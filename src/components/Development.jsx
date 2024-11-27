@@ -15,7 +15,7 @@ const Development = () => {
           <div className="max-w-[1180px] w-full mx-auto">
             <img src={DevImg} alt="dev-img" />
             <div className="text-center -mt-64">
-              <h2 className="text-[120px] font-bold leading-tight mb-5 -tracking-[4.8px]">
+              <h2 className="text-[120px] font-bold leading-tight mb-5 -tracking-[4.8px] max-xl:text-[92px]">
                 <span className="bg-blue-gradient">Development</span>
               </h2>
               <p className="text-2xl leading-10 font-normal text-[#3E5462] max-w-[896px] mx-auto">

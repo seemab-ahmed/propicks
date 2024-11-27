@@ -52,7 +52,7 @@ const Banner = () => {
     >
       <div className="container relative z-[1]">
         <div className="text-center mb-10">
-          <h1 className="text-[90px] text-white font-bold leading-none mb-5">
+          <h1 className="text-[90px] text-white font-bold leading-none mb-5 max-xl:text-7xl">
             Powering every winning
             <br /> sports <span className="bg-heading-gradient">prop firm</span>.
           </h1>
@@ -62,6 +62,7 @@ const Banner = () => {
           </p>
         </div>
       </div>
+      {/* video banner  */}
       <div
         ref={macbookRef}
         className="macbook p-5 bg-black border border-[rgba(255,255,255,0.4)] mx-auto"
@@ -108,7 +109,7 @@ const Banner = () => {
       </div>
 
       {/* Banner Lines */}
-      <div className="absolute top-44 right-0 mx-w-[480px]  w-full">
+      <div className="absolute top-44 right-0 mx-w-[480px]">
         <img src={LinesRight} alt="lines" loading="lazy"/>
       </div>
       <div className="absolute top-44 left-0 mx-w-[480px]">

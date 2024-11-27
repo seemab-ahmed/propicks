@@ -72,15 +72,15 @@ const Reviews = () => {
                 <div
                     className="mb-10 xl:mb-[60px] w-full mx-auto text-center"
                 >
-                    <h2 className="text-[120px] font-bold leading-none text-[#0F172A] mb-5">Clients Big Results.</h2>
+                    <h2 className="text-[120px] font-bold leading-none text-[#0F172A] mb-5 max-xl:text-[92px]">Clients Big Results.</h2>
                     <p className="text-2xl leading-8 font-normal text-[#3E5462] max-w-[854px] mx-auto w-full">Our technology is consistently lauded by users for its exceptional quality, intuitive design, and unparalleled customer support.</p>
                 </div>
                 <div className="relative">
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
-                        <ScrollingColumn reviewsList={reviewsList} speed={2.2} />
-                        <ScrollingColumn reviewsList={reviewsList} speed={1.8} />
-                        <ScrollingColumn reviewsList={reviewsList} speed={2.1} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1.2} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1.4} />
                     </div>
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 bottom-0 z-[1]"></div>
                 </div>
@@ -96,15 +96,24 @@ const ScrollingColumn = ({ reviewsList, speed }) => {
         const scrollContainer = scrollRef.current;
         let animationFrame;
 
-        const scrollContent = () => {
-            if (scrollContainer.scrollTop >= scrollContainer.scrollHeight / 2) {
-                scrollContainer.scrollTop = 0; // Reset scroll to create loop
-            }
-            scrollContainer.scrollTop += speed; // Scroll incrementally based on speed
-            animationFrame = requestAnimationFrame(scrollContent);
-        };
+        let accumulatedScroll = 0; // To store the fractional scroll value
 
-        animationFrame = requestAnimationFrame(scrollContent);
+const scrollContent = () => {
+    if (scrollContainer.scrollTop >= scrollContainer.scrollHeight / 2) {
+        scrollContainer.scrollTop = 0; // Reset scroll to create loop
+        accumulatedScroll = 0; // Reset fractional accumulation
+    }
+
+    accumulatedScroll += speed; // Add the fractional speed
+    const scrollStep = Math.floor(accumulatedScroll); // Extract the integer part
+    accumulatedScroll -= scrollStep; // Retain the fractional part for next frame
+
+    scrollContainer.scrollTop += scrollStep; // Apply only the integer scroll step
+
+    animationFrame = requestAnimationFrame(scrollContent);
+};
+
+animationFrame = requestAnimationFrame(scrollContent);
 
         return () => cancelAnimationFrame(animationFrame);
     }, [speed]);

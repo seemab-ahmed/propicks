@@ -18,7 +18,7 @@ const Footer = () => {
       }}
     >
       <div
-        className="container max-w-[1260px] mx-auto bg-no-repeat rounded-[60px] bg-cover bg-center items-center p-10 border-2 border-[#1996F5] border-b-transparent border-solid"
+        className="max-w-[1260px] w-[90%] mx-auto bg-no-repeat rounded-[60px] bg-cover bg-center items-center p-10 border-2 border-[#1996F5] border-b-transparent border-solid max-xl:w-[95%]"
         style={{
           background: `url(${FooterCard}) no-repeat center center`,
           backgroundSize: "cover",
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div className="flex items-center gap-[10px] mb-[72px] ms-auto w-max">
+            <div className="flex items-center text-sm gap-[10px] mb-[72px] ms-auto w-max max-xl:text-xs">
               <Link
                 to="/"
                 className="flex gap-[10px] text-[#81B4FF] bg-[#061838] rounded-[100px] py-[10px] px-5 leading-8"
@@ -68,21 +68,21 @@ const Footer = () => {
                 Proppicks Tech LLC is Registered in Malta
               </Link>
             </div>
-            <div className="flex justify-between text-sm leading-none max-w-[488px] ms-auto mr-5 text-[rgba(255,255,255,0.80)]">
-              <Link to="/" className="py-[6px] px-[10px] hover:underline">
+            <div className="flex justify-between text-sm leading-none max-w-[488px] ms-auto mr-5 text-[rgba(255,255,255,0.80)] max-xl:mr-0">
+              <Link to="/" className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]">
                 Development
               </Link>
-              <Link to="/" className="py-[6px] px-[10px] hover:underline">
+              <Link to="/" className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]">
                 Extra Services
               </Link>
-              <Link to="/" className="py-[6px] px-[10px] hover:underline">
+              <Link to="/" className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]">
                 Grow your firm
               </Link>
-              <Link to="/" className="py-[6px] px-[10px] hover:underline">
+              <Link to="/" className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]">
                 Terms of Service
               </Link>
             </div>
-            <div className="flex justify-between max-w-[104px] mt-8 ms-auto">
+            <div className="flex justify-between max-w-[104px] mt-8 ms-auto ">
               <Link to="/">
                 <img src={InstaIcon} alt="Instagram" />
               </Link>
@@ -128,7 +128,7 @@ const Footer = () => {
               </span>
               <Link
                 to="/"
-                className="py-[6px] px-5 bg-[rgba(255, 255, 255, 0.10)] text-white rounded-[100px]"
+                className="py-[6px] px-5 bg-[rgba(255,255,255,0.10)] text-white rounded-[100px]"
               >
                 Propicks
               </Link>

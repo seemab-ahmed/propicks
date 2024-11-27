@@ -11,7 +11,7 @@ const Faqs = () => {
 
   return (
     <section
-    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px]"
+    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px] pb-[340px] max-xl:text-[92px] max-xl:pt-[420px]"
       style={{
         background: `url(${FaqImg}) no-repeat center/cover `,
         backgroundPositionX:"center",
@@ -21,7 +21,7 @@ const Faqs = () => {
     >
       <div className="container max-w-[886px] mx-auto">
         <div className="text-center">
-          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5">
+          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5 max-xl:text-[92px]">
             Frequently Asked Questions
           </h2>
           <p className="text-2xl leading-9 text-center font-normal text-textLight max-w-[680px] w-full mx-auto mb-10">

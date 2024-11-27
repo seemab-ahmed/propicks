@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     // Ensure ScrollSmoother is available
     const ScrollSmoother = window.ScrollSmoother;
+    console.log(ScrollSmoother, "ScrollSmoother====>>>")
     if (ScrollSmoother && typeof ScrollSmoother.create === "function") {
       try {
         // Initialize ScrollSmoother

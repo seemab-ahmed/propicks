@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ServicesBg from "../assets/images/service-bg.png";
 import ServiceTop from "../assets/images/service-top.png";
@@ -10,75 +10,74 @@ import ServiceBg2 from "../assets/images/service-card-bg-2.png";
 import ServiceImg3 from "../assets/images/service-3.png";
 import ServiceBg3 from "../assets/images/service-card-bg-3.svg";
 import ServiceImg4 from "../assets/images/service-4.png";
-// import ServiceBg4 from "../assets/images/service-card-bg-4.svg"; 
+// import ServiceBg4 from "../assets/images/service-card-bg-4.svg";
 import ServiceImg5 from "../assets/images/service-5.png";
 import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
 import ServiceImg6 from "../assets/images/service-6.png";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Services = () => {
-  const servicesData = [
-    {
-      title: "White Glove Service",
-      description:
-        "Personalized, seamless, and exceptional service tailored to your every need.",
-      image: ServiceImg1,
-      backgroundStyle: {
-        background: `url(${ServiceBg1}) no-repeat center/cover`,
-      },
-    },
-    {
-      title: "Creative Design",
-      description:
-        "Making sure your firm is creating distinctive and impactful designs that bring your vision to life and make a lasting impression.",
-      image: ServiceImg2,
-      backgroundStyle: {
-        background: `url(${ServiceBg2}) no-repeat center/cover`,
-      },
-    },
-    {
-      title: "Start-to-Finish Excellence",
-      description:
-        "From vision to launch, we manage every detail to build, scale, and ensure your prop firm's success.",
-      image: ServiceImg3,
-      backgroundStyle: {
-        background: `url(${ServiceBg3}) no-repeat center/cover`,
-      },
-    },
-    {
-      title: "Dream Website",
-      description:
-        "We design custom-branded websites that bring your vision to life and surpass expectations, creating a lasting first impression for your customers.",
-      image: ServiceImg4,
-      backgroundStyle: {
-        background: `url(${ServiceBg5}) no-repeat center/cover`,
-      },
-      imgClass: "mt-[-230px] ",
-      imgRight: true,
-    },
-    {
-      title: "Mobile Friendly",
-      description:
-        "We recognize the importance of engaging with mobile devices, which is why we also focus on ensuring every project is both mobile and tablet friendly.",
-      image: ServiceImg5,
-      backgroundStyle: {
-        background: `url(${ServiceBg5}) no-repeat center/cover`,
-      },
-    },
-    {
-      title: "Top Line Work",
-      description:
-        "We create dashboards and websites with passion and precision, using top technologies like React and Node.js for outstanding results.",
-      image: ServiceImg6,
-      backgroundStyle: {
-        background: `url(${ServiceBg6}) no-repeat top/contain`,
-      },
-      imgClass: "mt-[95px]"
-    },
-  ];
+  useEffect(() => {
+    // Animate left column service cards individually
+    document.querySelectorAll(".col-left .service-card").forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          rotate: -30,
+          x: "-20%",
+        },
+        {
+          opacity: 1,
+          rotate: 0,
+          x: "0%",
+          // ease: "power2.out", // Smooth easing
+          duration: 1.5,      // Controls animation duration for smoothness
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", // Start when the top of the card is near the viewport
+            end: "bottom 40%", // End when the bottom of the card enters
+            scrub: true,
+            // markers: true,       // Smooth animation synced with scroll
+          },
+        }
+      );
+    });
+  
+    // Animate right column service cards individually
+    document.querySelectorAll(".col-right .service-card").forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          rotate: 30,
+          x: "20%",
+        },
+        {
+          opacity: 1,
+          rotate: 0,
+          x: "0%",
+          // ease: "power2.out", // Smooth easing
+          duration: 1.5,      // Controls animation duration for smoothness
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",  // Start when the top of the card is near the viewport
+            end: "bottom 30%", // End when the bottom of the card enters
+            scrub: true,       // Smooth animation synced with scroll
+          },
+        }
+      );
+    });
+  }, []);
+  
+
 
   return (
     <section
-      className="pt-[142px] pb-[140px] bg-no-repeat bg-cover relative"
+      className="pt-[142px] pb-[140px] bg-no-repeat bg-cover relative overflow-hidden"
       style={{
         background: `url(${ServicesBg}) no-repeat center/cover `,
         backgroundPositionX: "center",
@@ -86,7 +85,7 @@ const Services = () => {
       }}
     >
       <div className="absolute top-0 left-0 right-0 w-full">
-        <img src={ServiceTop} alt="service top gradient" className="w-full"/>
+        <img src={ServiceTop} alt="service top gradient" className="w-full" />
       </div>
       <div className="container max-w-[1260px] mx-auto relative z-[1]">
         <div className="text-center">
@@ -102,7 +101,7 @@ const Services = () => {
         </div>
         <div className="grid grid-cols-2 gap-8 mt-36">
           {/* services left col */}
-          <div className="grid grid-cols-1 gap-8">
+          <div id="col-left" className=" col-left grid grid-cols-1 gap-8">
             {servicesData
               .filter((_, index) => index % 2 === 0) // Odd indices
               .map((service, index) => (
@@ -116,8 +115,8 @@ const Services = () => {
                 />
               ))}
           </div>
-          {/* col */}
-          <div className="grid grid-cols-1 gap-8">
+          {/* col right */}
+          <div id="col-right" className="col-right grid grid-cols-1 gap-8">
             {servicesData
               .filter((_, index) => index % 2 !== 0) // Even indices
               .map((service, index) => (
@@ -143,7 +142,73 @@ const Services = () => {
 
 export default Services;
 
-const ServiceCard = ({ title, description, image, backgroundStyle, imgClass, imgRight }) => {
+const servicesData = [
+  {
+    title: "White Glove Service",
+    description:
+      "Personalized, seamless, and exceptional service tailored to your every need.",
+    image: ServiceImg1,
+    backgroundStyle: {
+      background: `url(${ServiceBg1}) no-repeat center/cover`,
+    },
+  },
+  {
+    title: "Creative Design",
+    description:
+      "Making sure your firm is creating distinctive and impactful designs that bring your vision to life and make a lasting impression.",
+    image: ServiceImg2,
+    backgroundStyle: {
+      background: `url(${ServiceBg2}) no-repeat center/cover`,
+    },
+  },
+  {
+    title: "Start-to-Finish Excellence",
+    description:
+      "From vision to launch, we manage every detail to build, scale, and ensure your prop firm's success.",
+    image: ServiceImg3,
+    backgroundStyle: {
+      background: `url(${ServiceBg3}) no-repeat center/cover`,
+    },
+  },
+  {
+    title: "Dream Website",
+    description:
+      "We design custom-branded websites that bring your vision to life and surpass expectations, creating a lasting first impression for your customers.",
+    image: ServiceImg4,
+    backgroundStyle: {
+      background: `url(${ServiceBg5}) no-repeat center/cover`,
+    },
+    imgClass: "mt-[-230px] ",
+    imgRight: true,
+  },
+  {
+    title: "Mobile Friendly",
+    description:
+      "We recognize the importance of engaging with mobile devices, which is why we also focus on ensuring every project is both mobile and tablet friendly.",
+    image: ServiceImg5,
+    backgroundStyle: {
+      background: `url(${ServiceBg5}) no-repeat center/cover`,
+    },
+  },
+  {
+    title: "Top Line Work",
+    description:
+      "We create dashboards and websites with passion and precision, using top technologies like React and Node.js for outstanding results.",
+    image: ServiceImg6,
+    backgroundStyle: {
+      background: `url(${ServiceBg6}) no-repeat top/contain`,
+    },
+    imgClass: "mt-[95px]",
+  },
+];
+const ServiceCard = ({
+  title,
+  description,
+  image,
+  backgroundStyle,
+  imgClass,
+  imgRight,
+}) => {
   const gradientRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -180,7 +245,8 @@ const ServiceCard = ({ title, description, image, backgroundStyle, imgClass, img
 
   return (
     <div
-      className="rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14"
+      id="service-card"
+      className="service-card rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14"
       style={{
         ...backgroundStyle,
         boxShadow:
@@ -190,16 +256,22 @@ const ServiceCard = ({ title, description, image, backgroundStyle, imgClass, img
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="max-w-[467px] w-[90%] text-center mx-auto mb-5 relative z-[2]">
-        <h4 className="text-6xl text-center font-bold leading-none tracking-[-1.2px] text-white mb-5">
+      <div className="max-w-[467px] w-[90%] text-center mx-auto mb-5 relative z-[2] ">
+        <h4 className="text-6xl text-center font-bold leading-none tracking-[-1.2px] text-white mb-5 max-xl:text-4xl">
           {title}
         </h4>
         <p className="text-xl text-[#C5CEE6] leading-normal text-center">
           {description}
         </p>
       </div>
-      <div className={`flex justify-center mx-auto w-full relative z-0 ${imgClass}`}>
-        <img src={image} alt={title} className={`block ${imgRight=== true ? "ms-auto": "mx-auto"}`} />
+      <div
+        className={`flex justify-center mx-auto w-full relative z-0 ${imgClass}`}
+      >
+        <img
+          src={image}
+          alt={title}
+          className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
+        />
       </div>
       <div
         ref={gradientRef}

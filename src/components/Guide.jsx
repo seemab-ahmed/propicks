@@ -7,7 +7,7 @@ import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 import FaceIdImg from "../assets/images/face-id.png";
-import StatsImg from "../assets/images/stats_image.png";
+import StatsImg from "../assets/images/stats.png";
 import PricingImg from "../assets/images/pricing-img.png";
 import DashboardImg from "../assets/images/dashboard-img.png";
 
@@ -22,7 +22,7 @@ const Guide = () => {
       </div>
       <div className="container relative z-[2]">
         <div className="text-center mb-10">
-          <h2 className="text-[120px] font-bold leading-tight text-white -tracking-[4.8px] mb-5">
+          <h2 className="text-[120px] font-bold leading-tight text-white -tracking-[4.8px] mb-5 max-xl:text-[92px]">
             What guide you through{" "}
             <span className="bg-heading-gradient">everything</span>.
           </h2>
@@ -43,7 +43,7 @@ const Guide = () => {
                 <img src={FaceIdImg} alt="faceid" />
               </figure>
               <div className="text-center">
-                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px]">
+                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl">
                   Integrate & Guide Through the Essentials
                 </h3>
                 <p className="text-lg font-normal leading-8 text-[#C5CEE6]">
@@ -62,7 +62,7 @@ const Guide = () => {
               <img src={StatsImg} alt="statsImg" />
             </figure>
             <div>
-              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px]">
+              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl">
                 Launch & Scale Your Firm
               </h3>
               <p className="text-lg font-normal leading-8 text-[#C5CEE6]">
@@ -84,7 +84,7 @@ const Guide = () => {
               />
             </figure>
             <div className="p-10">
-              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px]">
+              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl">
                 Develop Custom Plans with Risk Management
               </h3>
               <p className="text-lg font-normal leading-8 text-[#C5CEE6]">
@@ -100,7 +100,7 @@ const Guide = () => {
           >
             <div className="grid grid-cols-12 gap-5 items-center">
               <div className="text-center col-span-5 -mr-20">
-                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px]">
+                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl">
                   Design & Build <br />
                   Your Brand
                 </h3>

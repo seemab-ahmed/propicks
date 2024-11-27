@@ -1,7 +1,7 @@
 import React from "react";
 import BuildingBG from "../assets/images/building-bg.png";
 import BuildingBtm from "../assets/images/building-btm.png";
-import BuildingIcon from "../assets/images/building-icon.svg";
+// import BuildingIcon from "../assets/images/building-icon.svg";
 const Building = () => {
 
   return (
@@ -16,8 +16,8 @@ const Building = () => {
     >
       <div className="container max-w-[886px] mx-auto">
         <div className="text-center">
-          <div className="mx-auto flex justify-center mb-[-60px]"><img src={BuildingIcon} alt="" /></div>
-          <h2 className="text-[180px] text-white font-bold leading-none tracking-[-7.2px] mb-5">
+          {/* <div className="mx-auto flex justify-center mb-[-60px]"><img src={BuildingIcon} alt="" /></div> */}
+          <h2 className="text-[11.25rem] text-white font-bold leading-none tracking-[-7.2px] mb-5 max-2xl:text-[8.75rem]">
           <strong className=" text-[#1972F5] block">Building</strong> Brand Identity
           </h2>
           <p className="text-2xl leading-9 text-center font-normal text-textLight max-w-[870px] w-full mx-auto mb-16">

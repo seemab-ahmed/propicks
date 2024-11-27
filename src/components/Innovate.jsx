@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 
 const Innovative = () => {
   return (
-    <section className="col-span-12 bg-contain bg-center py-[340px]">
+    <section className="col-span-12 bg-contain bg-center pb-[340px]">
       <div className="grid grid-cols-12 gap-8 w-[96%] mx-auto">
         <div className="col-span-12 ">
           <div
-            className="grid grid-cols-2 gap-[142px] bg-no-repeat rounded-[55px] bg-cover bg-center items-center pl-[72px] pt-[74px]"
+            className="grid grid-cols-2 gap-[142px] bg-no-repeat rounded-[55px] bg-cover bg-center items-center pl-[72px] pt-[74px] max-xl:gap-16 max-xl:pl-12"
             style={{
               background: `url(${InnovativeBg}) no-repeat center center`,
               backgroundSize: "cover",
             }}
           >
             <div className="pb-12">
-              <h2 className="text-[120px] font-bold leading-none text-white mb-6 tracking-[-4.8px]">
+              <h2 className="text-[120px] font-bold leading-none text-white mb-6 tracking-[-4.8px] max-xl:text-[92px]">
                 Innovate with us
               </h2>
-              <p className="text-2xl font-normal leading-[2.25] text-[#C5CEE6]">
+              <p className="text-2xl font-normal leading-[2.25] text-[#C5CEE6] max-xl:text-lg max-xl:leading-[1.75]">
                 Let us help you build and grow your new business, creating a
                 foundation for lasting success. Our partnered firms have
                 generated over 100m+ in revenue.
@@ -47,12 +47,12 @@ const Innovative = () => {
               <figure className="self-end justify-self-end">
                 <img src={InnvativeSide} alt="faceid" />
               </figure>
-              <div className="w-[540px] h-[217px] flex items-center flex-col justify-center absolute bottom-[150px] left-[-100px] px-11 rounded-[44px] overflow-hidden border border-transparent border-solid"
+              <div className="w-[540px] h-[217px] flex items-center flex-col justify-center absolute bottom-[150px] left-[-100px] px-11 rounded-[44px] overflow-hidden border border-transparent border-solid max-xl:w-[400px] max-xl:h-[166px] max-xl:left-[-50px]"
               style={{
                 background: "linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%), radial-gradient(186.25% 107.66% at 51.84% 0%, rgba(25, 114, 245, 0.10) 0%, rgba(25, 114, 245, 0.00) 50%, rgba(25, 114, 245, 0.00) 100%)",
                 backdropFilter: "blur(108.18180847167969px)",
               }}>
-                <span className="block text-center text-[#1972F5] text-[90px] font-medium leading-normal m-0">+260%</span>
+                <span className="block text-center text-[#1972F5] text-[90px] font-medium leading-normal m-0 max-xl:text-6xl">+260%</span>
                 <span className="text-[#C5CEE6] text-xl block font-medium leading-normal text-center m-0">Your firms increase with PropPicks</span>
               </div>
             </div>
