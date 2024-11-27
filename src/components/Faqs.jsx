@@ -11,11 +11,11 @@ const Faqs = () => {
 
   return (
     <section
-    className="pt-[140px] pb-[120px] bg-no-repeat bg-cover"
+    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px]"
       style={{
-        background: `url(${FaqImg} `,
+        background: `url(${FaqImg}) no-repeat center/cover `,
         backgroundPositionX:"center",
-        backgroundPositionY:"22%",
+        backgroundPositionY:"0%",
         
       }}
     >
