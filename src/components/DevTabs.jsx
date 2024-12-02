@@ -7,15 +7,15 @@ const DevTabs = () => {
   const tabs = [
     {
       name: "React Node.js",
-      image: NodeImg, // Example image path
+      image: NodeImg,
     },
     {
       name: "Front-end",
-      image: NodeImg, // Example image path
+      image: NodeImg,
     },
     {
       name: "Back-end",
-      image: NodeImg, // Example image path
+      image: NodeImg,
     },
     {
       name: "CMS",
@@ -24,9 +24,9 @@ const DevTabs = () => {
   ];
 
   return (
-    <div className="max-w-[1370px] mx-auto w-[90%] mt-[72px]">
+    <div className="max-w-[1370px] mx-auto w-[90%] mt-[72px] max-md:overflow-hidden max-md:mt-6">
       {/* Tabs */}
-      <div className="grid grid-cols-4 gap-[10px] mb-6">
+      <div className="grid grid-cols-4 gap-[10px] mb-6 max-md:gap-[9.5rem] max-md:pb-3 max-md:overflow-scroll max-md:mb-3">
         {tabs.map((tab) => (
           <div
             key={tab.name}
@@ -35,9 +35,9 @@ const DevTabs = () => {
               activeTab === tab.name
                 ? "bg-tab-gradient text-white font-bold"
                 : "bg-white text-[#040B20] font-normal"
-            } hover:bg-tab-gradient `}
+            } hover:bg-tab-gradient hover:text-white max-lg:px-4 py-3 max-lg:text-base max-md:text-nowrap max-md:w-[140px] max-md:py-[10px]`}
             style={{
-              transition: "all 0.9s ease-in-out",
+              transition: "all 0.4s ease-in-out",
             }}
           >
             {tab.name}

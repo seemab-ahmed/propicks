@@ -169,3 +169,143 @@ h2 span {
 }
 
 /* global css end */
+
+/* header css start */
+.nav-list a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	padding: 0;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.nav-list a .item1 {
+	display: block;
+	-webkit-transition: -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-list .item2 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	display: inline;
+	text-align: center;
+	-webkit-transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0.8;
+}
+
+.nav-list a:hover {
+	color: #fff;
+  opacity: 1;
+}
+
+.nav-list a:hover .item1 {
+	color: #fff;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+  opacity: 1;
+}
+
+.nav-list a:hover .item2 {
+	top: 0;
+  opacity: 1;
+}
+
+.nav-list a:active {
+	-webkit-animation-name: rubberBand;
+	animation-name: rubberBand;
+}
+/* header css end */
+
+/* button css start */
+a.btn {
+  overflow: hidden;
+  position: relative;
+}
+a.btn span {
+  transition: 0.8s;
+}
+a.btn::before,
+a.btn::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #1972F5;
+  top: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+a.btn::before {
+  transform: translate(-50%, -50%);
+  left: -20px;
+}
+
+a.btn::after {
+  transform: translate(50%, -50%);
+  right: -20px;
+}
+
+a.btn:hover::before {
+  animation: move-left 0.8s both;
+  animation-direction: alternate;
+  z-index: 1;
+}
+a.btn:hover::after {
+  animation: move-right 0.8s both;
+  animation-direction: alternate;
+  z-index: 1;
+}
+
+a.btn:hover {
+  color: #fff;
+}
+@keyframes move-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+/* button css end */

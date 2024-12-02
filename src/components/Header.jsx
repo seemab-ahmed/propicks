@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import Logo from "../assets/images/main_logo.svg";
 
 const Header = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const headerRef = useRef(null);
   const contactBtnRef = useRef(null);
   const navListRef = useRef(null);
@@ -88,18 +88,19 @@ const Header = () => {
           </Link>
           <ul
             ref={navListRef}
-            className="flex items-center gap-2.5 w-[400px] overflow-hidden flex-none"
+            className="nav-list flex items-center gap-2.5 w-[400px] overflow-hidden flex-none"
           >
             {navLinks.map((item) => (
-              <li key={item.path} className="flex-none">
+              <li
+                key={item.path}
+                className="flex-none flex justify-center items-center py-2 px-2.5"
+              >
                 <Link
                   to={item.path}
-                  className={`text-sm font-normal leading-none py-2 px-2.5 text-white ${location.pathname === item.path
-                    ? "opacity-100 flex-none"
-                    : "text-white opacity-80"
-                    }`}
+                  className="text-sm font-normal leading-none"
                 >
-                  {item.name}
+                  <span className="item1">{item.name}</span>
+                  <span className="item2">{item.name}</span>
                 </Link>
               </li>
             ))}
@@ -110,12 +111,12 @@ const Header = () => {
           >
             <Link
               ref={contactBtnRef}
-              className="contact-btn h-9 opacity-0 scale-[0.6] origin-right flex items-center justify-center px-8 py-2 w-[135px] rounded-lg text-sm font-medium text-white leading-none bg-[rgba(255,255,255,0.1)] flex-none"
+              className="btn contact-btn h-9 opacity-0 scale-[0.6] origin-right flex items-center justify-center px-8 py-2 w-[135px] rounded-lg text-sm font-medium text-white leading-none bg-[rgba(255,255,255,0.1)] flex-none"
             >
-              Contact Us
+              <span className="relative z-[2]">Contact Us</span>
             </Link>
-            <Link className="h-9 flex items-center justify-center px-8 py-2 rounded-lg text-sm font-medium text-black leading-none bg-white flex-none">
-              Firm Demo
+            <Link className="btn h-9 flex items-center justify-center px-8 py-2 rounded-lg text-sm font-medium text-black leading-none bg-white flex-none">
+              <span className="relative z-[2]">Firm Demo</span>
             </Link>
           </div>
         </div>

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="pb-[274px] pt-[390px] bg-no-repeat bg-cover bg-center mt-[-500px]"
+      className="pb-[274px] pt-[390px] bg-no-repeat bg-cover bg-center mt-[-500px] max-lg:pt-[300px] max-lg:pb-32"
       style={{
         background: `url(${FooterBg}) no-repeat center/cover`,
       }}
@@ -24,7 +24,7 @@ const Footer = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="grid grid-cols-2 ">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:text-center">
           <div>
             <Link to="/">
               <img src={Brand} alt="propics" />
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div className="flex items-center text-sm gap-[10px] mb-[72px] ms-auto w-max max-xl:text-xs">
+            <div className="flex items-center flex-wrap text-sm gap-[10px] mb-[72px] ms-auto w-max max-xl:text-xs max-lg:flex-col max-lg:items-start max-lg:mb-11 max-md:mx-auto max-md:items-center">
               <Link
                 to="/"
                 className="flex gap-[10px] text-[#81B4FF] bg-[#061838] rounded-[100px] py-[10px] px-5 leading-8"
@@ -68,7 +68,7 @@ const Footer = () => {
                 Proppicks Tech LLC is Registered in Malta
               </Link>
             </div>
-            <div className="flex justify-between text-sm leading-none max-w-[488px] ms-auto mr-5 text-[rgba(255,255,255,0.80)] max-xl:mr-0">
+            <div className="flex justify-between flex-wrap text-sm leading-none max-w-[488px] ms-auto mr-5 text-[rgba(255,255,255,0.80)] max-xl:mr-0 max-xl:max-w-60 max-md:mx-auto">
               <Link to="/" className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]">
                 Development
               </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
                 Terms of Service
               </Link>
             </div>
-            <div className="flex justify-between max-w-[104px] mt-8 ms-auto ">
+            <div className="flex justify-between max-w-[104px] mt-8 ms-auto max-md:mx-auto">
               <Link to="/">
                 <img src={InstaIcon} alt="Instagram" />
               </Link>
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="flex gap-6 mt-12 items-center">
+          <div className="flex flex-wrap gap-6 mt-12 items-center max-md:justify-center">
             <Link
               to="/"
               className="px-5 py-[10px] flex gap-[10px] bg-[#061838] rounded-[14px] border border-solid border-[rgba(255,255,255,0.15)]"
@@ -122,7 +122,7 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center ">
               <span className="text-[#C5CEE6] text-sm leading-0">
                 See our mobile app
               </span>
@@ -133,7 +133,7 @@ const Footer = () => {
                 Propicks
               </Link>
             </div>
-            <div className="ms-auto">
+            <div className="ms-auto max-lg:mx-auto">
             <span className="text-[#C5CEE6] text-sm leading-0">
               © 2024 PropPicks Tech LLC
             </span>

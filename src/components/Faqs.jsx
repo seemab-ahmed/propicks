@@ -11,7 +11,7 @@ const Faqs = () => {
 
   return (
     <section
-    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px] pb-[340px] max-xl:text-[92px] max-xl:pt-[420px]"
+    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px] pb-[340px] max-xl:text-[92px] max-xl:pt-[420px] max-lg:pt-[340px] max-lg:pb-[180px] max-lg:mb-[-100px] max-md:pt-80 max-md:pb-40"
       style={{
         background: `url(${FaqImg}) no-repeat center/cover `,
         backgroundPositionX:"center",
@@ -21,10 +21,10 @@ const Faqs = () => {
     >
       <div className="container max-w-[886px] mx-auto">
         <div className="text-center">
-          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5 max-xl:text-[92px]">
+          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5 max-xl:text-[92px] max-lg:text-7xl max-lg:tracking-[-2px] max-md:text-4xl max-md:tracking-[-1.44px] max-md:mb-[10px]">
             Frequently Asked Questions
           </h2>
-          <p className="text-2xl leading-9 text-center font-normal text-textLight max-w-[680px] w-full mx-auto mb-10">
+          <p className="text-2xl leading-9 text-center font-normal text-textLight max-w-[680px] w-full mx-auto mb-10 max-lg:text-xl max-md:text-base max-md:mb-9">
             We’ve gathered all the important info right here. Explore our FAQs
             and find the answers you need.
           </p>
@@ -59,12 +59,12 @@ const FaqCard = ({ isOpen, onClick, question, answer }) => {
       {/* Header with Chevron Icon */}
 
       <div
-        className={`flex justify-between items-center p-7 rounded-[30px] cursor-pointer transition-all ease-in-out duration-500 ${
+        className={`flex justify-between items-center p-7 rounded-[30px] cursor-pointer transition-all ease-in-out duration-500 max-md:p-[14px] max-md:rounded-[20px] ${
           isOpen ? "text-[#010511] bg-white" : "text-white bg-transparent"
         }`}
         onClick={onClick}
       >
-        <span className="text-xl font-medium flex-grow">{question}</span>
+        <span className="text-xl font-medium flex-grow max-md:text-base">{question}</span>
         <ChevronDown isOpen={isOpen} />
       </div>
 
@@ -77,7 +77,7 @@ const FaqCard = ({ isOpen, onClick, question, answer }) => {
         }}
         className={` overflow-hidden transition-all ease-in-out duration-500`}
       >
-        <p className="p-5 m-0 text-lg leading-8 text-[#ffffffcc]">{answer}</p>
+        <p className="p-5 m-0 text-lg leading-8 text-[#ffffffcc] max-md:text-sm">{answer}</p>
       </div>
     </div>
   );

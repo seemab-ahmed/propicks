@@ -77,7 +77,7 @@ const Services = () => {
 
   return (
     <section
-      className="pt-[142px] pb-[140px] bg-no-repeat bg-cover relative overflow-hidden"
+      className="pt-[142px] pb-[140px] bg-no-repeat bg-cover relative overflow-hidden max-lg:py-28 max-md:pt-10 max-md:pb-[106px]"
       style={{
         background: `url(${ServicesBg}) no-repeat center/cover `,
         backgroundPositionX: "center",
@@ -89,17 +89,17 @@ const Services = () => {
       </div>
       <div className="container max-w-[1260px] mx-auto relative z-[1]">
         <div className="text-center">
-          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5">
+          <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5 max-lg:text-7xl max-md:text-4xl max-md:tracking-[-1.44px]">
             Services
           </h2>
-          <p className="text-2xl leading-9 text-center font-normal text-[#C5CEE6] max-w-[1170px] w-full mx-auto">
+          <p className="text-2xl leading-9 text-center font-normal text-[#C5CEE6] max-w-[1170px] w-full mx-auto max-lg:text-xl max-md:text-base">
             PropPicks Tech guides you every step of the way in building your
             dream prop firm—whether it's for sports, forex, or futures. From
             concept to launch, we provide the tools, expertise, and support to
             bring your vision to life.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 mt-36">
+        <div className="grid grid-cols-2 gap-8 mt-36 max-lg:mt-20 max-md:grid-cols-1 max-md:mt-6">
           {/* services left col */}
           <div id="col-left" className=" col-left grid grid-cols-1 gap-8">
             {servicesData
@@ -246,7 +246,7 @@ const ServiceCard = ({
   return (
     <div
       id="service-card"
-      className="service-card rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14"
+      className="service-card rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14 max-md:pt-[30px]"
       style={{
         ...backgroundStyle,
         boxShadow:
@@ -257,10 +257,10 @@ const ServiceCard = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-[467px] w-[90%] text-center mx-auto mb-5 relative z-[2] ">
-        <h4 className="text-6xl text-center font-bold leading-none tracking-[-1.2px] text-white mb-5 max-xl:text-4xl">
+        <h4 className="text-6xl text-center font-bold leading-none tracking-[-1.2px] text-white mb-5 max-xl:text-4xl max-lg:text-3xl max-md:text-[28px] max-md:mb-[10px]">
           {title}
         </h4>
-        <p className="text-xl text-[#C5CEE6] leading-normal text-center">
+        <p className="text-xl text-[#C5CEE6] leading-normal text-center max-lg:text-lg max-md:text-sm">
           {description}
         </p>
       </div>
