@@ -247,9 +247,18 @@ a.btn::after {
   width: 20px;
   height: 20px;
   background: #1972F5;
-  top: 50%;
+  top: 50%; 
   border-radius: 50%;
   z-index: -1;
+}
+a.btn.blue::before,
+a.btn.blue::after {
+  background: #fff;
+}
+a.btn.tab::before,
+a.btn.tab::after {
+  background: linear-gradient(90deg, #1C37E8 0%, #69F0F0 34.77%, #2898FF 64.53%, #E990FF 100%);
+
 }
 
 a.btn::before {
@@ -262,12 +271,14 @@ a.btn::after {
   right: -20px;
 }
 
-a.btn:hover::before {
+a.btn:hover::before,
+a.btn.active::before {
   animation: move-left 0.8s both;
   animation-direction: alternate;
   z-index: 1;
 }
-a.btn:hover::after {
+a.btn:hover::after,
+a.btn.active::after {
   animation: move-right 0.8s both;
   animation-direction: alternate;
   z-index: 1;
@@ -275,6 +286,9 @@ a.btn:hover::after {
 
 a.btn:hover {
   color: #fff;
+}
+a.btn.blue:hover {
+  color: #1972F5;
 }
 @keyframes move-left {
   0% {

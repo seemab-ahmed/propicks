@@ -23,6 +23,8 @@ const Services = () => {
   useEffect(() => {
     // Animate left column service cards individually
     document.querySelectorAll(".col-left .service-card").forEach((card) => {
+      console.log("console.log is working as expected on services 1 ... >>>>");
+      if(typeof window !== "undefined"){
       gsap.fromTo(
         card,
         {
@@ -45,10 +47,13 @@ const Services = () => {
           },
         }
       );
+    }
     });
   
     // Animate right column service cards individually
     document.querySelectorAll(".col-right .service-card").forEach((card) => {
+      if(typeof window !== "undefined"){
+        console.log("console.log is working as expected on services 2 ... >>>>");
       gsap.fromTo(
         card,
         {
@@ -70,6 +75,7 @@ const Services = () => {
           },
         }
       );
+    }
     });
   }, []);
   

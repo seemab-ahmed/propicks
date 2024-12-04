@@ -23,6 +23,8 @@ const Banner = () => {
   const cardTwoRef = useRef(null);
 
   useEffect(() => {
+    if(typeof window !== "undefined"){
+      console.log("console.log is working as expected ... >>>>");
     requestAnimationFrame(() => {
       // Animation for the heading
       gsap.fromTo(
@@ -90,6 +92,7 @@ const Banner = () => {
         }
       );
     });
+  }
   }, []);
 
   return (

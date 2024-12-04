@@ -27,19 +27,19 @@ const Innovative = () => {
               <div className="grid grid-cols-2 max-w-3xl gap-5 items-center mt-10 max-md:mt-8 max-md:gap-[10px]">
                 <Link
                   to="/"
-                  className=" text-center py-10 text-2xl leading-4 block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5  max-md:px-0 max-md:text-base"
+                  className="btn blue text-center py-10 text-2xl leading-4 block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5  max-md:px-0 max-md:text-base "
                   style={{
                     background:
                       "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
                   }}
                 >
-                  Firm Demo
+                  <span className="relative z-[2]">Firm Demo</span>
                 </Link>
                 <Link
                   to="/"
-                  className="text-center py-10 text-2xl leading-4 block text-black bg-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5 max-md:px-0 max-md:text-base"
+                  className="btn text-center py-10 text-2xl leading-4 block text-black bg-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5 max-md:px-0 max-md:text-base hover:text-white"
                 >
-                  Contact Us
+                  <span className="relative z-[2]">Contact Us</span>
                 </Link>
               </div>
             </div>

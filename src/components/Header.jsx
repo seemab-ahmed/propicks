@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import Logo from "../assets/images/main_logo.svg";
@@ -9,6 +9,7 @@ const Header = () => {
   const contactBtnRef = useRef(null);
   const navListRef = useRef(null);
   const buttonWrapperRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -17,8 +18,13 @@ const Header = () => {
     { name: "Grow your firm", path: "/grow-your-firm" },
   ];
 
+  
+
   useEffect(() => {
-    let lastScrollY = window.scrollY; // Track the last scroll position
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    if (!mediaQuery.matches) return; // Exit if screen width is 767px or smaller
+
+    let lastScrollY = window.scrollY;
 
     // Create a single timeline
     const timeline = gsap.timeline({ paused: true });
@@ -27,16 +33,12 @@ const Header = () => {
     timeline
       .to(buttonWrapperRef.current, {
         width: "280px",
-        // duration: 0.7,
-        // ease: "power1.inOut",
       })
       .to(
         contactBtnRef.current,
         {
           scale: 1,
           opacity: 1,
-          // duration: 0.7,
-          // ease: "power1.inOut",
         },
         "<"
       )
@@ -47,8 +49,6 @@ const Header = () => {
           width: "0px",
           pointerEvents: "none",
           scale: 0.6,
-          // duration: 0.7,
-          // ease: "power1.inOut",
         },
         "<"
       );
@@ -57,14 +57,12 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        // Scrolling down: play timeline
         timeline.play();
       } else if (currentScrollY < lastScrollY) {
-        // Scrolling up: reverse timeline
         timeline.reverse();
       }
 
-      lastScrollY = currentScrollY; // Update the last scroll position
+      lastScrollY = currentScrollY;
     };
 
     const debounceScroll = () => {
@@ -80,15 +78,57 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="p-5 fixed left-0 top-0 w-full z-[9999]" ref={headerRef}>
-      <div className="max-w-fit w-full mx-auto rounded-[10px] bg-[rgba(36,37,40,0.6)] backdrop-blur-[80%] p-2.5">
-        <div className="flex items-center gap-8">
+    <header className="py-5 md:p-5 fixed left-0 top-0 w-full z-[9999]" ref={headerRef}>
+      <div className="max-w-[90%] md:max-w-fit w-full mx-auto rounded-[10px] bg-[rgba(36,37,40,0.6)] backdrop-blur-[80%] p-2.5">
+        <div className="flex items-center justify-between gap-8">
           <Link className="w-9 h-9 flex items-center justify-center bg-[#1C3148] rounded-lg">
             <img src={Logo} alt="Logo" />
           </Link>
+
+          <button
+            className="hamburger-menu md:hidden flex items-center justify-center w-10 h-10 rounded-lg"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
+
           <ul
             ref={navListRef}
-            className="nav-list flex items-center gap-2.5 w-[400px] overflow-hidden flex-none"
+            className={`nav-list md:flex items-center gap-2.5 ${
+              isMenuOpen
+                ? "block absolute top-20 left-0 right-0 bg-[rgba(36,37,40,0.6)] backdrop-blur-[80%] p-5 rounded-md z-50 w-[90%] max-w-[727px] mx-auto"
+                : "hidden"
+            } md:block`}
           >
             {navLinks.map((item) => (
               <li
@@ -98,6 +138,7 @@ const Header = () => {
                 <Link
                   to={item.path}
                   className="text-sm font-normal leading-none"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="item1">{item.name}</span>
                   <span className="item2">{item.name}</span>
@@ -105,8 +146,9 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
           <div
-            className="flex items-center justify-end overflow-hidden gap-2.5 w-[130px]"
+            className="hidden md:flex items-center justify-end overflow-hidden gap-2.5 w-[130px]"
             ref={buttonWrapperRef}
           >
             <Link

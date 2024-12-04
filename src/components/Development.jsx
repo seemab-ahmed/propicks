@@ -3,6 +3,7 @@ import DevImg from "../assets/images/dev-img.png";
 import DevTop from "../assets/images/dev-top.png";
 import Reviews from "./Reviews";
 import DevTabs from "./DevTabs";
+import { Link } from "react-router-dom";
 
 const Development = () => {
   return (
@@ -24,15 +25,22 @@ const Development = () => {
                 your prop firm’s unique needs.
               </p>
             </div>
-
           </div>
         </div>
         <div>
-          <DevTabs/>
+          <DevTabs />
         </div>
         <div>
           <div>
             <Reviews />
+            <div className="flex items-center justify-center mt-6">
+              <Link
+                to="/"
+                className="btn text-center py-[36px] text-2xl leading-none block text-[#010510] max-w-[329px] w-full bg-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5 max-md:px-0 max-md:text-base max-md:max-w-[185px] hover:text-white"
+              >
+                <span className="relative z-[2]">Grow your firm</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

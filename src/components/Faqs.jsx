@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FaqImg from "../assets/images/faq-bg.png";
 import ChevronDown from "../assets/icons/chevron-down";
+import { Link } from "react-router-dom";
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Track the open FAQ
@@ -41,6 +42,18 @@ const Faqs = () => {
               answer={item.answer}
             />
           ))}
+        </div>
+        <div className="flex items-center justify-center mt-16 max-md:mt-8 max-md:hidden">
+        <Link
+                  to="/"
+                  className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
+                  }}
+                >
+                  <span className="relative z-[2]">Extra services</span>
+          </Link>
         </div>
       </div>
     </section>
