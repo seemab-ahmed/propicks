@@ -106,27 +106,27 @@ const faqData = [
   {
     question: "Is it possible to use any e-commerce platform?",
     answer:
-      "AI-driven analysis uses advanced algorithms to process your data in real-time, identifying trends, patterns, and opportunities. This helps you make informed decisions quickly, optimize your strategies, and stay ahead of the competition.",
+      "Certainly! You have the flexibility to integrate with any provider, or you can opt for our in-house checkout and backend solutions for easier management.",
   },
   {
     question: "Do you offer a risk management system?",
     answer:
-      "Yes, we provide a comprehensive risk management system to secure your operations.",
+      "Yes, absolutely. Risk management is crucial in any business. That's why we offer our in-house solutions for all risk management needs, which you can manage directly on the manager dashboard we provide for you.",
   },
     {
       question: "What payout methods do you offer?",
       answer:
-        "We support multiple payout methods including bank transfers, PayPal, and others.",
+        "We provide you with a variety of top-tier payout options, seamlessly integrated into your dashboard. Additionally, we offer expert advice on selecting the best options for your needs.",
     },
     {
       question: "What KYC solutions are available?",
       answer:
-        "Our platform supports advanced KYC verification to ensure compliance and security.",
+        "We integrate with over 15 KYC providers, offering you a selection of the best options tailored to your needs and those of your clients.",
     },
     {
       question: "Can I customize my client dashboard?",
       answer:
-        "Yes, our platform allows extensive customization options for client dashboards.",
+        "bsolutely! We offer full customization with our team of over 25 full-time in-house developers. Whatever your idea is, we can bring it to life.",
     },
 ];
 

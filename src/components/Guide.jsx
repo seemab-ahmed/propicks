@@ -6,7 +6,8 @@ import Card1Img from "../assets/images/card-1-bg.jpg";
 import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
-import StatsImg from "../assets/images/statsImage.png";
+// import FaceIdImg from "../assets/images/face-id.png";
+import StatsImg from "../assets/images/stats-image.png";
 import PricingImg from "../assets/images/pricing-img.png";
 import DashboardImg from "../assets/images/dashboard-img.png";
 import IdentificationImg from "../assets/images/Identity-Verification.gif"
