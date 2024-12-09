@@ -1,11 +1,11 @@
 import React from "react";
 import InnovativeBg from "../assets/images/innovative-bg.png";
-import InnvativeSide from "../assets/images/innovative-side.png";
+import InnvativeSide from "../assets/images/innovative.png";
 import { Link } from "react-router-dom";
 
 const Innovative = () => {
   return (
-    <section className="col-span-12 bg-contain bg-center pb-[340px]">
+    <section className="col-span-12 bg-contain bg-center">
       <div className="grid grid-cols-12 gap-8 w-[96%] mx-auto">
         <div className="col-span-12 ">
           <div
@@ -47,7 +47,7 @@ const Innovative = () => {
               <figure className="self-end justify-self-end">
                 <img src={InnvativeSide} alt="faceid" className="max-lg:h-[450px]" />
               </figure>
-              <div className="w-[540px] h-[217px] flex items-center flex-col justify-center absolute bottom-[150px] left-[-100px] px-11 rounded-[44px] overflow-hidden border border-transparent border-solid max-xl:w-[400px] max-xl:h-[166px] max-xl:left-[-50px] max-lg:left-[-300px] max-lg:w-auto
+              {/* <div className="w-[540px] h-[217px] flex items-center flex-col justify-center absolute bottom-[150px] left-[-100px] px-11 rounded-[44px] overflow-hidden border border-transparent border-solid max-xl:w-[400px] max-xl:h-[166px] max-xl:left-[-50px] max-lg:left-[-300px] max-lg:w-auto
               max-md:left-0 max-md:right-0 max-md:top-0"
               style={{
                 background: "linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%), radial-gradient(186.25% 107.66% at 51.84% 0%, rgba(25, 114, 245, 0.10) 0%, rgba(25, 114, 245, 0.00) 50%, rgba(25, 114, 245, 0.00) 100%)",
@@ -55,7 +55,7 @@ const Innovative = () => {
               }}>
                 <span className="block text-center text-[#1972F5] text-[90px] font-medium leading-normal m-0 max-xl:text-6xl">+260%</span>
                 <span className="text-[#C5CEE6] text-xl block font-medium leading-normal text-center m-0">Your firms increase with PropPicks</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

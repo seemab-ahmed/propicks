@@ -78,9 +78,9 @@ const Reviews = () => {
                 <div className="relative">
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
-                        <ScrollingColumn reviewsList={reviewsList} speed={2.2} />
-                        <ScrollingColumn reviewsList={reviewsList} speed={1.8} />
-                        <ScrollingColumn reviewsList={reviewsList} speed={2.1} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1.5} />
+                        <ScrollingColumn reviewsList={reviewsList} speed={1.4} />
                     </div>
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 bottom-0 z-[1]"></div>
                 </div>

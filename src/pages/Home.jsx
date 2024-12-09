@@ -6,6 +6,7 @@ import Innovative from "../components/Innovate";
 import Building from "../components/Buiding";
 import Services from "../components/Services";
 import Development from "../components/Development";
+import CustomOdds from "../components/CustomOdds";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner />
       <Guide />
       <Services/>
+      <CustomOdds  />
       <Development />
       <Building/>
       <Faqs />

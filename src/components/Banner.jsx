@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 // import BannerVideo from "../assets/video/showreel-home.mp4"
-import HeroBg from "../assets/images/hero-bg.png";
+// import HeroBg from "../assets/images/hero-bg.png";
 import HeroInnerImg from "../assets/images/banner-bg.png";
 import LinesRight from "../assets/images/line-right.svg";
 import LinesLeft from "../assets/images/line-left.svg";
@@ -10,10 +10,10 @@ import SalesIcon from "../assets/images/sale-icon.png";
 import StatsBg from "../assets/images/stats-bg.png";
 import Chart from "../assets/images/chart.png";
 import ChevronDown from "../assets/icons/chevron-down";
-
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+import BannerBtm from "../assets/images/banner-btm.svg";
+import Typewriter from "typewriter-effect";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
   const macbookRef = useRef(null);
@@ -23,8 +23,6 @@ const Banner = () => {
   const cardTwoRef = useRef(null);
 
   useEffect(() => {
-    if(typeof window !== "undefined"){
-      console.log("console.log is working as expected ... >>>>");
     requestAnimationFrame(() => {
       // Animation for the heading
       gsap.fromTo(
@@ -92,7 +90,6 @@ const Banner = () => {
         }
       );
     });
-  }
   }, []);
 
   return (
@@ -100,14 +97,22 @@ const Banner = () => {
       className="pt-[144px] bg-center bg-cover bg-no-repeat relative"
       ref={bannerRef}
       style={{
-        backgroundImage: `url(${HeroBg})`,
+        backgroundImage: `radial-gradient(circle at -30% 20%, #132436 10%, transparent 100%)`,
       }}
     >
       <div className="container relative z-[1]">
         <div className="text-center mb-10" ref={headingRef}>
           <h1 className="text-[90px] text-white font-bold leading-none mb-5 max-xl:text-7xl max-lg:text-[3.5rem] max-md:text-4xl max-md:mb-2 ">
             Powering every winning
-            <br /> sports <span className="bg-heading-gradient">prop firm</span>
+            <br /> <span className="text-white"><Typewriter
+              options={{
+                strings: ["sports", "forex"],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                deleteSpeed: 50,
+              }}
+            /></span>{" "}<span className="main-heading-span bg-heading-gradient">prop firm</span>
             .
           </h1>
           <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl max-lg:leading-relaxed max-md:text-base max-md:mb-[160px]">
@@ -186,6 +191,9 @@ const Banner = () => {
       </div>
       <div className="absolute top-44 left-0 mx-w-[480px] max-md:max-w-[200px]">
         <img src={LinesLeft} alt="lines" loading="lazy" />
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 w-full">
+        <img src={BannerBtm} alt="dev top gradient" className="w-full" />
       </div>
     </section>
   );

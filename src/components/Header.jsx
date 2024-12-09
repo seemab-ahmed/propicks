@@ -18,8 +18,6 @@ const Header = () => {
     { name: "Grow your firm", path: "/grow-your-firm" },
   ];
 
-  
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
     if (!mediaQuery.matches) return; // Exit if screen width is 767px or smaller

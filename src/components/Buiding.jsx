@@ -1,19 +1,18 @@
 import React from "react";
-import BuildingBG from "../assets/images/building-bg.png";
-import BuildingBtm from "../assets/images/building-btm.png";
+import BuildingBtm from "../assets/images/build-img-new.png";
+import PropPickLogo from "../assets/images/pp-logo-large.png"
+import DividerBtm from "../assets/images/service-btm.png"
 // import BuildingIcon from "../assets/images/building-icon.svg";
 const Building = () => {
 
   return (
     <section
-    className="pt-[140px] bg-no-repeat bg-cover mb-[-350px] max-lg:pt-28 max-lg:mb-[-190px] max-md:pt-10 max-md:mb-[-240px]"
-      style={{
-        background: `url(${BuildingBG}) no-repeat center/cover `,
-        backgroundPositionX:"center",
-        backgroundPositionY:"0%",
-        
-      }}
+    className="relative pt-[140px] pb-40 bg-no-repeat bg-cover  max-lg:pt-28 max-lg:pb-32 max-md:pt-10 max-md:pb-20"
+      
     >
+    <div className="absolute right-0 top-0">
+      <img src={PropPickLogo} alt="pp-logo" className="w-[300px] md:w-[704px]" />
+    </div>
       <div className="container max-w-[886px] mx-auto">
         <div className="text-center">
           {/* <div className="mx-auto flex justify-center mb-[-60px]"><img src={BuildingIcon} alt="" /></div> */}
@@ -27,9 +26,12 @@ const Building = () => {
 
         {/* FAQ Cards */}
       </div>
-        <div className="space-y-[10px] flex justify-end relative z-10">
+        <div className="w-[90%] mx-auto space-y-[10px] flex justify-end relative z-[2]">
             <img src={BuildingBtm} alt="buildingbtm" />
         </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full z-[3]">
+        <img src={DividerBtm} alt="dev top gradient" className="w-full" />
+      </div>
     </section>
   );
 };

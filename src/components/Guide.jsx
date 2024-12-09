@@ -1,15 +1,16 @@
 import React from "react";
 import GuideBg from "../assets/images/guide-bg.png";
-import GuideTop from "../assets/images/guide-gradient-top.png";
-import GuideBtm from "../assets/images/guide-gradient-btm.png";
+import GuideTop from "../assets/images/guide-top.svg";
+import GuideBtm from "../assets/images/service-btm.png";
 import Card1Img from "../assets/images/card-1-bg.jpg";
 import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
-import FaceIdImg from "../assets/images/face-id.png";
-import StatsImg from "../assets/images/stats_bar.png";
+// import FaceIdImg from "../assets/images/face-id.png";
+import StatsImg from "../assets/images/stats.png";
 import PricingImg from "../assets/images/pricing-img.png";
 import DashboardImg from "../assets/images/dashboard-img.png";
+import IdentificationImg from "../assets/images/Identity-Verification.gif"
 import { Link } from "react-router-dom";
 
 const Guide = () => {
@@ -18,13 +19,13 @@ const Guide = () => {
     style={{
       background: `url(${GuideBg}) no-repeat center center`,
     }}>
-      <div className="absolute top-0 left-0 right-0 w-full">
+      <div className="absolute top-[-1px] left-0 right-0 w-full">
         <img src={GuideTop} alt="Gradient Img" className="w-full"/>
       </div>
       <div className="container relative z-[2]">
         <div className="text-center mb-10 max-md:mb-8">
           <h2 className="text-[120px] font-bold leading-tight text-white tracking-[-4.8px] mb-5 max-xl:text-[92px]  max-lg:text-7xl max-lg:leading-snug max-md:text-4xl max-md:tracking-[-1.2px]">
-            What guide you through{" "}
+            We guide you through{" "}
             <span className="bg-heading-gradient">everything</span>.
           </h2>
           <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-lg:text-xl max-md:text-base">
@@ -41,7 +42,7 @@ const Guide = () => {
           >
             <div className="grid grid-cols-2 gap-7 items-center max-md:grid-cols-1">
               <figure className="max-md:order-2 max-md:mr-auto max-md:max-w-[85%] max-md:max-h-[322px]">
-                <img src={FaceIdImg} alt="faceid" />
+                <img src={IdentificationImg} alt="faceid" />
               </figure>
               <div className="text-center max-md:order-1 max-md:px-8">
                 <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px]  max-md:mb-[10px]">

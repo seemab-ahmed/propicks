@@ -4,6 +4,7 @@ import AppRoutes from './AppRoutes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import gsap from 'gsap';
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollSmoother from "./assets/js/ScrollSmoother.min.js";
 // Register ScrollTrigger plugin
@@ -13,7 +14,6 @@ function App() {
   useEffect(() => {
     // Ensure ScrollSmoother is available
     const ScrollSmoother = window.ScrollSmoother;
-    console.log(ScrollSmoother, "ScrollSmoother====>>>")
     if (ScrollSmoother && typeof ScrollSmoother.create === "function") {
       try {
         // Initialize ScrollSmoother
@@ -45,7 +45,6 @@ function App() {
         <div id="smooth-content">
           <AppRoutes />
           <Footer />
-
         </div>
       </div>
     </Router>

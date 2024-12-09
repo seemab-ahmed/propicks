@@ -51,7 +51,7 @@ const DevTabs = () => {
         <img
           src={tabs.find((tab) => tab.name === activeTab)?.image}
           alt={activeTab}
-          className="w-full  rounded-md shadow-md"
+          className="w-full  rounded-md"
         />
         <p>{tabs.find((tab) => tab.name === activeTab)?.content}</p>
       </div>

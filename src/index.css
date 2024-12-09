@@ -155,11 +155,15 @@ img {
   width: 90%;
 }
 
-h1 span,
+h1 .main-heading-span,
 h2 span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.Typewriter__cursor {
+  display: none;
 }
 
 @media (min-width: 1600px) {

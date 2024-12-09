@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 const Development = () => {
   return (
     <section className="p-5 pt-36 relative max-lg:pt-28">
-      <div className="absolute top-0 left-0 right-0 w-full">
+      <div className="absolute top-[-2px] left-0 right-0 w-full">
         <img src={DevTop} alt="dev top gradient" className="w-full" />
       </div>
-      <div className="rounded-[80px] bg-white py-28 max-lg:py-16 max-lg:rounded-[40px] max-md:py-10">
+      <div className="rounded-[80px] relative z-[2] bg-white py-28 max-lg:py-16 max-lg:rounded-[40px] max-md:py-10">
         <div>
           <div className="max-w-[1180px] w-full mx-auto">
             <img src={DevImg} alt="dev-img" />

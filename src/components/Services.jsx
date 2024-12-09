@@ -1,30 +1,29 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ServicesBg from "../assets/images/service-bg.png";
-import ServiceTop from "../assets/images/service-top.png";
-import ServicesBtm from "../assets/images/service-btm.png";
-import ServiceImg1 from "../assets/images/service-1.svg";
+import ServiceTop from "../assets/images/dev-top.png";
+// import ServiceImg1 from "../assets/images/service-1.svg";
 import ServiceBg1 from "../assets/images/service-card-bg-1.svg";
-import ServiceImg2 from "../assets/images/service-2.svg";
+// import ServiceImg2 from "../assets/images/service-2.svg";
 import ServiceBg2 from "../assets/images/service-card-bg-2.png";
-import ServiceImg3 from "../assets/images/service-3.png";
+import ServiceImg3 from "../assets/images/calender-img.gif";
 import ServiceBg3 from "../assets/images/service-card-bg-3.svg";
-import ServiceImg4 from "../assets/images/service-4.png";
+import ServiceImg4 from "../assets/images/services-4_new.gif";
 // import ServiceBg4 from "../assets/images/service-card-bg-4.svg";
-import ServiceImg5 from "../assets/images/service-5.png";
+import ServiceImg5 from "../assets/images/services-5_new.gif";
 import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
-import ServiceImg6 from "../assets/images/service-6.png";
+import ServiceImg6 from "../assets/images/services-6_new.gif";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ServiceImg1 from "../assets/images/brand-stratergy.gif"
+import ServiceImg2 from "../assets/images/creative-design.gif"
+// import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useEffect(() => {
     // Animate left column service cards individually
     document.querySelectorAll(".col-left .service-card").forEach((card) => {
-      console.log("console.log is working as expected on services 1 ... >>>>");
-      if(typeof window !== "undefined"){
       gsap.fromTo(
         card,
         {
@@ -47,13 +46,10 @@ const Services = () => {
           },
         }
       );
-    }
     });
-  
+
     // Animate right column service cards individually
     document.querySelectorAll(".col-right .service-card").forEach((card) => {
-      if(typeof window !== "undefined"){
-        console.log("console.log is working as expected on services 2 ... >>>>");
       gsap.fromTo(
         card,
         {
@@ -75,15 +71,14 @@ const Services = () => {
           },
         }
       );
-    }
     });
   }, []);
-  
+
 
 
   return (
     <section
-      className="pt-[142px] pb-[140px] bg-no-repeat bg-cover relative overflow-hidden max-lg:py-28 max-md:pt-10 max-md:pb-[106px]"
+      className="pt-[142px] pb-[0px] bg-no-repeat bg-cover relative overflow-hidden max-lg:py-28 max-md:pt-10 max-md:pb-[106px]"
       style={{
         background: `url(${ServicesBg}) no-repeat center/cover `,
         backgroundPositionX: "center",
@@ -138,9 +133,6 @@ const Services = () => {
               ))}
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 w-full">
-        <img src={ServicesBtm} alt="service top gradient" className="w-full" />
       </div>
     </section>
   );

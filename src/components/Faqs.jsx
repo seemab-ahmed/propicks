@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import FaqImg from "../assets/images/faq-bg.png";
+import FaqImg from "../assets/images/service-bg.png";
+import DevTop from "../assets/images/dev-top.png";
 import ChevronDown from "../assets/icons/chevron-down";
 import { Link } from "react-router-dom";
 
 const Faqs = () => {
-  const [activeIndex, setActiveIndex] = useState(null); // Track the open FAQ
+  const [activeIndex, setActiveIndex] = useState(0); // Track the open FAQ
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index); // Toggle the active FAQ
@@ -12,15 +13,19 @@ const Faqs = () => {
 
   return (
     <section
-    className="pt-[580px] bg-no-repeat bg-cover mb-[-200px] pb-[340px] max-xl:text-[92px] max-xl:pt-[420px] max-lg:pt-[340px] max-lg:pb-[180px] max-lg:mb-[-100px] max-md:pt-80 max-md:pb-40"
+    className="pt-32 pb-[125px] relative bg-no-repeat bg-cover  max-xl:text-[92px] max-xl:pt-28  max-lg:pb-[100px]  max-md:pt-20 max-md:pb-20"
       style={{
-        background: `url(${FaqImg}) no-repeat center/cover `,
+        background: `url(${FaqImg}) no-repeat center`,
         backgroundPositionX:"center",
-        backgroundPositionY:"0%",
+        backgroundPositionY:"170%",
+        backgroundSize: "90% 80%",
         
       }}
     >
-      <div className="container max-w-[886px] mx-auto">
+      <div className="absolute top-[-2px] left-0 right-0 w-full">
+        <img src={DevTop} alt="dev top gradient" className="w-full" />
+      </div>
+      <div className="container max-w-[886px] mx-auto relative z-[2]">
         <div className="text-center">
           <h2 className="text-[120px] text-white font-bold leading-none tracking-[-4.8px] mb-5 max-xl:text-[92px] max-lg:text-7xl max-lg:tracking-[-2px] max-md:text-4xl max-md:tracking-[-1.44px] max-md:mb-[10px]">
             Frequently Asked Questions
