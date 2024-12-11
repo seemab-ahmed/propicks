@@ -1,5 +1,5 @@
 import React from "react";
-import BuildingBtm from "../assets/images/build-img-new.png";
+import BuildingBtm from "../assets/images/build-img-latest.gif";
 import PropPickLogo from "../assets/images/pp-logo-large.png"
 import DividerBtm from "../assets/images/service-btm.png"
 // import BuildingIcon from "../assets/images/building-icon.svg";

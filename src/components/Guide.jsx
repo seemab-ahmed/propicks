@@ -7,20 +7,22 @@ import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 // import FaceIdImg from "../assets/images/face-id.png";
-import StatsImg from "../assets/images/stats-image.png";
-import PricingImg from "../assets/images/pricing-img.png";
+import StatsImg from "../assets/images/stats.gif";
+import PricingImg from "../assets/images/pricing.gif";
 import DashboardImg from "../assets/images/dashboard-img.png";
-import IdentificationImg from "../assets/images/Identity-Verification.gif"
+import IdentificationImg from "../assets/images/Identity-Verification.gif";
 import { Link } from "react-router-dom";
 
 const Guide = () => {
   return (
-    <section className="py-20 bg-contain relative"
-    style={{
-      background: `url(${GuideBg}) no-repeat center center`,
-    }}>
+    <section
+      className="py-20 bg-contain relative"
+      style={{
+        background: `url(${GuideBg}) no-repeat center center`,
+      }}
+    >
       <div className="absolute top-[-1px] left-0 right-0 w-full">
-        <img src={GuideTop} alt="Gradient Img" className="w-full"/>
+        <img src={GuideTop} alt="Gradient Img" className="w-full" />
       </div>
       <div className="container relative z-[2]">
         <div className="text-center mb-10 max-md:mb-8">
@@ -103,8 +105,7 @@ const Guide = () => {
             <div className="grid grid-cols-12 gap-5 items-center max-lg:gap-0 max-md:grid-cols-1">
               <div className="text-center col-span-5 max-lg:pl-7 max-lg:col-span-6 max-md:px-7 max-md:pt-8 max-md:mb-[-20px]">
                 <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-w-[360px] mx-auto max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px] max-md:max-w-[180px]">
-                  Design & Build 
-                  Your Brand
+                  Design & Build Your Brand
                 </h3>
                 <p className="text-lg font-normal leading-8 text-[#C5CEE6] max-w-[560px] w-full mx-auto max-lg:text-base max-md:text-sm ">
                   We bring your vision to life with custom Figma designs and a
@@ -119,15 +120,15 @@ const Guide = () => {
           </div>
         </div>
         <div className="flex items-center justify-center mt-16 max-md:mt-8">
-        <Link
-                  to="/"
-                  className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
-                  }}
-                >
-                  <span className="relative z-[2]">Development</span>
+          <Link
+            to="/"
+            className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
+            }}
+          >
+            <span className="relative z-[2]">Development</span>
           </Link>
         </div>
       </div>

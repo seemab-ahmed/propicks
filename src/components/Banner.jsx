@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import { gsap } from "gsap";
 // import BannerVideo from "../assets/video/showreel-home.mp4"
-// import HeroBg from "../assets/images/hero-bg.png";
-import HeroInnerImg from "../assets/images/banner-bg.png";
+import HeroBg from "../assets/images/hero-img-new.png";
+// import HeroInnerImg from "../assets/images/banner-bg.png";
 import LinesRight from "../assets/images/line-right.svg";
 import LinesLeft from "../assets/images/line-left.svg";
 import SalesBg from "../assets/images/sales-bg.png";
@@ -16,103 +16,110 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
-  const macbookRef = useRef(null);
+  // const macbookRef = useRef(null);
   const bannerRef = useRef(null);
   const headingRef = useRef(null);
   const cardRef = useRef(null);
   const cardTwoRef = useRef(null);
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      // Animation for the heading
-      gsap.fromTo(
-        headingRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -100,
-          opacity: 0,
-          duration: 1.2,
-          // ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "5% top",
-            end: "20% top",
-            scrub: true,
-          },
-        }
-      );
-      // Animation for the Cards
-      gsap.fromTo(
-        cardRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -200,
-          opacity: 0,
-          duration: 1.2,
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "10% top",
-            end: "20% top",
-            scrub: true,
-          },
-        }
-      );
-      gsap.fromTo(
-        cardTwoRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -200,
-          opacity: 0,
-          duration: 1.5,
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "10% top",
-            end: "20% top",
-            scrub: 1,
-          },
-        }
-      );
-      gsap.fromTo(
-        macbookRef.current,
-        { width: "70%", height: "70vh", borderRadius: "16px" },
-        {
-          width: "100%",
-          height: "100vh",
-          duration: 2,
-          borderRadius: 0,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "30% top",
-            end: "70% top",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
+  // useEffect(() => {
+  //   requestAnimationFrame(() => {
+  //     // Animation for the heading
+  //     gsap.fromTo(
+  //       headingRef.current,
+  //       { y: 0, opacity: 1 },
+  //       {
+  //         y: -100,
+  //         opacity: 0,
+  //         duration: 1.2,
+  //         // ease: "power3.out",
+  //         scrollTrigger: {
+  //           trigger: bannerRef.current,
+  //           start: "5% top",
+  //           end: "20% top",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
+  //     // Animation for the Cards
+  //     gsap.fromTo(
+  //       cardRef.current,
+  //       { y: 0, opacity: 1 },
+  //       {
+  //         y: -200,
+  //         opacity: 0,
+  //         duration: 1.2,
+  //         scrollTrigger: {
+  //           trigger: bannerRef.current,
+  //           start: "10% top",
+  //           end: "20% top",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
+  //     gsap.fromTo(
+  //       cardTwoRef.current,
+  //       { y: 0, opacity: 1 },
+  //       {
+  //         y: -200,
+  //         opacity: 0,
+  //         duration: 1.5,
+  //         scrollTrigger: {
+  //           trigger: bannerRef.current,
+  //           start: "10% top",
+  //           end: "20% top",
+  //           scrub: 1,
+  //         },
+  //       }
+  //     );
+  //     gsap.fromTo(
+  //       macbookRef.current,
+  //       { width: "70%", height: "70vh", borderRadius: "16px" },
+  //       {
+  //         width: "100%",
+  //         height: "100vh",
+  //         duration: 2,
+  //         borderRadius: 0,
+  //         ease: "power3.out",
+  //         scrollTrigger: {
+  //           trigger: bannerRef.current,
+  //           start: "30% top",
+  //           end: "70% top",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
+  //   });
+  // }, []);
 
   return (
     <section
-      className="pt-[144px] bg-center bg-cover bg-no-repeat relative"
+      className="pt-[144px] pb-[500px] md:pb-[635px] bg-center bg-cover bg-no-repeat relative"
       ref={bannerRef}
       style={{
-        backgroundImage: `radial-gradient(circle at -30% 20%, #132436 10%, transparent 100%)`,
+        // backgroundImage: `radial-gradient(circle at -30% 20%, #132436 10%, transparent 100%)`,
+        backgroundImage: `url(${HeroBg})`,
       }}
     >
       <div className="container relative z-[1]">
         <div className="text-center mb-10" ref={headingRef}>
           <h1 className="text-[90px] text-white font-bold leading-none mb-5 max-xl:text-7xl max-lg:text-[3.5rem] max-md:text-4xl max-md:mb-2 ">
             Powering every winning
-            <br /> <span className="text-white"><Typewriter
-              options={{
-                strings: ["sports", "forex"],
-                autoStart: true,
-                loop: true,
-                delay: 75,
-                deleteSpeed: 50,
-              }}
-            /></span>{" "}<span className="main-heading-span bg-heading-gradient">prop firm</span>
+            <br />{" "}
+            <span className="text-white">
+              <Typewriter
+                options={{
+                  strings: ["sports", "forex"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </span>{" "}
+            <span className="main-heading-span bg-heading-gradient">
+              prop firm
+            </span>
             .
           </h1>
           <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl max-lg:leading-relaxed max-md:text-base max-md:mb-[160px]">
@@ -122,20 +129,20 @@ const Banner = () => {
         </div>
       </div>
       {/* video banner  */}
-      <div
+      {/* <div
         ref={macbookRef}
         className="macbook p-5 bg-black border border-[rgba(255,255,255,0.4)] mx-auto"
       >
-        {/* <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+        <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
           <source src={BannerVideo} type="video/mp4" />
           <source src={BannerVideo} type="video/ogg" />
-        </video> */}
+        </video>
         <img
           src={HeroInnerImg}
           alt="thumbnail"
           className="w-full h-full object-cover"
         />
-      </div>
+      </div> */}
       {/* Sales Card */}
       <div
         className="absolute w-[309px] h-[303px] p-10 text-center bg-contain rounded-[40px] bottom-[103px] left-[5%] max-lg:w-auto max-lg:h-auto max-lg:py-5 max-md:mx-auto max-md:left-0 
