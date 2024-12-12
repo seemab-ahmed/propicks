@@ -8,7 +8,8 @@ import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 // import FaceIdImg from "../assets/images/face-id.png";
 import StatsImg from "../assets/images/stats.gif";
-import PricingImg from "../assets/images/pricing.gif";
+// import PricingImg from "../assets/images/pricing.gif";
+import PricingVideo from "../assets/video/pricingCard.webm";
 import DashboardImg from "../assets/images/dashboard-img.png";
 import IdentificationImg from "../assets/images/Identity-Verification.gif";
 import { Link } from "react-router-dom";
@@ -81,11 +82,14 @@ const Guide = () => {
             style={{ backgroundImage: `url(${Card3Img})` }}
           >
             <figure className="max-md:order-2">
-              <img
+              {/* <img
                 src={PricingImg}
                 alt="pricing-img"
                 className="max-h-[390px] w-full"
-              />
+              /> */}
+              <video width="100%" height="390" className="w-full h-full object-cover" autoPlay muted loop>
+                <source src={PricingVideo} type="video/webm" />
+              </video>
             </figure>
             <div className="p-10 max-lg:p-0 max-lg:mt-6 max-md:order-1 max-md:text-center max-md:px-7 max-md:pt-8 max-md:mt-0 max-md:mb-4">
               <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
