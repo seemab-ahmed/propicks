@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 // import BannerVideo from "../assets/video/showreel-home.mp4"
 import HeroBg from "../assets/images/hero-img-new.png";

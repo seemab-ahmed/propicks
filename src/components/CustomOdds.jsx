@@ -1,7 +1,7 @@
 import React from "react";
 import LinesRight from "../assets/images/line-right.svg";
 import LinesLeft from "../assets/images/line-left.svg";
-import OddsDash from "../assets/images/custom-odd.gif";
+import OddsDash from "../assets/video/odds-vid.webm";
 import ServicesBtm from "../assets/images/service-btm.png";
 const CustomOdds = () => {
   return (
@@ -17,7 +17,10 @@ const CustomOdds = () => {
         </p>
       </div>
       <div>
-        <img src={OddsDash} alt="dashboard" />
+      <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+            <source src={OddsDash} type="video/mp4" />
+            <source src={OddsDash} type="video/ogg" />
+      </video>
       </div>
       {/* Banner Lines */}
       <div className="absolute top-32 right-0 mx-w-[480px] max-xl:max-w-[380px] max-lg:max-w-[300px] max-md:max-w-[200px]">

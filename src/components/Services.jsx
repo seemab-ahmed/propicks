@@ -5,6 +5,12 @@ import ServiceTop from "../assets/images/dev-top.png";
 // import ServiceImg1 from "../assets/images/service-1.svg";
 import ServiceBg1 from "../assets/images/service-card-bg-1.svg";
 // import ServiceImg2 from "../assets/images/service-2.svg";
+import ServicesVideo1 from "../assets/video/services-vid1.webm"
+import ServicesVideo2 from "../assets/video/services-vid2.webm"
+import ServicesVideo3 from "../assets/video/services-vid3.webm"
+import ServicesVideo4 from "../assets/video/services-vid4.webm"
+// import ServicesVideo5 from "../assets/video/services-vid5.webm"
+import ServicesVideo6 from "../assets/video/services-vid6.webm"
 import ServiceBg2 from "../assets/images/service-card-bg-2.png";
 import ServiceImg3 from "../assets/images/calender-img.gif";
 import ServiceBg3 from "../assets/images/service-card-bg-3.svg";
@@ -15,7 +21,7 @@ import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
 import ServiceImg6 from "../assets/images/services-6_new.gif";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
 import ServiceImg1 from "../assets/images/brand-stratergy.gif"
-import ServiceImg2 from "../assets/images/creative-design.gif"
+// import ServiceImg2 from "../assets/images/creative-design.gif"
 // import ScrollTrigger from "gsap/ScrollTrigger";
 
 // gsap.registerPlugin(ScrollTrigger);
@@ -111,8 +117,10 @@ const Services = () => {
                   title={service.title}
                   description={service.description}
                   image={service.image}
+                  video={service.video}
                   backgroundStyle={service.backgroundStyle}
                   imgClass={service.imgClass}
+                  isVideo={service.isVideo}
                 />
               ))}
           </div>
@@ -126,9 +134,10 @@ const Services = () => {
                   title={service.title}
                   description={service.description}
                   image={service.image}
+                  video={service.video}
                   backgroundStyle={service.backgroundStyle}
                   imgClass={service.imgClass}
-                  imgRight={service.imgRight}
+                  isVideo={service.isVideo}
                 />
               ))}
           </div>
@@ -146,6 +155,8 @@ const servicesData = [
     description:
       "Personalized, seamless, and exceptional service tailored to your every need.",
     image: ServiceImg1,
+    video: ServicesVideo1,
+    isVideo: true,
     backgroundStyle: {
       background: `url(${ServiceBg1}) no-repeat center/cover`,
     },
@@ -154,7 +165,9 @@ const servicesData = [
     title: "Creative Design",
     description:
       "Making sure your firm is creating distinctive and impactful designs that bring your vision to life and make a lasting impression.",
-    image: ServiceImg2,
+    image: ServicesVideo2,
+    video: ServicesVideo2,
+    isVideo: true,
     backgroundStyle: {
       background: `url(${ServiceBg2}) no-repeat center/cover`,
     },
@@ -164,6 +177,8 @@ const servicesData = [
     description:
       "From vision to launch, we manage every detail to build, scale, and ensure your prop firm's success.",
     image: ServiceImg3,
+    video: ServicesVideo3,
+    isVideo: true,
     backgroundStyle: {
       background: `url(${ServiceBg3}) no-repeat center/cover`,
     },
@@ -173,6 +188,9 @@ const servicesData = [
     description:
       "We design custom-branded websites that bring your vision to life and surpass expectations, creating a lasting first impression for your customers.",
     image: ServiceImg4,
+    video: ServicesVideo4,
+    isVideo: true,
+    
     backgroundStyle: {
       background: `url(${ServiceBg5}) no-repeat center/cover`,
     },
@@ -184,6 +202,8 @@ const servicesData = [
     description:
       "We recognize the importance of engaging with mobile devices, which is why we also focus on ensuring every project is both mobile and tablet friendly.",
     image: ServiceImg5,
+    // video: ServicesVideo5,
+    // isVideo: true,
     backgroundStyle: {
       background: `url(${ServiceBg5}) no-repeat center/cover`,
     },
@@ -193,6 +213,8 @@ const servicesData = [
     description:
       "We create dashboards and websites with passion and precision, using top technologies like React and Node.js for outstanding results.",
     image: ServiceImg6,
+    video: ServicesVideo6,
+    isVideo: true,
     backgroundStyle: {
       background: `url(${ServiceBg6}) no-repeat top/contain`,
     },
@@ -206,6 +228,8 @@ const ServiceCard = ({
   backgroundStyle,
   imgClass,
   imgRight,
+  video,
+  isVideo = false,
 }) => {
   const gradientRef = useRef(null);
 
@@ -265,11 +289,19 @@ const ServiceCard = ({
       <div
         className={`flex justify-center mx-auto w-full relative z-0 ${imgClass}`}
       >
-        <img
-          src={image}
-          alt={title}
-          className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
-        />
+       {
+         !isVideo && <img
+            src={image}
+            alt={title}
+            className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
+          />
+        }
+        {isVideo &&
+          <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+            <source src={video} type="video/mp4" />
+            <source src={video} type="video/ogg" />
+          </video>
+        }
       </div>
       <div
         ref={gradientRef}
