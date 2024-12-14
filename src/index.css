@@ -170,6 +170,9 @@ h2 span {
   .container {
     max-width: 1260px;
   }
+  .form-container {
+    max-width: 1400px;
+  }
 }
 
 /* global css end */

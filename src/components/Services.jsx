@@ -21,64 +21,73 @@ import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
 import ServiceImg6 from "../assets/images/services-6_new.gif";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
 import ServiceImg1 from "../assets/images/brand-stratergy.gif"
-// import ServiceImg2 from "../assets/images/creative-design.gif"
-// import ScrollTrigger from "gsap/ScrollTrigger";
+import ServiceImg2 from "../assets/images/creative-design.gif"
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-  useEffect(() => {
-    // Animate left column service cards individually
-    document.querySelectorAll(".col-left .service-card").forEach((card) => {
-      gsap.fromTo(
-        card,
-        {
-          opacity: 0,
-          rotate: -30,
-          x: "-20%",
-        },
-        {
-          opacity: 1,
-          rotate: 0,
-          x: "0%",
-          // ease: "power2.out", // Smooth easing
-          duration: 1.5,      // Controls animation duration for smoothness
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%", // Start when the top of the card is near the viewport
-            end: "bottom 40%", // End when the bottom of the card enters
-            scrub: true,
-            // markers: true,       // Smooth animation synced with scroll
-          },
-        }
-      );
-    });
 
-    // Animate right column service cards individually
-    document.querySelectorAll(".col-right .service-card").forEach((card) => {
-      gsap.fromTo(
-        card,
-        {
-          opacity: 0,
-          rotate: 30,
-          x: "20%",
-        },
-        {
-          opacity: 1,
-          rotate: 0,
-          x: "0%",
-          // ease: "power2.out", // Smooth easing
-          duration: 1.5,      // Controls animation duration for smoothness
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",  // Start when the top of the card is near the viewport
-            end: "bottom 30%", // End when the bottom of the card enters
-            scrub: true,       // Smooth animation synced with scroll
+  useEffect(() => {
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+  
+    if (isDesktop) {
+      document.querySelectorAll(".col-left .service-card").forEach((card) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            rotate: -30,
+            x: "-20%",
           },
-        }
-      );
-    });
+          {
+            opacity: 1,
+            rotate: 0,
+            x: "0%",
+            duration: 1.5,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              end: "top 40%",
+              scrub: true,
+            },
+          }
+        );
+      });
+  
+      document.querySelectorAll(".col-right .service-card").forEach((card) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            rotate: 30,
+            x: "20%",
+          },
+          {
+            opacity: 1,
+            rotate: 0,
+            x: "0%",
+            duration: 1.5,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              end: "top 40%",
+              scrub: true,
+            },
+          }
+        );
+      });
+  
+      ScrollTrigger.refresh();
+    }
+  
+    return () => {
+      if (isDesktop) {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      }
+    };
   }, []);
+
 
 
 
@@ -190,7 +199,7 @@ const servicesData = [
     image: ServiceImg4,
     video: ServicesVideo4,
     isVideo: true,
-    
+
     backgroundStyle: {
       background: `url(${ServiceBg5}) no-repeat center/cover`,
     },
@@ -289,8 +298,8 @@ const ServiceCard = ({
       <div
         className={`flex justify-center mx-auto w-full relative z-0 ${imgClass}`}
       >
-       {
-         !isVideo && <img
+        {
+          !isVideo && <img
             src={image}
             alt={title}
             className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}

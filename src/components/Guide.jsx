@@ -7,8 +7,8 @@ import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 // import FaceIdImg from "../assets/images/face-id.png";
-// import StatsImg from "../assets/images/StatsNew.gif";
-import StatsVideo from "../assets/video/guide-vid2.webm";
+import StatsImg from "../assets/images/StatsNew.gif";
+import StatsVid from "../assets/video/guide-vid2.webm"
 // import PricingImg from "../assets/images/pricing-img.png";
 import PricingVid from "../assets/video/guide-vid3.webm";
 import DashboardImg from "../assets/images/dashboard-img.png";
@@ -64,13 +64,13 @@ const Guide = () => {
             className="col-span-6 grid grid-cols-1 bg-cover py-16 px-10 rounded-[36px] max-lg:py-10 max-lg:px-0 max-md:col-span-12 max-md:py-7 max-md:px-8 max-md:overflow-hidden"
             style={{ backgroundImage: `url(${Card2Img})` }}
           >
-            <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px]">
-              {/* <img src={StatsImg} alt="statsImg" /> */}
-              <video width="100%" height="100%" className="w-full object-cover" autoPlay muted loop>
-            <source src={StatsVideo} type="video/mp4" />
-            <source src={StatsVideo} type="video/ogg" />
+            {/* <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px]">
+              <img src={StatsImg} alt="statsImg" />
+            </figure> */}
+            <video width="100%" height="100%" className="w-full object-cover mb-[110px] max-lg:mb-6" autoPlay muted loop>
+              <source src={StatsVid} type="video/mp4" />
+              <source src={StatsVid} type="video/ogg" />
             </video>
-            </figure>
             <div className="max-lg:px-7 max-md:order-1 max-md:text-center max-md:p-0">
               <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
                 Launch & Scale Your Firm
@@ -94,9 +94,9 @@ const Guide = () => {
               />
             </figure> */}
             <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
-            <source src={PricingVid} type="video/mp4" />
-            <source src={PricingVid} type="video/ogg" />
-      </video>
+              <source src={PricingVid} type="video/mp4" />
+              <source src={PricingVid} type="video/ogg" />
+            </video>
             <div className="p-10 max-lg:p-0 max-lg:mt-6 max-md:order-1 max-md:text-center max-md:px-7 max-md:pt-8 max-md:mt-0 max-md:mb-4">
               <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
                 Develop Custom Plans with Risk Management

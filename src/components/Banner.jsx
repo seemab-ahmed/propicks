@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 // import BannerVideo from "../assets/video/showreel-home.mp4"
 import HeroBg from "../assets/images/hero-img-new.png";
@@ -16,81 +16,81 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
-  // const macbookRef = useRef(null);
+  const macbookRef = useRef(null);
   const bannerRef = useRef(null);
   const headingRef = useRef(null);
   const cardRef = useRef(null);
   const cardTwoRef = useRef(null);
 
-  // useEffect(() => {
-  //   requestAnimationFrame(() => {
-  //     // Animation for the heading
-  //     gsap.fromTo(
-  //       headingRef.current,
-  //       { y: 0, opacity: 1 },
-  //       {
-  //         y: -100,
-  //         opacity: 0,
-  //         duration: 1.2,
-  //         // ease: "power3.out",
-  //         scrollTrigger: {
-  //           trigger: bannerRef.current,
-  //           start: "5% top",
-  //           end: "20% top",
-  //           scrub: true,
-  //         },
-  //       }
-  //     );
-  //     // Animation for the Cards
-  //     gsap.fromTo(
-  //       cardRef.current,
-  //       { y: 0, opacity: 1 },
-  //       {
-  //         y: -200,
-  //         opacity: 0,
-  //         duration: 1.2,
-  //         scrollTrigger: {
-  //           trigger: bannerRef.current,
-  //           start: "10% top",
-  //           end: "20% top",
-  //           scrub: true,
-  //         },
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       cardTwoRef.current,
-  //       { y: 0, opacity: 1 },
-  //       {
-  //         y: -200,
-  //         opacity: 0,
-  //         duration: 1.5,
-  //         scrollTrigger: {
-  //           trigger: bannerRef.current,
-  //           start: "10% top",
-  //           end: "20% top",
-  //           scrub: 1,
-  //         },
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       macbookRef.current,
-  //       { width: "70%", height: "70vh", borderRadius: "16px" },
-  //       {
-  //         width: "100%",
-  //         height: "100vh",
-  //         duration: 2,
-  //         borderRadius: 0,
-  //         ease: "power3.out",
-  //         scrollTrigger: {
-  //           trigger: bannerRef.current,
-  //           start: "30% top",
-  //           end: "70% top",
-  //           scrub: true,
-  //         },
-  //       }
-  //     );
-  //   });
-  // }, []);
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      // Animation for the heading
+      gsap.fromTo(
+        headingRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: -100,
+          opacity: 0,
+          duration: 1.2,
+          // ease: "power3.out",
+          scrollTrigger: {
+            trigger: bannerRef.current,
+            start: "5% top",
+            end: "20% top",
+            scrub: true,
+          },
+        }
+      );
+      // Animation for the Cards
+      gsap.fromTo(
+        cardRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: -200,
+          opacity: 0,
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: bannerRef.current,
+            start: "10% top",
+            end: "20% top",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        cardTwoRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: -200,
+          opacity: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: bannerRef.current,
+            start: "10% top",
+            end: "20% top",
+            scrub: 1,
+          },
+        }
+      );
+      gsap.fromTo(
+        macbookRef.current,
+        { width: "70%", height: "70vh", borderRadius: "16px" },
+        {
+          width: "100%",
+          height: "100vh",
+          duration: 2,
+          borderRadius: 0,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: bannerRef.current,
+            start: "30% top",
+            end: "70% top",
+            scrub: true,
+          },
+        }
+      );
+    });
+  }, []);
 
   return (
     <section
