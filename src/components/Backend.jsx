@@ -1,0 +1,46 @@
+import React from 'react'
+import IconTop from "../assets/images/backend-icon-top.svg"
+import BackendBg from "../assets/images/backend-bg.png"
+import OptimizeImg from "../assets/images/optimize-card-btm.png"
+import BannerBtm from "../assets/images/dev-banner-btm.png";
+import DevelopBtm from "../assets/images/develop-btm.png"
+
+
+const Backend = () => {
+    return (
+        <section className='relative'>
+            <div className="absolute top-0 left-0 right-0 w-full rotate-180">
+                <img src={DevelopBtm} alt="dev top gradient" className="w-full" />
+            </div>
+            <div className='container'>
+                <div className='flex items-center justify-center flex-col mb-[60px] text-center'>
+                    <img src={IconTop} alt='icon' />
+                    <h2 className='text-[36px] md:text-[80px] lg:text-[120px] xl:text-[180px] font-bold leading-none text-white -tracking-[1.44px] xl:-tracking-[7.2px] -mt-20 xl:-mt-28 mb-5'><span className='bg-blue-gradient'>Backend</span></h2>
+                    <p className='text-base md:text-lg xl:text-2xl text-[#C5CEE6] font-normal leading-7 md:leading-8 xl:leading-10 max-w-[896px] w-full mx-auto'>Our coding architecture is designed for maximum scalability, speed, and reliability. Our systems can handle complex data processing and high traffic volumes effortlessly, ensuring your prop firm operates smoothly under any circumstances.</p>
+                </div>
+            </div>
+            <div className='relative bg-cover bg-no-repeat pb-[205px] md:pb-[600px] xl:pb-[894px] bg-right'>
+                {/* style={{ backgroundImage: `url(${BackendBg})` }} */}
+                <div className='container'>
+                    <div className='max-w-[214px] md:max-w-[690px] mx-auto md:mx-0 w-full rounded-[30px] bg-[#030818]'>
+                        <div className='px-5 md:px-10 xl:px-20 py-5 md:py-10 xl:pt-[90px] xl:pb-[51px] text-center'>
+                            <h3 className='text-sm md:text-[30px] xl:text-[57px] font-bold leading-none -tracking-[0.36px] xl:-tracking-[1.14px] text-white mb-1.5 md:mb-5'>Efficient Coding</h3>
+                            <p className='text-[10px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
+                        </div>
+                        <figure>
+                            <img src={OptimizeImg} alt='optimize' />
+                        </figure>
+                    </div>
+                </div>
+                <div className='absolute right-0 bottom-0 pl-[15%] w-full -z-[1]'>
+                    <img src={BackendBg} alt='optimize' className='w-full' />
+                </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 w-full">
+                <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+            </div>
+        </section>
+    )
+}
+
+export default Backend

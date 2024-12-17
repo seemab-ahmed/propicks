@@ -58,7 +58,7 @@ const Footer = () => {
                   className="flex gap-[10px] text-[#81B4FF] bg-[#061838] rounded-[100px] py-[10px] px-5 leading-8"
                 >
                   <img src={MailIcon} alt="Mail Icon" />
-                  <span>Tech@Proppicks.com</span>
+                  <span>sales@Proppicks.com</span>
                 </Link>
                 <Link
                   to="/"

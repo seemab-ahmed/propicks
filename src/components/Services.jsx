@@ -21,16 +21,15 @@ import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
 import ServiceImg6 from "../assets/images/services-6_new.gif";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
 import ServiceImg1 from "../assets/images/brand-stratergy.gif"
-import ServiceImg2 from "../assets/images/creative-design.gif"
+// import ServiceImg2 from "../assets/images/creative-design.gif"
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-
   useEffect(() => {
     const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-  
+
     if (isDesktop) {
       document.querySelectorAll(".col-left .service-card").forEach((card) => {
         gsap.fromTo(
@@ -54,7 +53,7 @@ const Services = () => {
           }
         );
       });
-  
+
       document.querySelectorAll(".col-right .service-card").forEach((card) => {
         gsap.fromTo(
           card,
@@ -77,16 +76,17 @@ const Services = () => {
           }
         );
       });
-  
+
       ScrollTrigger.refresh();
     }
-  
+
     return () => {
       if (isDesktop) {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       }
     };
   }, []);
+
 
 
 

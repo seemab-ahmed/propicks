@@ -1,22 +1,22 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Guide from "../components/Guide";
-import Faqs from "../components/Faqs";
-import Innovative from "../components/Innovate";
 import Building from "../components/Buiding";
-import Services from "../components/Services";
-import Development from "../components/Development";
 import CustomOdds from "../components/CustomOdds";
+import Faqs from "../components/Faqs";
+import Guide from "../components/Guide";
+import Innovative from "../components/Innovate";
+import Services from "../components/Services";
+import DevelopmentPlatform from "../components/DevelopmentPlatform";
 
 const Home = () => {
   return (
     <main>
       <Banner />
       <Guide />
-      <Services/>
-      <CustomOdds  />
-      <Development />
-      <Building/>
+      <Services />
+      <CustomOdds />
+      <DevelopmentPlatform />
+      <Building />
       <Faqs />
       <Innovative />
     </main>
