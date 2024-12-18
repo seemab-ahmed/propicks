@@ -16,7 +16,7 @@ const Innovative = () => {
             }}
           >
             <div className="pb-12 max-lg:px-10 max-md:px-5 max-md:text-center max-md:pb-0">
-              <h2 className="text-[120px] font-bold leading-none text-white mb-6 tracking-[-4.8px] max-xl:text-[92px] max-lg:text-6xl max-lg:tracking-normal max-md:text-4xl max-md:tracking-[-1.2px] max-md:mb-[10px]">
+              <h2 className="text-[100px] font-bold leading-none text-white mb-6 tracking-[-4.8px] max-2xl:text-[86px] max-xl:text-[76px] max-lg:text-6xl max-lg:tracking-normal max-md:text-4xl max-md:tracking-[-1.2px] max-md:mb-[10px]">
                 Innovate with us
               </h2>
               <p className="text-2xl font-normal leading-[2.25] text-[#C5CEE6] max-xl:text-lg max-xl:leading-[1.75] max-md:text-base">

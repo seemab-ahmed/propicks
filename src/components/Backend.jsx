@@ -1,7 +1,9 @@
 import React from 'react'
 import IconTop from "../assets/images/backend-icon-top.svg"
-import BackendBg from "../assets/images/backend-bg.png"
-import OptimizeImg from "../assets/images/optimize-card-btm.png"
+// import BackendBg from "../assets/images/backend-bg.png"
+import BackendBgVideo from "../assets/video/backend-video.webm"
+// import OptimizeImg from "../assets/images/optimize-card-btm.png"
+import CardBgVideo from "../assets/video/coding-card-bg.webm"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import DevelopBtm from "../assets/images/develop-btm.png"
 
@@ -22,18 +24,28 @@ const Backend = () => {
             <div className='relative bg-cover bg-no-repeat pb-[205px] md:pb-[600px] xl:pb-[894px] bg-right'>
                 {/* style={{ backgroundImage: `url(${BackendBg})` }} */}
                 <div className='container'>
-                    <div className='max-w-[214px] md:max-w-[690px] mx-auto md:mx-0 w-full rounded-[30px] bg-[#030818]'>
-                        <div className='px-5 md:px-10 xl:px-20 py-5 md:py-10 xl:pt-[90px] xl:pb-[51px] text-center'>
+                    <div className='max-w-[214px] min-h-[870px] relative md:max-w-[690px] mx-auto md:mx-0 w-full rounded-[30px] 
+                    border-t-2 border-solid border-[#FFFFFF1A] bg-[#030818] overflow-hidden'>
+                        <div className='px-5 md:px-10 xl:px-20 py-5 md:py-10 xl:pt-[90px] xl:pb-[51px] text-center relative z-[2]'>
                             <h3 className='text-sm md:text-[30px] xl:text-[57px] font-bold leading-none -tracking-[0.36px] xl:-tracking-[1.14px] text-white mb-1.5 md:mb-5'>Efficient Coding</h3>
                             <p className='text-[10px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
                         </div>
-                        <figure>
+                        {/* <figure>
                             <img src={OptimizeImg} alt='optimize' />
-                        </figure>
+                        </figure> */}
+                         <video width="100%" height="100%" className="w-full h-full object-cover absolute inset-0" autoPlay muted loop>
+                            <source src={CardBgVideo} type="video/mp4" />
+                            <source src={CardBgVideo} type="video/ogg" />
+                        </video>
+
                     </div>
                 </div>
-                <div className='absolute right-0 bottom-0 pl-[15%] w-full -z-[1]'>
-                    <img src={BackendBg} alt='optimize' className='w-full' />
+                <div className='absolute right-0 bottom-0 pl-0 w-full -z-[1]'>
+                    {/* <img src={BackendBg} alt='optimize' className='w-full' /> */}
+                     <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+                        <source src={BackendBgVideo} type="video/mp4" />
+                        <source src={BackendBgVideo} type="video/ogg" />
+                      </video>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">

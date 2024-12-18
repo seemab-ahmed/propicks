@@ -3,7 +3,7 @@ import LinesRight from "../assets/images/line-right.svg";
 import LinesLeft from "../assets/images/line-left.svg";
 import OddsDash from "../assets/images/custom-odd-main.gif";
 // import OddsDash from "../assets/video/odds-vid.webm";
-import ServicesBtm from "../assets/images/service-btm.png";
+// import ServicesBtm from "../assets/images/service-btm.png";
 const CustomOdds = () => {
   return (
     <section className="pt-[142px] text-center relative z-[2] overflow-hidden max-lg:pt-28 max-md:pt-12">

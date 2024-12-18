@@ -9,6 +9,8 @@ import DfMblBg from "../assets/images/df-mbl-bg.png";
 import { Link } from "react-router-dom";
 import VideoIcon from "../assets/images/video-icon.svg";
 
+import Typewriter from "typewriter-effect";
+
 const formData = [
   {
     id: 1,
@@ -75,8 +77,20 @@ const DreamFirm = () => {
         <div className="flex items-center flex-col lg:flex-row justify-between gap-10 relative z-[2]">
           <div className="max-w-[652px] w-full relative z-[1] text-center lg:text-left">
             <h2 className="text-4xl lg:text-[48px] xl:text-[60px] 2xl:text-[80px] font-bold leading-tight -tracking-[1.44px] 2xl:-tracking-[3.2px] text-white mb-5">
-              Let’s get to building your{" "}
-              <span className="bg-heading-gradient-two">dream firm.</span>
+              Let’s get to building your
+              {/* <span className="bg-heading-gradient-two">dream firm.</span> */}
+              {" "}
+            <span className="bg-heading-gradient-two">
+              <Typewriter
+                options={{
+                  strings: ["dream.", "firm."],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </span>{" "}
             </h2>
             <p className="text-base lg:text-2xl leading-snug lg:leading-10 font-normal text-[#C5CEE6] mb-8">
               Let’s get to building your dream firm with precision and passion.

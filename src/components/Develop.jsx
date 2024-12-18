@@ -1,7 +1,8 @@
 import React from 'react'
 import IconTop from "../assets/images/dev-icon-top.svg"
 import DevelopBg from "../assets/images/develop-shadow.png"
-import CardLeftBg from "../assets/images/develop-card-left.png"
+// import CardLeftBg from "../assets/images/develop-card-left.png"
+import CardLeftVideo from "../assets/video/bg-icon-removed.webm"
 import CardRightBg from "../assets/images/develop-card-right.png"
 import DevelopShadow from "../assets/images/dev-card-bg.png"
 import DevelopBtm from "../assets/images/develop-btm.png"
@@ -20,7 +21,12 @@ const Develop = () => {
                     <p className='text-base md:text-lg xl:text-2xl text-[#C5CEE6] font-normal leading-7 md:leading-8 xl:leading-10 max-w-[870px] w-full mx-auto'>When it comes to mobile development, PropPicks combines innovation with precision to keep your business at the forefront of technology.</p>
                 </div>
                 <div className='max-w-[1260px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-8 pb-[140px] relative'>
-                    <div className='min-h-[529px] xl:min-h-[789px] h-full bg-cover bg-no-repeat rounded-[20px] xl:rounded-[40px] border border-[rgba(255,255,255,0.00)] overflow-hidden' style={{ backgroundImage: `url(${CardLeftBg})` }}></div>
+                    <div className='min-h-[529px] xl:min-h-[789px] h-full bg-cover bg-no-repeat rounded-[20px] xl:rounded-[40px] border border-[rgba(255,255,255,0.00)] overflow-hidden'>
+                    <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+                       <source src={CardLeftVideo} type="video/mp4" />
+                       <source src={CardLeftVideo} type="video/ogg" />
+                    </video>
+                    </div>
                     <div className='min-h-[529px] xl:min-h-[789px] h-full p-5 xl:p-10 flex flex-col justify-end bg-cover bg-no-repeat border border-[rgba(255,255,255,0.00)] rounded-[20px] xl:rounded-[40px] overflow-hidden' style={{ backgroundImage: `url(${CardRightBg})` }}>
                         <h3 className='text-[32px] md:text-[40px] xl:text-[60px] font-bold leading-none text-white -tracking-[1.2px] mb-5'>Technology <br /> Stack</h3>
                         <p className='text-sm md:text-lg xl:text-xl font-normal leading-7 xl:leading-8 text-[#C5CEE6] mb-8'>We create dashboards and websites with passion and precision, using top technologies like React and Node.js for outstanding results.</p>

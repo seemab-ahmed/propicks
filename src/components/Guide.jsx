@@ -7,7 +7,7 @@ import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 // import FaceIdImg from "../assets/images/face-id.png";
-import StatsImg from "../assets/images/StatsNew.gif";
+// import StatsImg from "../assets/images/StatsNew.gif";
 import StatsVid from "../assets/video/guide-vid2.webm"
 // import PricingImg from "../assets/images/pricing-img.png";
 import PricingVid from "../assets/video/guide-vid3.webm";

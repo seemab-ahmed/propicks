@@ -58,7 +58,7 @@ const Footer = () => {
                   className="flex gap-[10px] text-[#81B4FF] bg-[#061838] rounded-[100px] py-[10px] px-5 leading-8"
                 >
                   <img src={MailIcon} alt="Mail Icon" />
-                  <span>sales@Proppicks.com</span>
+                  <span>Sales@Proppicks.com</span>
                 </Link>
                 <Link
                   to="/"
@@ -156,7 +156,7 @@ const Footer = () => {
         <div className="absolute bottom-0 left-0 right-0 w-full">
           <img src={FooterBtm} alt="dev top gradient" className="w-full" />
         </div>
-        
+
       </div>
 
       <div className="relative">
