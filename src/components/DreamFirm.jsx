@@ -8,8 +8,8 @@ import VectorImg from "../assets/images/form-vector.png";
 import DfMblBg from "../assets/images/df-mbl-bg.png";
 import { Link } from "react-router-dom";
 import VideoIcon from "../assets/images/video-icon.svg";
-
 import Typewriter from "typewriter-effect";
+import Video from "../assets/video/laptop-unreal.webm"
 
 const CustomDropdown = ({ options, name, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,6 @@ const CustomDropdown = ({ options, name, placeholder }) => {
       <div
         className="h-11 border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] px-2.5 flex items-center justify-between outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[rgba(197,206,230,0.5)] w-full cursor-pointer"
         onClick={handleToggle}
-        // style={{ backdropFilter: "blur(50px)" }}
       >
         <span>{selectedOption || placeholder}</span>
         <span className="text-[#C5CEE6]">&#9660;</span>
@@ -114,6 +113,12 @@ const formData = [
 ];
 
 const DreamFirm = ({ isgrowPage = false }) => {
+  const [isPopupOpen, setPopupOpen] = useState(false); // State to manage popup visibility
+
+  const handlePopupToggle = () => {
+    setPopupOpen(!isPopupOpen); // Toggle the popup visibility
+  };
+
   return (
     <section
       className={`pt-[140px] pb-[110px] ${!isgrowPage
@@ -147,13 +152,15 @@ const DreamFirm = ({ isgrowPage = false }) => {
               to bring your vision to life and set your business on the path to
               success. The future of your firm starts now!
             </p>
-            <Link
-              to="/"
-              className="border border-[rgba(255,255,255,0.10)] bg-[#1A2031] rounded-[10px] shadow-grey-inset max-w-[172px] lg:max-w-[255px] w-full h-[52px] flex items-center justify-center gap-3.5 text-base lg:text-lg font-semibold leading-none text-white mx-auto lg:mx-0"
-            >
-              <img src={VideoIcon} alt="video-icon" />
-              Watch Video
-            </Link>
+            <div>
+              <button
+                className="border border-[rgba(255,255,255,0.10)] bg-[#1A2031] rounded-[10px] shadow-grey-inset max-w-[172px] lg:max-w-[255px] w-full h-[52px] flex items-center justify-center gap-3.5 text-base lg:text-lg font-semibold leading-none text-white mx-auto lg:mx-0 cursor-pointer"
+                onClick={handlePopupToggle} // Trigger popup toggle on button click
+              >
+                <img src={VideoIcon} alt="video-icon" />
+                Watch Video
+              </button>
+            </div>
           </div>
           <div className="max-w-[600px] w-full border-[rgba(255,255,255,0.10)] bg-form-gradient rounded-[20px] p-1 lg:p-2.5 relative">
             <div className="rounded-2xl bg-form-inner-gradient border-[rgba(255,255,255,0.00)] p-6">
@@ -243,6 +250,25 @@ const DreamFirm = ({ isgrowPage = false }) => {
           </div>
           <div className="block lg:hidden absolute top-0 left-0 right-0 mx-auto w-auto -z-[1]">
             <img src={DfMblBg} alt="top" className="w-full" />
+          </div>
+        </div>
+      )}
+      {/* Popup */}
+      {isPopupOpen && (
+        <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center py-40 bg-black bg-opacity-50 z-[9999]">
+          <div className="container">
+            <div className="bg-black rounded-lg relative">
+              <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted controls loop>
+                <source src={Video} type="video/mp4" />
+                <source src={Video} type="video/ogg" />
+              </video>
+              <button
+                onClick={handlePopupToggle}
+                className="absolute -top-2 -right-2 text-white bg-[#1c3148] pb-2 rounded-lg h-8 w-8 md:h-10 md:w-10 flex justify-center items-center text-[24px] md:text-[32px] leading-8"
+              >
+                x
+              </button>
+            </div>
           </div>
         </div>
       )}

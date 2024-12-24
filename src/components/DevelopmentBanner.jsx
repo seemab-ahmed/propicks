@@ -6,6 +6,7 @@ import CodeImg from "../assets/images/dev-code.png"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import LinesLeft from "../assets/images/line-left.svg";
 import LinesRight from "../assets/images/line-right.svg";
+import HeroBg from "../assets/images/development-banner-bg-new.png"
 gsap.registerPlugin(ScrollTrigger);
 
 const DevelopmentBanner = () => {
@@ -87,10 +88,10 @@ const DevelopmentBanner = () => {
         <section
             className="pt-[144px] bg-center bg-cover bg-no-repeat relative"
             ref={bannerRef}
-        //   style={{
-        //     // backgroundImage: `radial-gradient(circle at -30% 20%, #132436 10%, transparent 100%)`,
-        //     // backgroundImage: `url(${HeroBg})`,
-        //   }}
+            style={{
+                // backgroundImage: `radial-gradient(circle at -30% 20%, #132436 10%, transparent 100%)`,
+                backgroundImage: `url(${HeroBg})`,
+            }}
         >
             <div className="container relative z-[1]">
                 <div className="text-center mb-10" ref={headingRef}>

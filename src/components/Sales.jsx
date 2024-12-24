@@ -1,13 +1,22 @@
 import React from 'react'
-import SalesImg from "../assets/images/sales-img.png"
+// import SalesImg from "../assets/images/sales-img.png"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import SalesBg from "../assets/images/sales-bg.png";
 import SalesIcon from "../assets/images/sale-icon.png";
 import DevelopBtm from "../assets/images/develop-btm.png"
+import SalesVideo from "../assets/video/laptop-unreal.webm"
 
 const Sales = () => {
     return (
-        <section className='pt-[77px] md:pt-[150px] lg:pt-[250px] xl:pt-[386px] pb-[219px] md:pb-[300px] lg:pb-[500px] xl:pb-[690px] bg-no-repeat bg-cover relative' style={{ backgroundImage: `url(${SalesImg})` }}>
+        <section className='pt-[77px] md:pt-[150px] lg:pt-[250px] xl:pt-[386px] pb-[219px] md:pb-[300px] lg:pb-[500px] xl:pb-[690px] bg-no-repeat bg-cover relative'
+        //  style={{ backgroundImage: `url(${SalesImg})` }}
+        >
+            <div className="absolute top-0 left-0 right-0 w-full h-full -z-[1]">
+            <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted controls loop>
+                <source src={SalesVideo} type="video/mp4" />
+                <source src={SalesVideo} type="video/ogg" />
+              </video>
+            </div>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
                 <img src={BannerBtm} alt="dev top gradient" className="w-full" />
             </div>

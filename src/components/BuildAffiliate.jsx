@@ -85,7 +85,7 @@ const BuildAffiliate = () => {
                     </div>
                     <span>{item.label}</span>
                   </div>
-                  <Link to="/" className="text-base font-medium text-center text-white py-[10px] 
+                  <Link className="text-base font-medium text-center text-white py-[10px] 
                   px-10 bg-[#FFFFFF1A] border border-solid border-[#FFFFFF1A] rounded-[100px] 
                   mr-[10px] opacity-0 transition-all duration-300 group-hover:opacity-100 max-md:px-[15px] 
                   max-md:py-[2px] max-md:text-[10px] max-md:rounded-[15px]">Enter</Link>
