@@ -7,14 +7,14 @@ import NumberOneTech from "../components/NumberOneTech";
 import BuildAffiliate from "../components/BuildAffiliate";
 
 const GrowFirm = () => {
-  return (
+  return ( 
     <main>
       <GrowFirmBanner />
       <AdvancedPlatform/>
       <GrowFirmSection />
       <NumberOneTech />
       <BuildAffiliate/>
-      <DreamFirm/>
+      <DreamFirm isgrowPage= "true" />
     </main>
   );
 };

@@ -24,16 +24,16 @@ const Backend = () => {
             <div className='relative bg-cover bg-no-repeat pb-[205px] md:pb-[600px] xl:pb-[894px] bg-right'>
                 {/* style={{ backgroundImage: `url(${BackendBg})` }} */}
                 <div className='container'>
-                    <div className='max-w-[214px] min-h-[870px] relative md:max-w-[690px] mx-auto md:mx-0 w-full rounded-[30px] 
+                    <div className='max-w-[400px] min-h-[404px] md:min-h-[870px] relative md:max-w-[690px] mx-auto md:mx-0 w-full rounded-[30px] 
                     border-t-2 border-solid border-[#FFFFFF1A] bg-[#030818] overflow-hidden'>
                         <div className='px-5 md:px-10 xl:px-20 py-5 md:py-10 xl:pt-[90px] xl:pb-[51px] text-center relative z-[2]'>
-                            <h3 className='text-sm md:text-[30px] xl:text-[57px] font-bold leading-none -tracking-[0.36px] xl:-tracking-[1.14px] text-white mb-1.5 md:mb-5'>Efficient Coding</h3>
-                            <p className='text-[10px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
+                            <h3 className='text-lg md:text-[30px] xl:text-[57px] font-bold leading-none -tracking-[0.36px] xl:-tracking-[1.14px] text-white mb-2 md:mb-5'>Efficient Coding</h3>
+                            <p className='text-[12px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
                         </div>
                         {/* <figure>
                             <img src={OptimizeImg} alt='optimize' />
                         </figure> */}
-                         <video width="100%" height="100%" className="w-full h-full object-cover absolute inset-0" autoPlay muted loop>
+                         <video width="100%" height="100%" className="w-full h-full object-cover align-top absolute inset-0" autoPlay muted loop>
                             <source src={CardBgVideo} type="video/mp4" />
                             <source src={CardBgVideo} type="video/ogg" />
                         </video>

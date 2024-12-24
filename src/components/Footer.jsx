@@ -69,19 +69,19 @@ const Footer = () => {
               </div>
               <div className="flex justify-between flex-wrap text-sm leading-none max-w-[488px] ms-auto mr-5 text-[rgba(255,255,255,0.80)] max-xl:mr-0 max-xl:max-w-60 max-md:mx-auto">
                 <Link
-                  to="/"
+                  to="/development"
                   className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]"
                 >
                   Development
                 </Link>
                 <Link
-                  to="/"
+                  to="/extra-services"
                   className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]"
                 >
                   Extra Services
                 </Link>
                 <Link
-                  to="/"
+                  to="/grow-your-firm"
                   className="py-[6px] px-[10px] hover:underline max-xl:px-[5px]"
                 >
                   Grow your firm

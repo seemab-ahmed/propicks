@@ -10,7 +10,7 @@ const MobileDev = () => {
       <div className="relative rounded-[32px] md:rounded-[40px] xl:rounded-[80px] bg-white overflow-hidden">
         <div className="max-w-[1140px] w-[90%] mx-auto mb-[65px]">
           <div className="text-center flex items-center justify-center flex-col relative z-[2]">
-            <img src={MobileDevTop} alt="mobile-dev-top" />
+            <img src={MobileDevTop} alt="mobile-dev-top" className="max-md:max-w-[275px] max-md:-mt-12" />
             <h2 className="text-[36px] md:text-[80px] lg:text-[120px] xl:text-[180px] font-bold leading-none -tracking-[1.44px] xl:-tracking-[7.2px] -mt-20 xl:-mt-28 mb-5">
               <span className="bg-heading-gradient">Mobile Dev</span>
             </h2>
@@ -27,7 +27,7 @@ const MobileDev = () => {
         <video
           width="100%"
           height="100%"
-          className="w-full h-full object-cover -mt-[860px] relative z-0"
+          className="w-full h-full object-cover  -mt-[750px]  relative z-0 max-2xl:mt-[-550px] max-xl:mt-[-480px] max-lg:mt-[-350px] max-md:mt-[-250px] max-sm:mt-[-200px]"
           autoPlay
           muted
           loop

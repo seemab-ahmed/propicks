@@ -18,25 +18,28 @@ const DevelopmentPlatform = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const divs = containerRef.current.querySelectorAll(".dev");
-
-    gsap.fromTo(
-      divs,
-      { opacity: 0, scale: 0 }, // Start with opacity 0 and scale 0
-      {
-        opacity: 1, // Fade in
-        scale: 1, // Scale up to normal size
-        duration: 1, // Duration of each animation
-        ease: "elastic.out(1, 0.5)", // Elastic easing for bubble effect
-        stagger: 0.2, // Delay between animations for each element
-        scrollTrigger: {
-          trigger: containerRef.current, // Trigger on the container
-          start: "top 80%", // Start when the container is 80% in the viewport
-          toggleActions: "play none none reverse", // Play on enter, reverse on leave
-        },
-      }
-    );
+    if (window.innerWidth > 768) {
+      const divs = containerRef.current.querySelectorAll(".dev");
+  
+      gsap.fromTo(
+        divs,
+        { opacity: 0, scale: 0 }, // Start with opacity 0 and scale 0
+        {
+          opacity: 1, // Fade in
+          scale: 1, // Scale up to normal size
+          duration: 1, // Duration of each animation
+          ease: "elastic.out(1, 0.5)", // Elastic easing for bubble effect
+          stagger: 0.2, // Delay between animations for each element
+          scrollTrigger: {
+            trigger: containerRef.current, // Trigger on the container
+            start: "top 80%", // Start when the container is 80% in the viewport
+            toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          },
+        }
+      );
+    }
   }, []);
+  
   return (
     <section className="p-5 pt-36 relative max-lg:pt-28">
       <div className="absolute top-[-2px] left-0 right-0 w-full">

@@ -27,127 +27,125 @@ const Banner = () => {
   const increaseRef = useRef(null);
 
   useEffect(() => {
-    requestAnimationFrame(() => {
-      // Animation for the heading
-      gsap.fromTo(
-        headingRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -100,
-          opacity: 0,
-          duration: 1.2,
-          // ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "5% top",
-            end: "20% top",
-            scrub: true,
-          },
-        }
-      );
-      // Animation for the Cards
-      gsap.fromTo(
-        cardRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -400,
-          opacity: 0,
-          duration: 2.2,
-          ease: "power3.out", // Smooth easing
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "10% top",
-            end: "85% top",
-            scrub: true, // Lower scrub for smoother scrolling
-          },
-        }
-      );
-      gsap.fromTo(
-        increaseRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -400,
-          opacity: 0,
-          duration: 2.5, // Adjust duration for smoothness
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "4% top", // Slightly offset start for better sync
-            end: "90% top",
-            scrub: true,
-          },
-        }
-      );
-      gsap.fromTo(
-        userRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -400,
-          opacity: 0,
-          duration: 2.5, // Adjust duration for smoothness
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "12% top", // Slightly offset start for better sync
-            end: "90% top",
-            scrub: true,
-          },
-        }
-      );
-      gsap.fromTo(
-        arrowRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -400,
-          opacity: 0,
-          duration: 2.5, // Adjust duration for smoothness
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "20% top", // Slightly offset start for better sync
-            end: "90% top",
-            scrub: true,
-          },
-        }
-      );
-      
-      gsap.fromTo(
-        cardTwoRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: -400,
-          opacity: 0,
-          duration: 2.5,
-          ease: "power3.out", // Smooth easing
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "10% top",
-            end: "80% top",
-            scrub: true, // Lower scrub for smoother scrolling
-            // markers: true,
-          },
-        }
-      );
-      // gsap.fromTo(
-      //   macbookRef.current,
-      //   { width: "70%", height: "70vh", borderRadius: "16px" },
-      //   {
-      //     width: "100%",
-      //     height: "100vh",
-      //     duration: 2,
-      //     borderRadius: 0,
-      //     ease: "power3.out",
-      //     scrollTrigger: {
-      //       trigger: bannerRef.current,
-      //       start: "30% top",
-      //       end: "70% top",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-    });
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        requestAnimationFrame(() => {
+          // Animation for the heading
+          gsap.fromTo(
+            headingRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -100,
+              opacity: 0,
+              duration: 1.2,
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "5% top",
+                end: "20% top",
+                scrub: true,
+              },
+            }
+          );
+          // Animation for the Cards
+          gsap.fromTo(
+            cardRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -400,
+              opacity: 0,
+              duration: 2.2,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "10% top",
+                end: "85% top",
+                scrub: true,
+              },
+            }
+          );
+          gsap.fromTo(
+            increaseRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -400,
+              opacity: 0,
+              duration: 2.5,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "4% top",
+                end: "90% top",
+                scrub: true,
+              },
+            }
+          );
+          gsap.fromTo(
+            userRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -400,
+              opacity: 0,
+              duration: 2.5,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "12% top",
+                end: "90% top",
+                scrub: true,
+              },
+            }
+          );
+          gsap.fromTo(
+            arrowRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -400,
+              opacity: 0,
+              duration: 2.5,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "20% top",
+                end: "90% top",
+                scrub: true,
+              },
+            }
+          );
+          gsap.fromTo(
+            cardTwoRef.current,
+            { y: 0, opacity: 1 },
+            {
+              y: -400,
+              opacity: 0,
+              duration: 2.5,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: bannerRef.current,
+                start: "10% top",
+                end: "80% top",
+                scrub: true,
+              },
+            }
+          );
+        });
+      } else {
+        // Optional: Clear ScrollTriggers for small screens
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      }
+    };
+  
+    // Initial execution
+    handleResize();
+  
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+  
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-
+  
   return (
     <section
       className="pt-[144px] bg-center bg-cover bg-no-repeat relative"
@@ -155,7 +153,7 @@ const Banner = () => {
     >
       <div className="container ">
         <div className="text-center mb-10 relative z-[1]" ref={headingRef}>
-          <h1 className="text-[90px] text-white font-bold leading-none mb-5 max-xl:text-7xl max-lg:text-[3.5rem] max-md:text-4xl max-md:mb-2 ">
+          <h1 className="text-[90px] text-white font-bold leading-none mb-5 max-xl:text-7xl max-lg:text-[3.5rem] max-md:text-[34px] max-md:mb-2 ">
             Powering every winning
             <br />{" "}
             <span className="text-white">

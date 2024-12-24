@@ -122,11 +122,10 @@ const Header = () => {
 
           <ul
             ref={navListRef}
-            className={`nav-list md:flex items-center gap-2.5 ${
-              isMenuOpen
+            className={`nav-list md:flex items-center gap-2.5 ${isMenuOpen
                 ? "block absolute top-20 left-0 right-0 bg-[rgba(36,37,40,0.6)] backdrop-blur-[80%] p-5 rounded-md z-50 w-[90%] max-w-[727px] mx-auto"
                 : "hidden"
-            } md:block`}
+              } md:block`}
           >
             {navLinks.map((item) => (
               <li
@@ -149,13 +148,13 @@ const Header = () => {
             className="hidden md:flex items-center justify-end overflow-hidden gap-2.5 w-[130px]"
             ref={buttonWrapperRef}
           >
-            <Link
+            <Link to="/contact-us"
               ref={contactBtnRef}
               className="btn contact-btn h-9 opacity-0 scale-[0.6] origin-right flex items-center justify-center px-8 py-2 w-[135px] rounded-lg text-sm font-medium text-white leading-none bg-[rgba(255,255,255,0.1)] flex-none"
             >
               <span className="relative z-[2]">Contact Us</span>
             </Link>
-            <Link className="btn h-9 flex items-center justify-center px-8 py-2 rounded-lg text-sm font-medium text-black leading-none bg-white flex-none">
+            <Link to="/firm-demo" className="btn h-9 flex items-center justify-center px-8 py-2 rounded-lg text-sm font-medium text-black leading-none bg-white flex-none">
               <span className="relative z-[2]">Firm Demo</span>
             </Link>
           </div>

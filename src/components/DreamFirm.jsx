@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BannerBtm from "../assets/images/banner-btm.svg";
 import DfBtm from "../assets/images/df-bg.png";
 import PPLogo from "../assets/images/pp-logo-large2.png";
@@ -10,6 +10,46 @@ import { Link } from "react-router-dom";
 import VideoIcon from "../assets/images/video-icon.svg";
 
 import Typewriter from "typewriter-effect";
+
+const CustomDropdown = ({ options, name, placeholder }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleToggle = () => setIsOpen(!isOpen);
+  const handleSelect = (option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative">
+      <div
+        className="h-11 border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] px-2.5 flex items-center justify-between outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[rgba(197,206,230,0.5)] w-full cursor-pointer"
+        onClick={handleToggle}
+        // style={{ backdropFilter: "blur(50px)" }}
+      >
+        <span>{selectedOption || placeholder}</span>
+        <span className="text-[#C5CEE6]">&#9660;</span>
+        {isOpen && (
+          <ul
+            className="absolute top-full left-0 w-full mt-1 bg-[rgba(255,255,255,1)] rounded-[10px] text-[#000] overflow-hidden shadow-lg z-[1]"
+            style={{ backdropFilter: "blur(300px)" }}
+          >
+            {options.map((option, index) => (
+              <li
+                key={index}
+                onClick={() => handleSelect(option)}
+                className="px-2.5 py-2 cursor-pointer hover:bg-[rgba(0,0,0,0.10)]"
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const formData = [
   {
@@ -46,6 +86,7 @@ const formData = [
     name: "phone",
     type: "dropdown",
     options: ["+1", "+44", "+91", "+81"],
+    placeholder: "Select phone code",
   },
   {
     id: 6,
@@ -53,6 +94,7 @@ const formData = [
     name: "country",
     type: "dropdown",
     options: ["United States", "United Kingdom", "India", "Japan"],
+    placeholder: "Select country",
   },
   {
     id: 7,
@@ -60,6 +102,7 @@ const formData = [
     name: "subject",
     type: "dropdown",
     options: ["Sports", "Forex", "Features"],
+    placeholder: "Select subject",
   },
   {
     id: 8,
@@ -70,27 +113,33 @@ const formData = [
   },
 ];
 
-const DreamFirm = () => {
+const DreamFirm = ({ isgrowPage = false }) => {
   return (
-    <section className="pt-[140px] pb-[110px] lg:py-[214px] relative overflow-hidden">
+    <section
+      className={`pt-[140px] pb-[110px] ${!isgrowPage
+        ? "lg:py-[214px]"
+        : "lg:pb-[40px] max-lg:pb-[0] max-md:pt-10"
+        } relative overflow-hidden`}
+    >
       <div className="form-container container">
         <div className="flex items-center flex-col lg:flex-row justify-between gap-10 relative z-[2]">
           <div className="max-w-[652px] w-full relative z-[1] text-center lg:text-left">
             <h2 className="text-4xl lg:text-[48px] xl:text-[60px] 2xl:text-[80px] font-bold leading-tight -tracking-[1.44px] 2xl:-tracking-[3.2px] text-white mb-5">
-              Let’s get to building your
-              {/* <span className="bg-heading-gradient-two">dream firm.</span> */}
-              {" "}
-            <span className="bg-heading-gradient-two">
-              <Typewriter
-                options={{
-                  strings: ["dream.", "firm."],
-                  autoStart: true,
-                  loop: true,
-                  delay: 75,
-                  deleteSpeed: 50,
-                }}
-              />
-            </span>{" "}
+              Let’s get to building your{" "}
+              <span className="bg-heading-gradient-two">
+                <span>
+                  <Typewriter
+                    options={{
+                      strings: ["dream", "prop", "forex", "sports"],
+                      autoStart: true,
+                      loop: true,
+                      delay: 100,
+                      deleteSpeed: 100,
+                    }}
+                  />
+                </span>{" "}
+                <span className="">firm.</span>
+              </span>
             </h2>
             <p className="text-base lg:text-2xl leading-snug lg:leading-10 font-normal text-[#C5CEE6] mb-8">
               Let’s get to building your dream firm with precision and passion.
@@ -132,28 +181,22 @@ const DreamFirm = () => {
                         id={item.name}
                         type="text"
                         placeholder={item.placeholder}
-                        className="h-11 border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] px-2.5 flex items-center justify-center outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[#C5CEE6] w-full"
+                        className="h-11 border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] px-2.5 flex items-center justify-center outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[rgba(197,206,230,0.5)] w-full"
                         style={{ backdropFilter: "blur(50px)" }}
                       />
                     )}
                     {item.type === "dropdown" && (
-                      <select
-                        id={item.name}
-                        className="h-11 border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] px-2.5 flex items-center justify-center outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[#C5CEE6] w-full"
-                        style={{ backdropFilter: "blur(50px)" }}
-                      >
-                        {item.options.map((option, index) => (
-                          <option key={index} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
+                      <CustomDropdown
+                        options={item.options}
+                        name={item.name}
+                        placeholder={item.placeholder}
+                      />
                     )}
                     {item.type === "textarea" && (
                       <textarea
                         id={item.name}
                         placeholder={item.placeholder}
-                        className="border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] p-2.5 flex items-center justify-center outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[#C5CEE6] w-full"
+                        className="border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.10)] rounded-[10px] p-2.5 flex items-center justify-center outline-none text-sm lg:text-base font-medium leading-none text-[#C5CEE6] placeholder:text-[rgba(197,206,230,0.5)] w-full"
                         style={{
                           backdropFilter: "blur(50px)",
                           height: "120px",
@@ -163,7 +206,12 @@ const DreamFirm = () => {
                     )}
                   </div>
                 ))}
-                <Link to="" className="bg-white shadow-white-inset rounded-[10px] flex items-center justify-center h-12 lg:h-[52px] text-base lg:text-lg font-semibold leading-none text-[#010510] col-span-12 mt-3">Contact us</Link>
+                <Link
+                  to=""
+                  className="btn bg-white shadow-white-inset rounded-[10px] flex items-center justify-center h-12 lg:h-[52px] text-base lg:text-lg font-semibold leading-none text-[#010510] col-span-12 mt-3"
+                >
+                  <span className="relative z-[2]">Contact us</span>
+                </Link>
               </form>
             </div>
             <div className="hidden lg:block absolute top-0 left-0 w-full h-full -z-[1] scale-150">
@@ -173,9 +221,11 @@ const DreamFirm = () => {
         </div>
       </div>
       <div className="hidden lg:block">
-        <div className="absolute top-0 left-0 w-full max-w-[42vw] h-auto -z-[1]">
-          <img src={PPLogo} alt="top" className="w-full" />
-        </div>
+        {!isgrowPage && (
+          <div className="absolute top-0 left-0 w-full max-w-[42vw] h-auto -z-[1]">
+            <img src={PPLogo} alt="top" className="w-full" />
+          </div>
+        )}
         <div className="absolute top-1/2 -translate-y-1/2 right-0 mx-w-[480px] max-md:max-w-[200px]">
           <img src={LinesRight} alt="lines" loading="lazy" />
         </div>
@@ -183,15 +233,19 @@ const DreamFirm = () => {
           <img src={LinesLeft} alt="lines" loading="lazy" />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-        <img src={BannerBtm} alt="btm" className="w-full" />
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 w-full">
-        <img src={DfBtm} alt="btm" className="w-full" />
-      </div>
-      <div className="block lg:hidden absolute top-0 left-0 right-0 mx-auto w-auto -z-[1]">
-        <img src={DfMblBg} alt="top" className="w-full" />
-      </div>
+      {!isgrowPage && (
+        <div>
+          <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
+            <img src={BannerBtm} alt="btm" className="w-full" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 w-full">
+            <img src={DfBtm} alt="btm" className="w-full" />
+          </div>
+          <div className="block lg:hidden absolute top-0 left-0 right-0 mx-auto w-auto -z-[1]">
+            <img src={DfMblBg} alt="top" className="w-full" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

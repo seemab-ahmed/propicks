@@ -12,7 +12,7 @@ const Development = () => {
     <main>
       <DevelopmentBanner />
       <Sales />
-      <Develop />
+      <Develop /> 
       <Backend />
       <MobileDev />
       <Faqs hideGradient={true} />

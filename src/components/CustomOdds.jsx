@@ -18,8 +18,8 @@ const CustomOdds = () => {
         </p>
       </div>
       <div>
-        <figure>
-          <img src={OddsDash} alt="main" loading="lazy" />
+        <figure className="w-full">
+          <img src={OddsDash} alt="main" loading="lazy" className="w-full" />
         </figure>
         {/* <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
             <source src={OddsDash} type="video/mp4" />

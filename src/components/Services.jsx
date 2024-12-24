@@ -87,10 +87,6 @@ const Services = () => {
     };
   }, []);
 
-
-
-
-
   return (
     <section
       className="pt-[142px] pb-[0px] bg-no-repeat bg-cover relative overflow-hidden max-lg:py-28 max-md:pt-10 max-md:pb-[106px]"
