@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:text-center">
             <div>
               <Link to="/">
-                <img src={Brand} alt="propics" />
+                <img src={Brand} alt="PropPicks" />
               </Link>
               <div className="max-w-[480px]">
                 <p className="text-sm font-normal leading-[2.25] text-[#C5CEE6] mb-2">
@@ -141,7 +141,7 @@ const Footer = () => {
                   to="/"
                   className="py-[6px] px-5 bg-[rgba(255,255,255,0.10)] text-white rounded-[100px]"
                 >
-                  Propicks
+                  PropPicks
                 </Link>
               </div>
               <div className="ms-auto max-lg:mx-auto">

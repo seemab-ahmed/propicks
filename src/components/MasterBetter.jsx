@@ -19,7 +19,7 @@ const MasterBetter = () => {
                     leading-none text-white -tracking-[1.44px] xl:-tracking-[4.8px] mb-5 max-md:mb-3'>Follow and <br /> copy <span className='bg-heading-gradient'>master betters</span></h2>
                     <p className='text-base md:text-lg xl:text-2xl text-[rgba(255,255,255,0.80)] 
                     font-medium leading-7 md:leading-8 xl:leading-10 max-w-[1040px] mx-auto 
-                    w-full mb-6 max-md:text-base'>Propicks simplifies your betting experience. Select any professional better using the Propicks Social App, and start reproducing their results for yourself.</p>
+                    w-full mb-6 max-md:text-base'>Proppicks simplifies your betting experience. Select any professional better using the Proppicks Social App, and start reproducing their results for yourself.</p>
                     <Link
                         to="/"
                         className="btn blue text-center py-3 xl:py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white max-w-fit mx-auto"
