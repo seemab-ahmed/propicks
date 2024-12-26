@@ -1,6 +1,6 @@
 import React from "react";
 import MobileDevTop from "../assets/images/mobile-dev-top.svg";
-// import IphoneImg from "../assets/images/iphones.png";
+import IphoneImg from "../assets/images/iphones.png";
 import IphoneVideo from "../assets/video/dev-bg.webm";
 import MdBtm from "../assets/images/mobile-dev-btm.png";
 
@@ -27,7 +27,7 @@ const MobileDev = () => {
         <video
           width="100%"
           height="100%"
-          className="w-full h-full object-cover  -mt-[750px]  relative z-0 max-2xl:mt-[-550px] max-xl:mt-[-480px] max-lg:mt-[-350px] max-md:mt-[-250px] max-sm:mt-[-200px]"
+          className="w-full h-full object-cover hidden md:block  -mt-[750px]  relative z-0 max-2xl:mt-[-550px] max-xl:mt-[-480px] max-lg:mt-[-350px] max-md:mt-[-250px] max-sm:mt-[-200px]"
           autoPlay
           muted
           loop
@@ -36,9 +36,9 @@ const MobileDev = () => {
            <source src={IphoneVideo} type="video/ogg" />
           {" "}
         </video>
-        {/* <figure>
+        <figure className="block md:hidden">
                     <img src={IphoneImg} alt='iphone' />
-                </figure> */}
+                </figure>
         <div className="absolute bottom-0 left-0 right-0 w-full">
           <img src={MdBtm} alt="dev btm gradient" className="w-full" />
         </div>

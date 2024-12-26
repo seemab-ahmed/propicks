@@ -6,10 +6,10 @@ import Card1Img from "../assets/images/card-1-bg.jpg";
 import Card2Img from "../assets/images/card-2-bg.jpg";
 import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
-// import FaceIdImg from "../assets/images/face-id.png";
-// import StatsImg from "../assets/images/StatsNew.gif";
+import FaceIdImg from "../assets/images/face-id.png";
+import StatsImg from "../assets/images/stats-image.png";
 import StatsVid from "../assets/video/guide-vid2.webm"
-// import PricingImg from "../assets/images/pricing-img.png";
+import PricingImg from "../assets/images/pricing-img.png";
 import PricingVid from "../assets/video/guide-vid3.webm";
 import DashboardImg from "../assets/images/dashboard-img.png";
 import IdentificationImg from "../assets/images/Identity-Verification.gif";
@@ -46,7 +46,8 @@ const Guide = () => {
           >
             <div className="grid grid-cols-2 gap-7 items-center max-md:grid-cols-1">
               <figure className="max-md:order-2 max-md:mr-auto max-md:max-w-[85%] max-md:max-h-[322px]">
-                <img src={IdentificationImg} alt="faceid" />
+                <img src={IdentificationImg} alt="faceid" className="hidden md:block" />
+                <img src={FaceIdImg} alt="faceid" className="block md:hidden" />
               </figure>
               <div className="text-center max-md:order-1 max-md:px-8">
                 <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px]  max-md:mb-[10px]">
@@ -64,10 +65,10 @@ const Guide = () => {
             className="col-span-6 grid grid-cols-1 bg-cover py-16 px-10 rounded-[36px] max-lg:py-10 max-lg:px-0 max-md:col-span-12 max-md:py-7 max-md:px-8 max-md:overflow-hidden"
             style={{ backgroundImage: `url(${Card2Img})` }}
           >
-            {/* <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px]">
+            <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px] block md:hidden">
               <img src={StatsImg} alt="statsImg" />
-            </figure> */}
-            <video width="100%" height="100%" className="w-full object-cover mb-[110px] max-lg:mb-6" autoPlay muted loop>
+            </figure>
+            <video width="100%" height="100%" className="w-full object-cover mb-[110px] max-lg:mb-6 hidden md:block" autoPlay muted loop>
               <source src={StatsVid} type="video/mp4" />
               <source src={StatsVid} type="video/ogg" />
             </video>
@@ -86,14 +87,14 @@ const Guide = () => {
             className="col-span-6 grid grid-cols-1 bg-cover pt-4 rounded-[36px] max-lg:py-10 max-lg:px-7 max-md:col-span-12 max-md:p-0"
             style={{ backgroundImage: `url(${Card3Img})` }}
           >
-            {/* <figure className="max-md:order-2">
+            <figure className="max-md:order-2 block md:hidden">
               <img
                 src={PricingImg}
                 alt="pricing-img"
                 className="max-h-[390px] w-full"
               />
-            </figure> */}
-            <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+            </figure>
+            <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
               <source src={PricingVid} type="video/mp4" />
               <source src={PricingVid} type="video/ogg" />
             </video>
@@ -131,7 +132,7 @@ const Guide = () => {
         </div>
         <div className="flex items-center justify-center mt-16 max-md:mt-8">
           <Link
-            to="/"
+            to="/development"
             className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white"
             style={{
               background:

@@ -79,7 +79,7 @@ const Header = () => {
     <header className="py-5 md:p-5 fixed left-0 top-0 w-full z-[9999]" ref={headerRef}>
       <div className="max-w-[90%] md:max-w-fit w-full mx-auto rounded-[10px] bg-[rgba(36,37,40,0.6)] backdrop-blur-[80%] p-2.5">
         <div className="flex items-center justify-between gap-8">
-          <Link className="w-9 h-9 flex items-center justify-center bg-[#1C3148] rounded-lg">
+          <Link to="/" className="w-9 h-9 flex items-center justify-center bg-[#1C3148] rounded-lg">
             <img src={Logo} alt="Logo" />
           </Link>
 

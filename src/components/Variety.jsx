@@ -70,18 +70,18 @@ const Variety = () => {
                 <img src={VarietyBtm} alt="dev bottom gradient" className="w-full" />
             </div>
             <div className='max-w-[1520px] w-[90%] mx-auto max-md:overflow-hidden'>
-                <h2 className='text-[36px] md:text-[80px] lg:text-[120px] font-bold 
+                <h2 className='text-[36px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[120px] font-bold 
                 leading-none text-white -tracking-[1.44px] xl:-tracking-[4.8px] 
-                mb-[84px] max-md:mb-[10px] max-md:text-center'>Choose from a variety sports</h2>
+                mb-[84px]  max-md:mb-[10px] text-center'>Choose from a variety sports</h2>
                 <p className="hidden text-base text-white text-center max-md:block
                 max-md:mb-10">Experience a new era of innovation. Transform the way you play, connect, and strategize with cutting-edge technology designed to elevate your prop firm and redefine your sports experience!</p>
                 <div className="mb-[142px] max-md:mb-10">
                     {/* Desktop View */}
                     <ul className="grid grid-cols-5 gap-10 max-md:hidden">
                         {buttons.map((button) => (
-                            <li key={button.id}>
-                                <Link to="">
-                                    <img src={button.src} alt="btn" />
+                            <li key={button.id} className='2xl:h-[88px] xl:h-[76px] lg:h-16 md:h-14 h-10'>
+                                <Link to="/" className='block h-full'> 
+                                    <img src={button.src} alt="btn" className='h-full w-full block' />
                                 </Link>
                             </li>
                         ))}

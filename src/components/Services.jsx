@@ -2,25 +2,26 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ServicesBg from "../assets/images/service-bg.png";
 import ServiceTop from "../assets/images/dev-top.png";
-// import ServiceImg1 from "../assets/images/service-1.svg";
+import ServiceImg1 from "../assets/images/service-1.svg";
+import ServiceImg2 from "../assets/images/service-2.svg";
 import ServiceBg1 from "../assets/images/service-card-bg-1.svg";
-// import ServiceImg2 from "../assets/images/service-2.svg";
-import ServicesVideo1 from "../assets/video/services-vid1.webm"
-import ServicesVideo2 from "../assets/video/services-vid2.webm"
-import ServicesVideo3 from "../assets/video/services-vid3.webm"
-import ServicesVideo4 from "../assets/video/services-vid4.webm"
+import ServicesVideo1 from "../assets/video/services-vid1.webm";
+import ServicesVideo2 from "../assets/video/services-vid2.webm";
+import ServicesVideo3 from "../assets/video/services-vid3.webm";
+import ServicesVideo4 from "../assets/video/services-vid4.webm";
 // import ServicesVideo5 from "../assets/video/services-vid5.webm"
-import ServicesVideo6 from "../assets/video/services-vid6.webm"
+import ServicesVideo6 from "../assets/video/services-vid6.webm";
 import ServiceBg2 from "../assets/images/service-card-bg-2.png";
-import ServiceImg3 from "../assets/images/calender-img.gif";
+import ServiceImg3 from "../assets/images/service-3.svg";
 import ServiceBg3 from "../assets/images/service-card-bg-3.svg";
-import ServiceImg4 from "../assets/images/services-4_new.gif";
+import ServiceImg4 from "../assets/images/service-4.png";
 // import ServiceBg4 from "../assets/images/service-card-bg-4.svg";
-import ServiceImg5 from "../assets/images/services-5_new.gif";
+import ServiceImg5 from "../assets/images/service-5.png";
+import ServiceGif5 from "../assets/images/services-5_new.gif";
 import ServiceBg5 from "../assets/images/service-card-bg-5.svg";
-import ServiceImg6 from "../assets/images/services-6_new.gif";
+import ServiceImg6 from "../assets/images/service-6.png";
 import ServiceBg6 from "../assets/images/service-card-bg-6.svg";
-import ServiceImg1 from "../assets/images/brand-stratergy.gif"
+// import ServiceImg1 from "../assets/images/brand-stratergy.gif"
 // import ServiceImg2 from "../assets/images/creative-design.gif"
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -28,62 +29,93 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useEffect(() => {
-    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    const setupAnimations = () => {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
-    if (isDesktop) {
-      document.querySelectorAll(".col-left .service-card").forEach((card) => {
-        gsap.fromTo(
-          card,
-          {
-            opacity: 0,
-            rotate: -30,
-            x: "-20%",
-          },
-          {
-            opacity: 1,
-            rotate: 0,
-            x: "0%",
-            duration: 1.5,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              end: "top 40%",
-              scrub: true,
-            },
-          }
-        );
-      });
-
-      document.querySelectorAll(".col-right .service-card").forEach((card) => {
-        gsap.fromTo(
-          card,
-          {
-            opacity: 0,
-            rotate: 30,
-            x: "20%",
-          },
-          {
-            opacity: 1,
-            rotate: 0,
-            x: "0%",
-            duration: 1.5,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              end: "top 40%",
-              scrub: true,
-            },
-          }
-        );
-      });
-
-      ScrollTrigger.refresh();
-    }
-
-    return () => {
       if (isDesktop) {
+        // Animate left column cards
+        document.querySelectorAll(".col-left .service-card").forEach((card) => {
+          gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              rotate: -30,
+              x: "-20%",
+            },
+            {
+              opacity: 1,
+              rotate: 0,
+              x: "0%",
+              duration: 1.5,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 80%",
+                end: "top 40%",
+                scrub: true,
+              },
+            }
+          );
+        });
+
+        // Animate right column cards
+        document
+          .querySelectorAll(".col-right .service-card")
+          .forEach((card) => {
+            gsap.fromTo(
+              card,
+              {
+                opacity: 0,
+                rotate: 30,
+                x: "20%",
+              },
+              {
+                opacity: 1,
+                rotate: 0,
+                x: "0%",
+                duration: 1.5,
+                scrollTrigger: {
+                  trigger: card,
+                  start: "top 80%",
+                  end: "top 40%",
+                  scrub: true,
+                },
+              }
+            );
+          });
+
+        // Refresh ScrollTrigger
+        ScrollTrigger.refresh();
+      } else {
+        // Reset styles for cards below 768px
+        document
+          .querySelectorAll(".col-left .service-card, .col-right .service-card")
+          .forEach((card) => {
+            gsap.set(card, {
+              opacity: 1,
+              rotate: 0,
+              x: "0%",
+            });
+          });
+
+        // Kill all ScrollTriggers
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       }
+    };
+
+    // Initial setup
+    setupAnimations();
+
+    // Add resize listener to reapply animations based on screen size
+    const resizeListener = () => setupAnimations();
+    window.addEventListener("resize", resizeListener);
+
+    // Cleanup function
+    return () => {
+      // Remove resize listener
+      window.removeEventListener("resize", resizeListener);
+
+      // Kill all ScrollTriggers to prevent memory leaks
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -121,6 +153,7 @@ const Services = () => {
                   key={index}
                   title={service.title}
                   description={service.description}
+                  gifImg={service.gifImg}
                   image={service.image}
                   video={service.video}
                   backgroundStyle={service.backgroundStyle}
@@ -138,6 +171,7 @@ const Services = () => {
                   key={index}
                   title={service.title}
                   description={service.description}
+                  gifImg={service.gifImg}
                   image={service.image}
                   video={service.video}
                   backgroundStyle={service.backgroundStyle}
@@ -170,7 +204,7 @@ const servicesData = [
     title: "Creative Design",
     description:
       "Making sure your firm is creating distinctive and impactful designs that bring your vision to life and make a lasting impression.",
-    image: ServicesVideo2,
+    image: ServiceImg2,
     video: ServicesVideo2,
     isVideo: true,
     backgroundStyle: {
@@ -206,6 +240,7 @@ const servicesData = [
     title: "Mobile Friendly",
     description:
       "We recognize the importance of engaging with mobile devices, which is why we also focus on ensuring every project is both mobile and tablet friendly.",
+    gifImg: ServiceGif5,
     image: ServiceImg5,
     // video: ServicesVideo5,
     // isVideo: true,
@@ -230,6 +265,7 @@ const ServiceCard = ({
   title,
   description,
   image,
+  gifImg,
   backgroundStyle,
   imgClass,
   imgRight,
@@ -294,19 +330,35 @@ const ServiceCard = ({
       <div
         className={`flex justify-center mx-auto w-full relative z-0 ${imgClass}`}
       >
-        {
-          !isVideo && <img
+        <div className="hidden md:block">
+          {!isVideo && (
+            <img
+              src={gifImg}
+              alt={title}
+              className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
+            />
+          )}
+          {isVideo && (
+            <video
+              width="100%"
+              height="100%"
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+            >
+              <source src={video} type="video/mp4" />
+              <source src={video} type="video/ogg" />
+            </video>
+          )}
+        </div>
+        <div className="block md:hidden">
+          <img
             src={image}
             alt={title}
             className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
           />
-        }
-        {isVideo &&
-          <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
-            <source src={video} type="video/mp4" />
-            <source src={video} type="video/ogg" />
-          </video>
-        }
+        </div>
       </div>
       <div
         ref={gradientRef}

@@ -35,7 +35,7 @@ const MasterBetter = () => {
                     <img src={MbCard} alt='mb-bg' />
                 </div>
                 <Link
-                    to="/"
+                    to="/grow-your-firm"
                     className="btn text-center py-[36px] text-2xl leading-none 
                     block text-white max-w-[329px] w-full bg-[rgba(61,127,222,0.10)] 
                     font-medium rounded-[10px] border border-[#3D7FDE]  

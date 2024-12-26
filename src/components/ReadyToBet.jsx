@@ -77,7 +77,7 @@ const ReadyToBet = () => {
               <div className="relative z-[1] grid grid-cols-2 max-w-[365px] gap-5 items-center 
               mt-10 max-md:mt-8 max-md:gap-[10px] max-md:mx-auto max-md:justify-center max-md:flex">
                 <Link
-                  to="/"
+                  to="/firm-demo"
                   className="btn blue text-center py-5 text-xs leading-4 block text-white font-medium rounded-[10px] 
                   border border-[#3D7FDE] shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] 
                   max-md:py-5 max-md:px-0 max-md:text-base  max-md:w-[170px] max-md:m-0"
@@ -89,7 +89,7 @@ const ReadyToBet = () => {
                   <span className="relative z-[2]">Firm Demo</span>
                 </Link>
                 <Link
-                  to="/"
+                  to="/contact-us"
                   className="btn text-center py-5 text-xs leading-4 block text-black bg-white 
                   font-medium rounded-[10px] border border-[#3D7FDE] 
                   shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] 

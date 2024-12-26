@@ -1,8 +1,8 @@
 import React from 'react'
 import IconTop from "../assets/images/backend-icon-top.svg"
-// import BackendBg from "../assets/images/backend-bg.png"
+import BackendBg from "../assets/images/backend-bg.png"
 import BackendBgVideo from "../assets/video/backend-video.webm"
-// import OptimizeImg from "../assets/images/optimize-card-btm.png"
+import OptimizeImg from "../assets/images/optimize-card-btm.png"
 import CardBgVideo from "../assets/video/coding-card-bg.webm"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import DevelopBtm from "../assets/images/develop-btm.png"
@@ -30,10 +30,10 @@ const Backend = () => {
                             <h3 className='text-lg md:text-[30px] xl:text-[57px] font-bold leading-none -tracking-[0.36px] xl:-tracking-[1.14px] text-white mb-2 md:mb-5'>Efficient Coding</h3>
                             <p className='text-[12px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
                         </div>
-                        {/* <figure>
+                        <figure  className='block md:hidden'>
                             <img src={OptimizeImg} alt='optimize' />
-                        </figure> */}
-                         <video width="100%" height="100%" className="w-full h-full object-cover align-top absolute inset-0" autoPlay muted loop>
+                        </figure>
+                         <video width="100%" height="100%" className="w-full h-full object-cover align-top absolute inset-0 hidden md:block" autoPlay muted loop>
                             <source src={CardBgVideo} type="video/mp4" />
                             <source src={CardBgVideo} type="video/ogg" />
                         </video>
@@ -41,8 +41,8 @@ const Backend = () => {
                     </div>
                 </div>
                 <div className='absolute right-0 bottom-0 pl-0 w-full -z-[1]'>
-                    {/* <img src={BackendBg} alt='optimize' className='w-full' /> */}
-                     <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+                    <img src={BackendBg} alt='optimize' className='w-full block md:hidden' />
+                     <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
                         <source src={BackendBgVideo} type="video/mp4" />
                         <source src={BackendBgVideo} type="video/ogg" />
                       </video>

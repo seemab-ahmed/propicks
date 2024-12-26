@@ -1,5 +1,6 @@
 import React from "react";
 import BuildingBtm from "../assets/images/build-img-latest.gif";
+import BuildingBtmMb from "../assets/images/build-img-new.png";
 import PropPickLogo from "../assets/images/pp-logo-large.png"
 import DividerBtm from "../assets/images/service-btm.png"
 // import BuildingIcon from "../assets/images/building-icon.svg";
@@ -27,7 +28,8 @@ const Building = () => {
         {/* FAQ Cards */}
       </div>
         <div className="w-[90%] mx-auto space-y-[10px] flex justify-end relative z-[2]">
-            <img src={BuildingBtm} alt="buildingbtm" />
+            <img src={BuildingBtm} alt="buildingbtm"  className="hidden md:block"/>
+            <img src={BuildingBtmMb} alt="buildingbtm" className="block md:hidden" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 w-full z-[3]">
         <img src={DividerBtm} alt="dev top gradient" className="w-full" />

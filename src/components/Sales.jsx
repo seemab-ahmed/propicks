@@ -1,5 +1,5 @@
 import React from 'react'
-// import SalesImg from "../assets/images/sales-img.png"
+import SalesImg from "../assets/images/sales-img.png"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import SalesBg from "../assets/images/sales-bg.png";
 import SalesIcon from "../assets/images/sale-icon.png";
@@ -12,10 +12,11 @@ const Sales = () => {
         //  style={{ backgroundImage: `url(${SalesImg})` }}
         >
             <div className="absolute top-0 left-0 right-0 w-full h-full -z-[1]">
-            <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted controls loop>
+              <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block " autoPlay muted controls loop>
                 <source src={SalesVideo} type="video/mp4" />
                 <source src={SalesVideo} type="video/ogg" />
               </video>
+              <img src={SalesImg} alt="sale-bg" className='w-full h-full object-cover block md:hidden' />
             </div>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
                 <img src={BannerBtm} alt="dev top gradient" className="w-full" />

@@ -26,7 +26,7 @@ const Innovative = () => {
               </p>
               <div className="grid grid-cols-2 max-w-3xl gap-5 items-center mt-10 max-md:mt-8 max-md:gap-[10px]">
                 <Link
-                  to="/"
+                  to="/firm-demo"
                   className="btn blue text-center py-10 text-2xl leading-4 block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5  max-md:px-0 max-md:text-base "
                   style={{
                     background:
@@ -36,7 +36,7 @@ const Innovative = () => {
                   <span className="relative z-[2]">Firm Demo</span>
                 </Link>
                 <Link
-                  to="/"
+                  to="/contact-us"
                   className="btn text-center py-10 text-2xl leading-4 block text-black bg-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5 max-md:px-0 max-md:text-base hover:text-white"
                 >
                   <span className="relative z-[2]">Contact Us</span>

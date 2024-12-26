@@ -95,7 +95,7 @@ const DevelopmentPlatform = () => {
             <Reviews />
             <div className="flex items-center justify-center mt-6">
               <Link
-                to="/"
+                to="/grow-your-firm"
                 className="btn text-center py-[36px] text-2xl leading-none block text-[#010510] max-w-[329px] w-full bg-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:py-5 max-md:px-0 max-md:text-base max-md:max-w-[185px] hover:text-white"
               >
                 <span className="relative z-[2]">Grow your firm</span>

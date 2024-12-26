@@ -12,23 +12,52 @@ import { gsap } from 'gsap';
 
 const Revolution = () => {
     useEffect(() => {
-        if (window.innerWidth > 768) {
+        const applyAnimations = () => {
+          if (window.innerWidth > 768) {
+            // Add animations
             const randomMovement = (element, xRange, yRange, duration) => {
-                gsap.to(element, {
-                    x: () => gsap.utils.random(-xRange, xRange),
-                    y: () => gsap.utils.random(-yRange, yRange),
-                    duration: duration,
-                    ease: "power1.inOut",
-                    repeat: -1,
-                    yoyo: true,
-                });
+              gsap.to(element, {
+                x: () => gsap.utils.random(-xRange, xRange),
+                y: () => gsap.utils.random(-yRange, yRange),
+                duration: duration,
+                ease: "power1.inOut",
+                repeat: -1,
+                yoyo: true,
+              });
             };
-
+      
             randomMovement(".card1", 10, 10, 3);
             randomMovement(".card2", 15, 15, 4);
             randomMovement(".card3", 10, 10, 3.5);
-        }
-    }, []);
+          } else {
+            // Kill animations below 768px
+            gsap.killTweensOf(".card1");
+            gsap.killTweensOf(".card2");
+            gsap.killTweensOf(".card3");
+      
+            // Reset styles for mobile view
+            document.querySelectorAll(".card1, .card2, .card3").forEach((element) => {
+              element.style.transform = "translate(0, 0)";
+            });
+          }
+        };
+      
+        // Initial check
+        applyAnimations();
+      
+        // Add resize listener
+        window.addEventListener("resize", applyAnimations);
+      
+        // Cleanup
+        return () => {
+          window.removeEventListener("resize", applyAnimations);
+          // Ensure all animations are killed on cleanup
+          gsap.killTweensOf(".card1");
+          gsap.killTweensOf(".card2");
+          gsap.killTweensOf(".card3");
+        };
+      }, []);
+      
 
     return (
         <section>
@@ -84,9 +113,9 @@ const Revolution = () => {
                     </div>
                 </div>
             </div>
-            <div className='relative'>
-                <img src={IphoneImg} alt='iphones' />
-                <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
+            <div className='relative '>
+                <img src={IphoneImg} alt='iphones' className='mx-auto' />
+                <div className="absolute bottom-0 left-0 right-0  w-full z-[1]">
                     <img src={RvBtm} alt="dev bottom gradient" className="w-full" />
                 </div>
             </div>

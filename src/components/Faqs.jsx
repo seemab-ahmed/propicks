@@ -53,7 +53,7 @@ const Faqs = ({ hideGradient = false }) => {
         </div>
         <div className="flex items-center justify-center mt-16 max-md:mt-8 max-md:hidden">
           <Link
-            to="/"
+            to="/extra-services"
             className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE] shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)] max-md:text-base hover:text-white"
             style={{
               background:

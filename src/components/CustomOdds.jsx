@@ -1,9 +1,9 @@
 import React from "react";
 import LinesRight from "../assets/images/line-right.svg";
 import LinesLeft from "../assets/images/line-left.svg";
-import OddsDash from "../assets/images/custom-odd-main.gif";
-// import OddsDash from "../assets/video/odds-vid.webm";
-// import ServicesBtm from "../assets/images/service-btm.png";
+import OddsDashMb from "../assets/images/odds-dash.png";
+import OddsDash from "../assets/video/custom-odd.webm";
+import ServicesBtm from "../assets/images/service-btm.png";
 const CustomOdds = () => {
   return (
     <section className="pt-[142px] text-center relative z-[2] overflow-hidden max-lg:pt-28 max-md:pt-12">
@@ -18,13 +18,13 @@ const CustomOdds = () => {
         </p>
       </div>
       <div>
-        <figure className="w-full">
-          <img src={OddsDash} alt="main" loading="lazy" className="w-full" />
+        <figure className=" block md:hidden w-full">
+          <img src={OddsDashMb} alt="main" loading="lazy" className="w-full" />
         </figure>
-        {/* <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted loop>
+        <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
             <source src={OddsDash} type="video/mp4" />
             <source src={OddsDash} type="video/ogg" />
-      </video> */}
+      </video>
       </div>
       {/* Banner Lines */}
       <div className="absolute top-32 right-0 mx-w-[480px] max-xl:max-w-[380px] max-lg:max-w-[300px] max-md:max-w-[200px]">
@@ -34,9 +34,9 @@ const CustomOdds = () => {
         <img src={LinesLeft} alt="lines" loading="lazy" />
       </div>
       {/* btm-img  */}
-      {/* <div className="absolute bottom-[-3px] left-0 right-0 w-full">
+      <div className="absolute bottom-[-3px] left-0 right-0 w-full">
         <img src={ServicesBtm} alt="service top gradient" className="w-full" />
-      </div> */}
+      </div> 
     </section>
   );
 };
