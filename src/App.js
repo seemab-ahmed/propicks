@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import ScrollSmoother from "./assets/js/ScrollSmoother.min.js";
+import ScrollSmoother from "./assets/js/ScrollSmoother.min.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
