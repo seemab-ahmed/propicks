@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import BannerVideo from "../assets/video/banner-video.mov";
+import BannerVideo from "../assets/video/banner-video.mp4";
 import Footballs from "../assets/images/footballs.png";
 import VideoIcon from "../assets/images/video-icon.svg";
 import HeroInnerImg from "../assets/images/iphone-banner.png";

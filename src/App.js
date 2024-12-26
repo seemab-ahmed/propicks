@@ -41,7 +41,7 @@ function App() {
     });
 
     // Ensure ScrollSmoother is available
-    const ScrollSmoother = window.ScrollSmoother;
+    // const ScrollSmoother = window.ScrollSmoother;
     if (ScrollSmoother && typeof ScrollSmoother.create === "function") {
       try {
         const smootherInstance = ScrollSmoother.create({
