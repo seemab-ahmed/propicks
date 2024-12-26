@@ -16,7 +16,7 @@ const Sales = () => {
                 <source src={SalesVideo} type="video/mp4" />
                 <source src={SalesVideo} type="video/ogg" />
               </video>
-              <img src={SalesImg} alt="sale-bg" className='w-full h-full object-cover block md:hidden' />
+              <img src={SalesImg} alt="sale-bg" loading='lazy' className='w-full h-full object-cover block md:hidden' />
             </div>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
                 <img src={BannerBtm} alt="dev top gradient" className="w-full" />
