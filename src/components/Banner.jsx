@@ -185,7 +185,8 @@ const Banner = () => {
             </span>
             .
           </h1>
-          <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl max-lg:leading-relaxed max-md:text-base max-md:mb-[160px]">
+          <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl 
+          max-lg:leading-relaxed max-md:text-base ">
             Unleash the power of advanced technology to transform your business
             and fuel unprecedented growth, driving results beyond 200%.
           </p>
@@ -193,7 +194,7 @@ const Banner = () => {
             className="border border-[rgba(255,255,255,0.10)] bg-[#1A2031] rounded-[10px] 
             shadow-grey-inset max-w-[172px] lg:max-w-[255px] w-full h-[52px] flex items-center 
             justify-center gap-3.5 text-base lg:text-lg font-semibold leading-none text-white 
-            mx-auto cursor-pointer mt-4"
+            mx-auto cursor-pointer mt-4 max-md:mb-[160px]"
             onClick={handlePopupToggle} // Trigger popup toggle on button click
           >
             <img src={VideoIcon} alt="video-icon" />
@@ -334,7 +335,7 @@ const Banner = () => {
           </div>
         </div>
       )}
-      {/* Banner Lines */}
+      {/* Banner Lines */} 
       <div className="absolute top-44 right-0 mx-w-[480px] max-md:max-w-[200px]">
         <img src={LinesRight} alt="lines" loading="lazy" />
       </div>
@@ -349,3 +350,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

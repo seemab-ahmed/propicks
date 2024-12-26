@@ -6,16 +6,28 @@ import ExtraServices from "./pages/ExtraServices";
 import Development from "./pages/Development";
 import GrowFirm from "./pages/GrowFirm";
 import FirmDemo from "./pages/FirmDemo";
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 const AppRoutes = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
-    const shouldScrollToTop = true;
-    if (shouldScrollToTop) {
-      window.scrollTo(0, 0);
-    }
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    // Preload other pages
+    const preloadPages = () => {
+      import("./pages/Development");
+      import("./pages/ExtraServices");
+      import("./pages/ContactUs");
+      import("./pages/GrowFirm");
+      import("./pages/FirmDemo");
+    };
+    preloadPages();
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -29,3 +41,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
