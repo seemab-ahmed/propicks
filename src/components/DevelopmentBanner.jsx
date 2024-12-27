@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import React, { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BannerImg from "../assets/images/dev-banner-img.png"
-import CodeImg from "../assets/images/dev-code.png"
+import CodeImg from "../assets/images/dev-code.webp"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import LinesLeft from "../assets/images/line-left.svg";
 import LinesRight from "../assets/images/line-right.svg";
@@ -102,7 +102,7 @@ const DevelopmentBanner = () => {
                         At PropPicks, we prioritize excellence by utilizing top-tier technologies like React and Node.js to deliver the best results for our clients.
                     </p>
                     <figure className="mt-8 -mb-[150px] md:-mb-[220px] lg:-mb-[320px] xl:-mb-[450px]">
-                        <img src={CodeImg} alt="code-img" className="max-w-[200px] md:max-w-[300px] lg:max-w-[500px] xl:max-w-[705px] w-full mx-auto" />
+                        <img src={CodeImg} loading="lazy" alt="code-img" className="max-w-[200px] md:max-w-[300px] lg:max-w-[500px] xl:max-w-[705px] w-full mx-auto" />
                     </figure>
                 </div>
             </div>
@@ -114,6 +114,7 @@ const DevelopmentBanner = () => {
                 <img
                     src={BannerImg}
                     alt="thumbnail"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -126,7 +127,7 @@ const DevelopmentBanner = () => {
                 <img src={LinesLeft} alt="lines" loading="lazy" />
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">
-                <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+                <img src={BannerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
             </div>
         </section>
     );

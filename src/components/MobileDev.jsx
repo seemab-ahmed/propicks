@@ -10,7 +10,7 @@ const MobileDev = () => {
       <div className="relative rounded-[32px] md:rounded-[40px] xl:rounded-[80px] bg-white overflow-hidden">
         <div className="max-w-[1140px] w-[90%] mx-auto mb-[65px]">
           <div className="text-center flex items-center justify-center flex-col relative z-[2]">
-            <img src={MobileDevTop} alt="mobile-dev-top" className="max-md:max-w-[275px] max-md:-mt-12" />
+            <img src={MobileDevTop} loading="lazy" alt="mobile-dev-top" className="max-md:max-w-[275px] max-md:-mt-12" />
             <h2 className="text-[36px] md:text-[80px] lg:text-[120px] xl:text-[180px] font-bold leading-none -tracking-[1.44px] xl:-tracking-[7.2px] -mt-20 xl:-mt-28 mb-5">
               <span className="bg-heading-gradient">Mobile Dev</span>
             </h2>
@@ -37,10 +37,10 @@ const MobileDev = () => {
           {" "}
         </video>
         <figure className="block md:hidden">
-                    <img src={IphoneImg} alt='iphone' />
+                    <img src={IphoneImg} loading="lazy" alt='iphone' />
                 </figure>
         <div className="absolute bottom-0 left-0 right-0 w-full">
-          <img src={MdBtm} alt="dev btm gradient" className="w-full" />
+          <img src={MdBtm} loading="lazy" alt="dev btm gradient" className="w-full" />
         </div>
       </div>
     </section>

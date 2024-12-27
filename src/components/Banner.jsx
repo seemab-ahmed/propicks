@@ -178,7 +178,7 @@ const Banner = () => {
             max-xl:m-0 max-lg:w-[94px] max-lg:h-[36px] max-md:w-[75px] max-md:h-[27px]"
             >
               {" "}
-              <img src={Footballs} alt="footballs" className="w-[100%]" />
+              <img src={Footballs} alt="footballs" loading="lazy" className="w-[100%]" />
             </div>
             <span className="main-heading-span bg-heading-gradient">
               prop firm
@@ -197,7 +197,7 @@ const Banner = () => {
             mx-auto cursor-pointer mt-4 max-md:mb-[160px]"
             onClick={handlePopupToggle} // Trigger popup toggle on button click
           >
-            <img src={VideoIcon} alt="video-icon" />
+            <img src={VideoIcon} alt="video-icon" loading="lazy" />
             Watch Video
           </button>
         </div>
@@ -215,6 +215,7 @@ const Banner = () => {
               <img
                 src={ArrowUp}
                 alt="up arrow"
+                loading="lazy"
                 className="w-9 h-9 max-lg:w-7 max-lg:h-7"
               />
               <span className="text-2xl leading-none max-lg:text-xl">
@@ -239,6 +240,7 @@ const Banner = () => {
                   <img
                     src={dollarIcon}
                     alt="dollor symbol"
+                    loading="lazy"
                     className="w-6 h-6 inline-block ms-3 rotate-[9.4deg] max-xl:w-5 max-xl:h-5 max-xl:-translate-y-[2px]"
                   />
                 </span>
@@ -249,6 +251,7 @@ const Banner = () => {
                   <img
                     src={SalesArrowUp}
                     alt="up arrow"
+                    loading="lazy"
                     className="w-9 h-9 max-lg:w-7 max-lg:h-7"
                   />
                   <span className="text-2xl leading-none max-lg:text-xl">
@@ -260,7 +263,7 @@ const Banner = () => {
           </div>
           {/* Iphone Img */}
           <div className="relative left-0 max-w-[660px] bottom-0 right-0 mx-auto z-[0] max-xl:max-w-[486px] max-lg:max-w-[450px]">
-            <img src={HeroInnerImg} alt="thumbnail" className="w-full h-full" />
+            <img src={HeroInnerImg} alt="thumbnail" loading="lazy" className="w-full h-full" />
           </div>
           {/* md hideden  stats row */}
           <div className="absolute right-0 top-[75px] -translate-x-24 z-10 max-2xl:-translate-x-10 max-xl:top-8 max-xl:translate-x-0 max-md:hidden">
@@ -279,6 +282,7 @@ const Banner = () => {
                 <img
                   src={dollarIcon}
                   alt="dollor symbol"
+                  loading="lazy"
                   className="w-6 h-6 inline-block ms-3 rotate-[9.4deg] max-xl:w-5 max-xl:h-5 max-xl:-translate-y-[2px]"
                 />
               </span>
@@ -289,7 +293,7 @@ const Banner = () => {
               </div>
               <div>
                 <div className="max-w-[136px] ms-auto mt-10 max-lg:mt-6">
-                  <img src={Chart} alt="chart" />
+                  <img src={Chart} alt="chart" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -297,13 +301,13 @@ const Banner = () => {
               className="max-w-[295px] mx-auto block mt-10 -translate-x-12 max-xl:max-w-64 max-lg:w-52 max-lg:translate-x-0"
               ref={userRef}
             >
-              <img src={clientImages} alt="sales images" />
+              <img src={clientImages} alt="sales images" loading="lazy" />
             </div>
             <div
               className="max-w-[75px] mx-auto block mt-10  relative z-[10] max-xl:max-w-16 max-xl:mt-8 max-lg:mr-3"
               ref={arrowRef}
             >
-              <img src={BannerArrowUp} alt="arrow" />
+              <img src={BannerArrowUp} alt="arrow" loading="lazy" />
             </div>
           </div>
         </div>
@@ -343,7 +347,7 @@ const Banner = () => {
         <img src={LinesLeft} alt="lines" loading="lazy" />
       </div>
       <div className="absolute bottom-0 left-0 right-0 w-full z-[2]">
-        <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+        <img src={BannerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
       </div>
     </section>
   );

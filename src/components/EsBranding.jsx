@@ -1,5 +1,5 @@
 import React from 'react'
-import BrandingBg from "../assets/images/branding-shadow.png"
+import BrandingBg from "../assets/images/branding-shadow.webp"
 import BdCard1 from "../assets/images/bd-card1.png"
 import BdCard2 from "../assets/images/bd-card2.png"
 import BdCard3 from "../assets/images/bd-card3.png"
@@ -44,7 +44,7 @@ const EsBranding = () => {
                         <p className='text-2xl md:text-lg xl:text-[32px] text-[rgba(15,23,42,0.80)] font-normal leading-7 md:leading-8 xl:leading-10'>Let’s make your firm stand out.</p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-                        <img src={WhtiteBtm} alt="top gradient" className="w-full" />
+                        <img src={WhtiteBtm} loading="lazy" alt="top gradient" className="w-full" />
                     </div>
                 </div>
                 <div className=' md:py-[80px] py-0'>
@@ -52,32 +52,32 @@ const EsBranding = () => {
                         <div className='grid grid-cols-12 gap-6 mb-6 max-md:gap-[10px]'>
                             <div className='grid grid-cols-1 gap-6 col-span-5'>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center py-[70px] px-[60px] overflow-hidden h-full'>
-                                    <img src={BdCard1} alt='card-img' />
+                                    <img loading="lazy" src={BdCard1} alt='card-img' />
                                 </figure>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center py-[70px] px-[60px] overflow-hidden h-full'>
-                                    <img src={BdCard3} alt='card-img' />
+                                    <img loading="lazy" src={BdCard3} alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-7'>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center pt-[90px] pl-[30px] overflow-hidden h-full'>
-                                    <img src={BdCard2} alt='card-img' />
+                                    <img src={BdCard2} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                         </div>
                         <div className='grid grid-cols-12 gap-6'>
                             <div className='col-span-5'>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center py-[70px] px-[60px] overflow-hidden h-full'>
-                                    <img src={BdCard4} alt='card-img' />
+                                    <img src={BdCard4} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-5'>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center py-[70px] px-[60px] overflow-hidden h-full'>
-                                    <img src={BdCard5} alt='card-img' />
+                                    <img src={BdCard5} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-2'>
                                 <figure className='branding-card bg-[#010510] rounded-[40px] flex justify-center items-center p-4 overflow-hidden h-full'>
-                                    <img src={BdCard6} alt='card-img' />
+                                    <img src={BdCard6} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                         </div>
@@ -87,37 +87,37 @@ const EsBranding = () => {
                             <div className='grid grid-cols-1 gap-6 col-span-5'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center 
                                 items-center  overflow-hidden h-full pt-[42px] pb-5 max-h-[230px]'>
-                                    <img src={BdCard1} alt='card-img' />
+                                    <img src={BdCard1} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-7'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center 
                                 items-center pl-6 overflow-hidden h-full max-h-[230px]'>
-                                    <img src={BdCard2} alt='card-img' />
+                                    <img src={BdCard2} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-6'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center
                                  items-center px-[0px] overflow-hidden h-full max-h-[230px]'>
-                                    <img src={BdCard4} alt='card-img' />
+                                    <img src={BdCard4} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-6'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center 
                                 items-center px-[10px] overflow-hidden h-full max-h-[230px]'>
-                                    <img src={BdCard3} alt='card-img' />
+                                    <img src={BdCard3} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
                             <div className='col-span-6'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center 
                                 items-center p-0 overflow-hidden h-full max-h-[230px]'>
-                                    <img src={BdCard6} alt='card-img' className='block max-h-[230px]' />
+                                    <img src={BdCard6} loading="lazy" alt='card-img' className='block max-h-[230px]' />
                                 </figure>
                             </div>
                             <div className='col-span-6'>
                                 <figure className='bg-[#010510] rounded-[26px] flex justify-center 
                                 items-center py-[70px] px-[0px] overflow-hidden h-full max-h-[230px]'>
-                                    <img src={BdCard5} alt='card-img' />
+                                    <img src={BdCard5} loading="lazy" alt='card-img' />
                                 </figure>
                             </div>
 
@@ -141,13 +141,13 @@ const EsBranding = () => {
                                     <p className='text-xl leading-8 text-white font-normal max-md:text-sm'>We do them for you!</p>
                                 </div>
                                 <figure>
-                                    <img src={BsCard1} alt='bs-card' />
+                                    <img src={BsCard1} loading="lazy" alt='bs-card' />
                                 </figure>
                             </div>
                             <div>
                                 <div className='bg-light-purple-gradient rounded-[40px] border border-[rgba(255,255,255,0.40)] overflow-hidden px-9 py-8 mb-6 max-md:px-[17px] max-md:py-5 max-md:rounded-[20px] max-md:mb-[12px]'>
                                     <figure>
-                                        <img src={BsCard2} alt='bs-card' />
+                                        <img src={BsCard2} loading="lazy" alt='bs-card' />
                                     </figure>
                                 </div>
                                 <ul className='grid grid-cols-2 gap-x-2 gap-y-6 max-md:gap-y-[10px]'>
@@ -164,12 +164,12 @@ const EsBranding = () => {
                             </div>
                             <div className='rounded-[40px] border border-[rgba(255,255,255,0.40)] overflow-hidden'>
                                 <figure>
-                                    <img src={BsCard3} alt='bs-card' />
+                                    <img src={BsCard3} loading="lazy" alt='bs-card' />
                                 </figure>
                             </div>
                             <div className='border border-[rgba(255,255,255,0.40)] overflow-hidden'>
                                 <figure>
-                                    <img src={BsCard4} alt='bs-card' />
+                                    <img src={BsCard4} loading="lazy" alt='bs-card' />
                                 </figure>
                             </div>
                         </div>
@@ -177,13 +177,13 @@ const EsBranding = () => {
                 </div>
                 <div className='relative'>
                     <div className="absolute top-0 left-0 right-0 w-full z-[1] rotate-180">
-                        <img src={WhtiteBtm} alt="bottom gradient" className="w-full" />
+                        <img src={WhtiteBtm} alt="bottom gradient" loading="lazy" className="w-full" />
                     </div>
                     <figure>
-                        <img src={BrandingImg} alt='branding-img' />
+                        <img src={BrandingImg} loading="lazy" alt='branding-img' />
                     </figure>
                     <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-                        <img src={WhtiteBtm} alt="top gradient" className="w-full" />
+                        <img src={WhtiteBtm} alt="top gradient" loading="lazy" className="w-full" />
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ const DevelopmentPlatform = () => {
   return (
     <section className="p-5 pt-36 relative max-lg:pt-28">
       <div className="absolute top-[-2px] left-0 right-0 w-full">
-        <img src={DevTop} alt="dev top gradient" className="w-full" />
+        <img src={DevTop} alt="dev top gradient" loading="lazy" className="w-full" />
       </div>
       <div className="rounded-[80px] relative z-[2] bg-white py-28 max-lg:py-16 max-lg:rounded-[40px] max-md:py-10">
         <div>
@@ -53,28 +53,28 @@ const DevelopmentPlatform = () => {
               ref={containerRef}
             >
               <div className="dev mt-[285px] max-xl:w-32 max-lg:mt-[140px] max-md:mt-[90px]">
-                <img src={Dev1} alt="dev-tool" />
+                <img src={Dev1} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev mt-[130px] max-xl:w-32 max-lg:mt-[70px] max-md:mt-[40px]">
-                <img src={Dev2} alt="dev-tool" />
+                <img src={Dev2} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev mt-[36px] max-xl:w-32 max-lg:mt-[20px] max-md:mt-[15px]">
-                <img src={Dev3} alt="dev-tool" />
+                <img src={Dev3} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev max-xl:w-32">
-                <img src={Dev4} alt="dev-tool" />
+                <img src={Dev4} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev mt-[36px] max-xl:w-32 max-lg:mt-[20px] max-md:mt-[15px]">
-                <img src={Dev5} alt="dev-tool" />
+                <img src={Dev5} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev mt-[130px] max-xl:w-32 max-lg:mt-[70px] max-md:mt-[40px]">
-                <img src={Dev6} alt="dev-tool" />
+                <img src={Dev6} alt="dev-tool" loading="lazy" />
               </div>
               <div className="dev mt-[285px] max-xl:w-32 max-lg:mt-[140px] max-md:mt-[90px]">
-                <img src={Dev7} alt="dev-tool" />
+                <img src={Dev7} alt="dev-tool" loading="lazy" />
               </div>
             </div>
-            <img src={DevImg} alt="dev-img" />
+            <img src={DevImg} alt="dev-img" loading="lazy" />
             <div className="text-center -mt-64">
               <h2 className="text-[120px] font-bold leading-tight mb-5 -tracking-[4.8px] max-xl:text-[92px] max-lg:text-6xl max-lg:mt-6 max-md:mt-[172px] max-md:text-4xl max-md:tracking-[-1.44px] max-md:mb-[10px]">
                 <span className="bg-blue-gradient">Development</span>

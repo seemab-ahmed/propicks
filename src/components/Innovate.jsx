@@ -45,7 +45,7 @@ const Innovative = () => {
             </div>
             <div className="relative self-end justify-self-end">
               <figure className="self-end justify-self-end">
-                <img src={InnvativeSide} alt="faceid" className="max-lg:h-[450px]" />
+                <img src={InnvativeSide} loading="lazy" alt="faceid" className="max-lg:h-[450px]" />
               </figure>
               {/* <div className="w-[540px] h-[217px] flex items-center flex-col justify-center absolute bottom-[150px] left-[-100px] px-11 rounded-[44px] overflow-hidden border border-transparent border-solid max-xl:w-[400px] max-xl:h-[166px] max-xl:left-[-50px] max-lg:left-[-300px] max-lg:w-auto
               max-md:left-0 max-md:right-0 max-md:top-0"

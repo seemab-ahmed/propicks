@@ -1,7 +1,7 @@
 import React from 'react'
 import IconTop from "../assets/images/dev-icon-top.svg"
 import DevelopBg from "../assets/images/develop-shadow.png"
-import CardLeftBg from "../assets/images/develop-card-left.png"
+import CardLeftBg from "../assets/images/develop-card-left.webp"
 import CardLeftVideo from "../assets/video/bg-icon-removed.webm"
 import CardRightBg from "../assets/images/develop-card-right.png"
 import DevelopShadow from "../assets/images/dev-card-bg.png"
@@ -12,11 +12,11 @@ const Develop = () => {
     return (
         <section className='relative bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${DevelopBg})` }}>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
-                <img src={DevelopBtm} alt="dev top gradient" className="w-full" />
+                <img src={DevelopBtm} alt="dev top gradient" loading="lazy" className="w-full" />
             </div>
             <div className='container'>
                 <div className='flex items-center justify-center flex-col mb-[60px] text-center'>
-                    <img src={IconTop} alt='icon' />
+                    <img src={IconTop} alt='icon' loading="lazy" />
                     <h2 className='text-[36px] md:text-[80px] lg:text-[120px] xl:text-[180px] font-bold leading-none text-white -tracking-[1.44px] xl:-tracking-[7.2px] -mt-20 xl:-mt-28 mb-5'>&lt;<span className='bg-blue-gradient tracking-[0]'>/</span> <b className='text-[36px] md:text-[50px] lg:text-[80px] xl:text-[120px] -tracking-[1.44px] xl:-tracking-[4.8px]'>Develop</b> &gt;</h2>
                     <p className='text-base md:text-lg xl:text-2xl text-[#C5CEE6] font-normal leading-7 md:leading-8 xl:leading-10 max-w-[870px] w-full mx-auto'>When it comes to mobile development, PropPicks combines innovation with precision to keep your business at the forefront of technology.</p>
                 </div>
@@ -26,7 +26,7 @@ const Develop = () => {
                         <source src={CardLeftVideo} type="video/mp4" />
                         <source src={CardLeftVideo} type="video/ogg" />
                         </video>
-                        <img src={CardLeftBg} alt="card bg" className='w-full h-full object-cover block md:hidden' />
+                        <img src={CardLeftBg} alt="card bg" loading="lazy" className='w-full h-full object-cover block md:hidden' />
                     </div>
                     <div className='min-h-[529px] xl:min-h-[789px] h-full p-5 xl:p-10 flex flex-col justify-end bg-cover bg-no-repeat border border-[rgba(255,255,255,0.00)] rounded-[20px] xl:rounded-[40px] overflow-hidden' style={{ backgroundImage: `url(${CardRightBg})` }}>
                         <h3 className='text-[32px] md:text-[40px] xl:text-[60px] font-bold leading-none text-white -tracking-[1.2px] mb-5'>Technology <br /> Stack</h3>
@@ -43,12 +43,12 @@ const Develop = () => {
                         </Link>
                     </div>
                     <div className="absolute bottom-0 left-0 mx-auto right-0 w-full -z-[1]">
-                        <img src={DevelopShadow} alt="dev shadow gradient" className="w-full object-cover object-center" />
+                        <img src={DevelopShadow} loading="lazy" alt="dev shadow gradient" className="w-full object-cover object-center" />
                     </div>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">
-                <img src={DevelopBtm} alt="dev bottom gradient" className="w-full" />
+                <img src={DevelopBtm} alt="dev bottom gradient" loading="lazy" className="w-full" />
             </div>
         </section>
     )

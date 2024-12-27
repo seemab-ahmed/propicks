@@ -24,7 +24,7 @@ const Faqs = ({ hideGradient = false }) => {
       {/* Conditionally render the gradient */}
       {!hideGradient && (
         <div className="absolute top-[-2px] left-0 right-0 w-full">
-          <img src={DevTop} alt="dev top gradient" className="w-full" />
+          <img src={DevTop} alt="dev top gradient" loading="lazy" className="w-full" />
         </div>
       )}
 

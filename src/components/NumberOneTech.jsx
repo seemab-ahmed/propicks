@@ -22,7 +22,7 @@ const NumberOneTech = () => {
       }}
     >
       <div className="absolute top-0 left-0 right-0 w-full">
-        <img src={ServiceTop} alt="service top gradient" className="w-full" />
+        <img src={ServiceTop} alt="service top gradient" loading="lazy" className="w-full" />
       </div>
       <div className="container max-w-[1280px] mx-auto relative z-[1]">
         <div className="text-center">
@@ -45,7 +45,7 @@ const NumberOneTech = () => {
             <div className="relative z-[2] mb-10  max-lg:mb-5">
               <div className="mb-[32px] p-6 rounded-[24px] bg-white w-[78px] h-[78px] max-lg:w-[60px] 
               max-lg:h-[60px] max-lg:p-[18px] max-lg:rounded-[18px] max-lg:mb-6">
-                <img src={iconCard1} alt="card icon" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
+                <img src={iconCard1} alt="card icon" loading="lazy" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
               </div>
               <h4 className="text-[32px] font-bold leading-none tracking-[-1.2px] text-white mb-5 
               max-xl:text-4xl max-lg:text-[26px] max-lg:mb-[10px]">
@@ -57,7 +57,7 @@ const NumberOneTech = () => {
               </p>
             </div>
             <div className="flex justify-center mx-auto w-full relative z-0">
-              <img src={ServiceImg1} alt="" className="block mx-auto" />
+              <img src={ServiceImg1} alt="" loading="lazy" className="block mx-auto" />
             </div>
             <div
               className="absolute bottom-0 left-0 right-0 w-full h-[175px]"
@@ -80,7 +80,7 @@ const NumberOneTech = () => {
             <div className="relative z-[2] mb-10 max-lg:mb-5">
               <div className="mb-[32px] p-6 rounded-[24px] bg-[#1972F5] w-[78px] h-[78px] max-lg:w-[60px] 
                 max-lg:h-[60px] max-lg:p-[18px] max-lg:rounded-[18px] max-lg:mb-6">
-                <img src={iconCard2} alt="card icon" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
+                <img src={iconCard2} alt="card icon" loading="lazy" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
               </div>
               <h4 className="text-[32px] font-bold leading-none tracking-[-1.2px] text-white mb-5 
               max-xl:text-4xl max-lg:text-[26px] max-lg:mb-[10px]">
@@ -91,7 +91,7 @@ const NumberOneTech = () => {
               </p>
             </div>
             <div className="flex justify-center mx-auto w-full relative z-0">
-              <img src={ServiceImg2} alt="" className="block mx-auto" />
+              <img src={ServiceImg2} alt="" loading="lazy" className="block mx-auto" />
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ const NumberOneTech = () => {
             <div className="relative z-[2] mb-10 max-lg:mb-5">
               <div className="mb-[32px] p-6 rounded-[24px] bg-[#00C43E] w-[78px] h-[78px] max-lg:w-[60px] 
                 max-lg:h-[60px] max-lg:p-[18px] max-lg:rounded-[18px] max-lg:mb-6">
-                <img src={iconCard3} alt="card icon" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
+                <img src={iconCard3} alt="card icon" loading="lazy" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
               </div>
               <h4 className="text-[32px] font-bold leading-none tracking-[-1.2px] text-white mb-5 
               max-xl:text-4xl max-lg:text-[26px] max-lg:mb-[10px]">
@@ -121,7 +121,7 @@ const NumberOneTech = () => {
               </p>
             </div>
             <div className="flex justify-center mx-auto w-full relative z-0">
-              <img src={ServiceImg3} alt="" className="block mx-auto" />
+              <img src={ServiceImg3} alt="" loading="lazy" className="block mx-auto" />
             </div>
             <div
               className="absolute bottom-0 left-0 right-0 w-full h-[54px]"
@@ -143,7 +143,7 @@ const NumberOneTech = () => {
             <div className="relative z-[2] mb-10 max-lg:mb-5">
               <div className="mb-[32px] p-6 rounded-[24px] bg-[#FF5C36] w-[78px] h-[78px] max-lg:w-[60px] 
                 max-lg:h-[60px] max-lg:p-[18px] max-lg:rounded-[18px] max-lg:mb-6">
-                <img src={iconCard4} alt="card icon" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
+                <img src={iconCard4} alt="card icon" loading="lazy" className="w-8 h-8 max-lg:w-6 max-lg:h-6" />
               </div>
               <h4 className="text-[32px] font-bold leading-none tracking-[-1.2px] text-white mb-5 
               max-xl:text-4xl max-lg:text-[26px] max-lg:mb-[10px]">
@@ -154,7 +154,7 @@ const NumberOneTech = () => {
               </p>
             </div>
             <div className="flex justify-center mx-auto w-full relative z-0">
-              <img src={ServiceImg4} alt="" className="block mx-auto" />
+              <img src={ServiceImg4} alt="" loading="lazy" className="block mx-auto" />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import SalesImg from "../assets/images/sales-img.png"
+import SalesImg from "../assets/images/sales-img.webp"
 import BannerBtm from "../assets/images/dev-banner-btm.png";
 import SalesBg from "../assets/images/sales-bg.png";
 import SalesIcon from "../assets/images/sale-icon.png";
@@ -19,7 +19,7 @@ const Sales = () => {
               <img src={SalesImg} alt="sale-bg" loading='lazy' className='w-full h-full object-cover block md:hidden' />
             </div>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
-                <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+                <img src={BannerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
             </div>
             <div className='w-[90%] md:w-[85%] mx-auto'>
                 <div
@@ -29,7 +29,7 @@ const Sales = () => {
                     }}
                 >
                     <div className="flex justify-center mx-auto mb-7 max-lg:mb-5 max-lg:w-14 max-md:w-[46px] max-md:mb-2">
-                        <img src={SalesIcon} alt="sale Arrows" />
+                        <img src={SalesIcon} alt="sale Arrows" loading="lazy" />
                     </div>
                     <div>
                         <h4 className="text-xl leading-normal text-white font-medium max-md:text-sm">
@@ -45,7 +45,7 @@ const Sales = () => {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">
-                <img src={DevelopBtm} alt="dev bottom gradient" className="w-full" />
+                <img src={DevelopBtm} alt="dev bottom gradient" loading="lazy" className="w-full" />
             </div>
         </section>
     )

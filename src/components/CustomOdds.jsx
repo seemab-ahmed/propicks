@@ -35,7 +35,7 @@ const CustomOdds = () => {
       </div>
       {/* btm-img  */}
       <div className="absolute bottom-[-3px] left-0 right-0 w-full">
-        <img src={ServicesBtm} alt="service top gradient" className="w-full" />
+        <img src={ServicesBtm} alt="service top gradient" loading="lazy" className="w-full" />
       </div> 
     </section>
   );

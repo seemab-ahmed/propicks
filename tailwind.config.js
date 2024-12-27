@@ -22,6 +22,7 @@ module.exports = {
         "purple-gradient": "linear-gradient(111deg, #E1C3FF 8.34%, #8B79FF 23.76%, #4830FF 83.56%)",
         "light-blue-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
         "light-purple-gradient": "linear-gradient(180deg, #8B79FF 0%, #816EFF 100%)",
+        "menu-black-gradient": "linear-gradient(180deg, #0A0A0A 0%, #040404 100%)",
       },
       boxShadow: {
         "grey-inset": "0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset",

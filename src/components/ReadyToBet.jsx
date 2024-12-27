@@ -42,6 +42,7 @@ const ReadyToBet = () => {
                   <img
                     src={AppleStoreIcon}
                     alt="Apple Store"
+                    loading="lazy"
                     className="w-9 max-md:w-6"
                   />
                   <div>
@@ -62,6 +63,7 @@ const ReadyToBet = () => {
                   <img
                     src={PlayStoreIcon}
                     alt="Apple Store"
+                    loading="lazy"
                     className="w-9 max-md:w-6"
                   />
                   <div>
@@ -104,12 +106,13 @@ const ReadyToBet = () => {
                 <img
                   src={BetSide}
                   alt="faceid"
+                  loading="lazy"
                   className="max-lg:h-[450px] max-md:h-[289px]"
                 />
               </figure>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">
-              <img src={BetShadow} alt="gradient" className="w-full" />
+              <img src={BetShadow} alt="gradient" loading="lazy" className="w-full" />
             </div>
           </div>
         </div>

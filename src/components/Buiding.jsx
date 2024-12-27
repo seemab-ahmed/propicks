@@ -12,7 +12,7 @@ const Building = () => {
       
     >
     <div className="absolute right-0 top-0">
-      <img src={PropPickLogo} alt="pp-logo" className="w-[300px] md:w-[704px]" />
+      <img src={PropPickLogo} alt="pp-logo" loading="lazy" className="w-[300px] md:w-[704px]" />
     </div>
       <div className="container max-w-[886px] mx-auto">
         <div className="text-center">
@@ -28,11 +28,11 @@ const Building = () => {
         {/* FAQ Cards */}
       </div>
         <div className="w-[90%] mx-auto space-y-[10px] flex justify-end relative z-[2]">
-            <img src={BuildingBtm} alt="buildingbtm"  className="hidden md:block"/>
-            <img src={BuildingBtmMb} alt="buildingbtm" className="block md:hidden" />
+            <img src={BuildingBtm} alt="buildingbtm" loading="lazy"  className="hidden md:block"/>
+            <img src={BuildingBtmMb} alt="buildingbtm" loading="lazy" className="block md:hidden" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 w-full z-[3]">
-        <img src={DividerBtm} alt="dev top gradient" className="w-full" />
+        <img src={DividerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
       </div>
     </section>
   );

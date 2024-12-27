@@ -25,7 +25,7 @@ const GrowFirmBanner = () => {
       <div className="container relative z-[1]">
         <div className="text-center mb-10 max-w-[1140px] mx-auto" ref={headingRef}>
           <h1 className="text-[110px] text-white font-bold leading-none mb-5 max-xl:text-7xl max-lg:text-[3.5rem] max-md:text-4xl max-md:mb-2">
-            We help you <span className="main-heading-span bg-heading-gradient min-w-[120px]"><span>
+            We help you <span className="main-heading-span bg-heading-gradient min-w-[120px] max-md:min-w-[89px]"><span>
               <Typewriter
                 options={{
                   strings: ["grow", "profit", 'earn'],
@@ -49,11 +49,13 @@ const GrowFirmBanner = () => {
             <img
               src={affiliate}
               alt="thumbnail"
+              loading="lazy"
               className="hidden md:block"
             />
             <img
               src={affiliateMb}
               alt="thumbnail"
+              loading="lazy"
               className="block md:hidden"
             />
           </div>
@@ -61,7 +63,7 @@ const GrowFirmBanner = () => {
       </div>
       {/* grow bg mb top  */}
       <div className="max-w-85% mx-auto absolute top-0 left-0 right-0 block md:hidden">
-        <img src={GrowBgTop} alt="grow bg" />
+        <img src={GrowBgTop} alt="grow bg" loading="lazy" />
       </div>
       {/* Banner Lines */}
       <div className="absolute bottom-80 right-0 mx-w-[480px] max-md:max-w-[200px] max-sm:max-w-[180px] max-md:top-[177px]">
@@ -72,7 +74,7 @@ const GrowFirmBanner = () => {
       </div>
       {/* gradient  */}
       <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-        <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+        <img src={BannerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
       </div>
     </section>
   );

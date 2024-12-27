@@ -43,7 +43,7 @@ const GrowFirmSection = () => {
       }}
     >
       <div className="absolute top-0 left-0 right-0 w-full">
-        <img src={ServiceTop} alt="service top gradient" className="w-full" />
+        <img src={ServiceTop} alt="service top gradient" loading="lazy" className="w-full" />
       </div>
       <div className="container relative z-[1] max-w-[1260px] mx-auto">
         <div className="text-center ">
@@ -70,12 +70,12 @@ const GrowFirmSection = () => {
                 </p>
               </div>
               <div  className="mx-auto hidden md:block">
-                <img src={GrowCardIcon} alt="icon img" />
+                <img src={GrowCardIcon} alt="icon img" loading="lazy" />
               </div>
 
             </div>
             <figure className="col-span-7 self-end max-lg:col-span-6 flex justify-end">
-              <img src={GrowCardImg} alt="faceid" />
+              <img src={GrowCardImg} alt="faceid" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -83,7 +83,7 @@ const GrowFirmSection = () => {
         <TierTabs TabHeading="How it works" tiers={WorktabsData} />
       </div>
       <div className="absolute bottom-0 left-0 right-0 w-full">
-        <img src={ServiceBottom} alt="service bottom gradient" className="w-full" />
+        <img src={ServiceBottom} alt="service bottom gradient" loading="lazy" className="w-full" />
       </div>
     </section>
   );

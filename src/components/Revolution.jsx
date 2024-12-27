@@ -80,7 +80,7 @@ const Revolution = () => {
                             className="px-10 py-5 flex gap-5 bg-[#061838] rounded-[14px] border border-solid 
                             border-[rgba(255,255,255,0.15)] max-md:px-[20px] max-md:py-[10px] max-md:gap-[10px]"
                         >
-                            <img src={AppleStoreIcon} alt="Apple Store" className='w-9 max-md:w-6' />
+                            <img src={AppleStoreIcon} alt="Apple Store" loading="lazy" className='w-9 max-md:w-6' />
                             <div>
                                 <span className="text-white text-lg block leading-[1.2] mb-1 max-md:text-xs">
                                     Download on the
@@ -95,7 +95,7 @@ const Revolution = () => {
                             className="px-10 py-5 flex gap-5 bg-[#061838] rounded-[14px] border 
                             border-solid border-[rgba(255,255,255,0.15)] max-md:px-[20px] max-md:py-[10px] max-md:gap-[10px]"
                         >
-                            <img src={PlayStoreIcon} alt="Apple Store" className='w-9 max-md:w-6' />
+                            <img src={PlayStoreIcon} alt="Apple Store" loading="lazy" className='w-9 max-md:w-6' />
                             <div>
                                 <span className="text-white text-lg block leading-[1.2] mb-1 max-md:text-xs">
                                     Get it on
@@ -107,16 +107,16 @@ const Revolution = () => {
                         </Link>
                     </div>
                     <div className='flex items-center justify-center gap-10 max-md:flex-col max-md:gap-0'>
-                        <img src={RvCard1} alt='card1' className='card1 max-w-[318px] w-full' />
-                        <img src={RvCard2} alt='card2' className='card2 max-w-[514px] w-full' />
-                        <img src={RvCard3} alt='card3' className='card3 max-w-[339px] w-full' />
+                        <img src={RvCard1} alt='card1' loading="lazy" className='card1 max-w-[318px] w-full' />
+                        <img src={RvCard2} alt='card2' loading="lazy" className='card2 max-w-[514px] w-full' />
+                        <img src={RvCard3} alt='card3' loading="lazy" className='card3 max-w-[339px] w-full' />
                     </div>
                 </div>
             </div>
             <div className='relative '>
-                <img src={IphoneImg} alt='iphones' className='mx-auto' />
+                <img src={IphoneImg} loading="lazy" alt='iphones' className='mx-auto' />
                 <div className="absolute bottom-0 left-0 right-0  w-full z-[1]">
-                    <img src={RvBtm} alt="dev bottom gradient" className="w-full" />
+                    <img src={RvBtm} loading="lazy" alt="dev bottom gradient" className="w-full" />
                 </div>
             </div>
         </section>

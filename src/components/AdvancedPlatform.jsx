@@ -44,10 +44,10 @@ const AdvancedPlatform = () => {
       {/* section top divider  */}
       <div>
         <div className="absolute top-0 left-0 right-0 w-full z-[1]">
-          <img src={ServiceTop} alt="service top gradient" className="w-full" />
+          <img src={ServiceTop} alt="service top gradient" loading="lazy" className="w-full" />
         </div>
         <div className="absolute top-0 left-0 right-0 w-[70%] block mx-auto z-0 md:hidden" >
-          <img src={ServiceTopMb} alt="service top gradient" className="w-full" />
+          <img src={ServiceTopMb} alt="service top gradient" loading="lazy" className="w-full" />
         </div>
       </div> 
       {/* section container */}
@@ -78,7 +78,7 @@ const AdvancedPlatform = () => {
               </p>
             </div>
             <figure className="col-span-7 self-end max-lg:col-span-6 flex justify-end">
-              <img src={DashboardImg} alt="faceid" />
+              <img src={DashboardImg} alt="faceid" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -87,7 +87,7 @@ const AdvancedPlatform = () => {
       </div>
       {/* section btm divider  */}
       <div className="absolute bottom-0 left-0 right-0 w-full">
-        <img src={ServiceBottom} alt="service bottom gradient" className="w-full" />
+        <img src={ServiceBottom} alt="service bottom gradient" loading="lazy" className="w-full" />
       </div>
     </section>
   );

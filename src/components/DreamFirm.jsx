@@ -157,7 +157,7 @@ const DreamFirm = ({ isgrowPage = false }) => {
                 className="border border-[rgba(255,255,255,0.10)] bg-[#1A2031] rounded-[10px] shadow-grey-inset max-w-[172px] lg:max-w-[255px] w-full h-[52px] flex items-center justify-center gap-3.5 text-base lg:text-lg font-semibold leading-none text-white mx-auto lg:mx-0 cursor-pointer"
                 onClick={handlePopupToggle} // Trigger popup toggle on button click
               >
-                <img src={VideoIcon} alt="video-icon" />
+                <img src={VideoIcon} alt="video-icon" loading="lazy" />
                 Watch Video
               </button>
             </div>
@@ -222,7 +222,7 @@ const DreamFirm = ({ isgrowPage = false }) => {
               </form>
             </div>
             <div className="hidden lg:block absolute top-0 left-0 w-full h-full -z-[1] scale-150">
-              <img src={VectorImg} alt="vector" className="w-full" />
+              <img src={VectorImg} alt="vector" loading="lazy" className="w-full" />
             </div>
           </div>
         </div>
@@ -230,11 +230,11 @@ const DreamFirm = ({ isgrowPage = false }) => {
       <div className="hidden lg:block">
         {!isgrowPage && (
           <div className="absolute top-0 left-0 w-full max-w-[42vw] h-auto -z-[1]">
-            <img src={PPLogo} alt="top" className="w-full" />
+            <img src={PPLogo} alt="top" loading="lazy" className="w-full" />
           </div>
         )}
         <div className="absolute top-1/2 -translate-y-1/2 right-0 mx-w-[480px] max-md:max-w-[200px]">
-          <img src={LinesRight} alt="lines" loading="lazy" />
+          <img src={LinesRight} alt="lines"  loading="lazy" />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 left-0 mx-w-[480px] max-md:max-w-[200px]">
           <img src={LinesLeft} alt="lines" loading="lazy" />
@@ -243,13 +243,13 @@ const DreamFirm = ({ isgrowPage = false }) => {
       {!isgrowPage && (
         <div>
           <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-            <img src={BannerBtm} alt="btm" className="w-full" />
+            <img src={BannerBtm} alt="btm" loading="lazy" className="w-full" />
           </div>
           <div className="absolute bottom-0 left-0 right-0 w-full">
-            <img src={DfBtm} alt="btm" className="w-full" />
+            <img src={DfBtm} alt="btm" loading="lazy" className="w-full" />
           </div>
           <div className="block lg:hidden absolute top-0 left-0 right-0 mx-auto w-auto -z-[1]">
-            <img src={DfMblBg} alt="top" className="w-full" />
+            <img src={DfMblBg} alt="top" loading="lazy" className="w-full" />
           </div>
         </div>
       )}

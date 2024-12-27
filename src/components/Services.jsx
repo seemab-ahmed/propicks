@@ -129,7 +129,7 @@ const Services = () => {
       }}
     >
       <div className="absolute top-0 left-0 right-0 w-full">
-        <img src={ServiceTop} alt="service top gradient" className="w-full" />
+        <img src={ServiceTop} alt="service top gradient" loading="lazy" className="w-full" />
       </div>
       <div className="container max-w-[1260px] mx-auto relative z-[1]">
         <div className="text-center">
@@ -335,6 +335,7 @@ const ServiceCard = ({
             <img
               src={gifImg}
               alt={title}
+              loading="lazy"
               className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
             />
           )}
@@ -356,6 +357,7 @@ const ServiceCard = ({
           <img
             src={image}
             alt={title}
+            loading="lazy"
             className={`block ${imgRight === true ? "ms-auto" : "mx-auto"}`}
           />
         </div>

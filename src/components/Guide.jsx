@@ -24,7 +24,7 @@ const Guide = () => {
       }}
     >
       <div className="absolute top-[-1px] left-0 right-0 w-full">
-        <img src={GuideTop} alt="Gradient Img" className="w-full" />
+        <img src={GuideTop} alt="Gradient Img" loading="lazy" className="w-full" />
       </div>
       <div className="container relative z-[2]">
         <div className="text-center mb-10 max-md:mb-8">
@@ -46,8 +46,8 @@ const Guide = () => {
           >
             <div className="grid grid-cols-2 gap-7 items-center max-md:grid-cols-1">
               <figure className="max-md:order-2 max-md:mr-auto max-md:max-w-[85%] max-md:max-h-[322px]">
-                <img src={IdentificationImg} alt="faceid" className="hidden md:block" />
-                <img src={FaceIdImg} alt="faceid" className="block md:hidden" />
+                <img src={IdentificationImg} alt="faceid" loading="lazy" className="hidden md:block" />
+                <img src={FaceIdImg} alt="faceid" loading="lazy" className="block md:hidden" />
               </figure>
               <div className="text-center max-md:order-1 max-md:px-8">
                 <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px]  max-md:mb-[10px]">
@@ -66,7 +66,7 @@ const Guide = () => {
             style={{ backgroundImage: `url(${Card2Img})` }}
           >
             <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px] block md:hidden">
-              <img src={StatsImg} alt="statsImg" />
+              <img src={StatsImg} alt="statsImg" loading="lazy" />
             </figure>
             <video width="100%" height="100%" className="w-full object-cover mb-[110px] max-lg:mb-6 hidden md:block" autoPlay muted loop>
               <source src={StatsVid} type="video/mp4" />
@@ -91,6 +91,7 @@ const Guide = () => {
               <img
                 src={PricingImg}
                 alt="pricing-img"
+                loading="lazy"
                 className="max-h-[390px] w-full"
               />
             </figure>
@@ -125,7 +126,7 @@ const Guide = () => {
                 </p>
               </div>
               <figure className="col-span-7 self-end max-lg:col-span-6 ">
-                <img src={DashboardImg} alt="faceid" />
+                <img src={DashboardImg} alt="faceid" loading="lazy" />
               </figure>
             </div>
           </div>
@@ -144,7 +145,7 @@ const Guide = () => {
         </div>
       </div>
       <div className="absolute bottom-[-2px] left-0 right-0 w-full z-[1]">
-        <img src={GuideBtm} alt="Gradient Img" className="w-full" />
+        <img src={GuideBtm} alt="Gradient Img" loading="lazy" className="w-full" />
       </div>
     </section>
   );

@@ -81,7 +81,7 @@ const BuildAffiliate = () => {
                       className="p-6 bg-[#FFFFFF1A] border rounded-[20px] border-solid  
                     border-[#FFFFFF1A] max-md:rounded-lg max-md:p-2"
                     >
-                      <img src={item.icon} alt="icon" className="w-8 h-8 max-md:w-3 max-md:h-3" />
+                      <img src={item.icon} alt="icon" loading="lazy" className="w-8 h-8 max-md:w-3 max-md:h-3" />
                     </div>
                     <span>{item.label}</span>
                   </div>

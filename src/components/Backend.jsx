@@ -12,11 +12,11 @@ const Backend = () => {
     return (
         <section className='relative'>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180">
-                <img src={DevelopBtm} alt="dev top gradient" className="w-full" />
+                <img src={DevelopBtm} alt="dev top gradient" loading="lazy" className="w-full" />
             </div>
             <div className='container'>
                 <div className='flex items-center justify-center flex-col mb-[60px] text-center'>
-                    <img src={IconTop} alt='icon' />
+                    <img src={IconTop} loading="lazy" alt='icon' />
                     <h2 className='text-[36px] md:text-[80px] lg:text-[120px] xl:text-[180px] font-bold leading-none text-white -tracking-[1.44px] xl:-tracking-[7.2px] -mt-20 xl:-mt-28 mb-5'><span className='bg-blue-gradient'>Backend</span></h2>
                     <p className='text-base md:text-lg xl:text-2xl text-[#C5CEE6] font-normal leading-7 md:leading-8 xl:leading-10 max-w-[896px] w-full mx-auto'>Our coding architecture is designed for maximum scalability, speed, and reliability. Our systems can handle complex data processing and high traffic volumes effortlessly, ensuring your prop firm operates smoothly under any circumstances.</p>
                 </div>
@@ -31,7 +31,7 @@ const Backend = () => {
                             <p className='text-[12px] md:text-lg xl:text-[21px] font-normal leading-[18px] md:leading-7 xl:leading-10 text-[#C5CEE6]'>Efficiency drives our coding. Every line is crafted for speed, reliability, and scalability, ensuring seamless performance for your prop firm.</p>
                         </div>
                         <figure  className='block md:hidden'>
-                            <img src={OptimizeImg} alt='optimize' />
+                            <img src={OptimizeImg} loading="lazy" alt='optimize' />
                         </figure>
                          <video width="100%" height="100%" className="w-full h-full object-cover align-top absolute inset-0 hidden md:block" autoPlay muted loop>
                             <source src={CardBgVideo} type="video/mp4" />
@@ -41,7 +41,7 @@ const Backend = () => {
                     </div>
                 </div>
                 <div className='absolute right-0 bottom-0 pl-0 w-full -z-[1]'>
-                    <img src={BackendBg} alt='optimize' className='w-full block md:hidden' />
+                    <img src={BackendBg} loading="lazy" alt='optimize' className='w-full block md:hidden' />
                      <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
                         <source src={BackendBgVideo} type="video/mp4" />
                         <source src={BackendBgVideo} type="video/ogg" />
@@ -49,7 +49,7 @@ const Backend = () => {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full">
-                <img src={BannerBtm} alt="dev top gradient" className="w-full" />
+                <img src={BannerBtm} loading="lazy" alt="dev top gradient" className="w-full" />
             </div>
         </section>
     )

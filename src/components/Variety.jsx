@@ -67,7 +67,7 @@ const Variety = () => {
     return (
         <section className='pt-[142px] bg-no-repeat bg-cover relative max-md:pt-10' style={{ backgroundImage: `url(${VarietyBg})` }}>
             <div className="absolute top-0 left-0 right-0 w-full z-[1] rotate-180">
-                <img src={VarietyBtm} alt="dev bottom gradient" className="w-full" />
+                <img src={VarietyBtm} loading="lazy" alt="dev bottom gradient" className="w-full" />
             </div>
             <div className='max-w-[1520px] w-[90%] mx-auto max-md:overflow-hidden'>
                 <h2 className='text-[36px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[120px] font-bold 
@@ -81,7 +81,7 @@ const Variety = () => {
                         {buttons.map((button) => (
                             <li key={button.id} className='2xl:h-[88px] xl:h-[76px] lg:h-16 md:h-14 h-10'>
                                 <Link to="/" className='block h-full'> 
-                                    <img src={button.src} alt="btn" className='h-full w-full block' />
+                                    <img src={button.src} alt="btn" loading="lazy" className='h-full w-full block' />
                                 </Link>
                             </li>
                         ))}
@@ -132,7 +132,7 @@ const Variety = () => {
                             <figure className='bg-[#070F29] p-6 w-20 h-20 rounded-[24px] flex 
                             item-center justify-center mb-[100px] max-md:mb-[60px] max-md:w-[60px] 
                             max-md:h-[60px] max-md:rounded-[18px] max-md:p-4'>
-                                <img src={item.icon} alt='icon' />
+                                <img src={item.icon} loading="lazy" alt='icon' />
                             </figure>
                             <div>
                                 <h5 className='text-[32px] font-bold leading-none text-white 
@@ -144,11 +144,11 @@ const Variety = () => {
                     ))}
                 </div>
                 <div className='absolute bottom-0 left-0 right-0 w-full -z-[1]'>
-                    <img src={VarietyCardBg} alt='variety-card-bg' className='w-full object-cover object-center' />
+                    <img src={VarietyCardBg} loading="lazy" alt='variety-card-bg' className='w-full object-cover object-center' />
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full z-[1]">
-                <img src={RvBtm} alt="dev bottom gradient" className="w-full" />
+                <img src={RvBtm} loading="lazy" alt="dev bottom gradient" className="w-full" />
             </div>
         </section>
     );

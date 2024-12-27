@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:text-center">
             <div>
               <Link to="/">
-                <img src={Brand} alt="PropPicks" />
+                <img src={Brand} alt="PropPicks" loading="lazy" />
               </Link>
               <div className="max-w-[480px]">
                 <p className="text-sm font-normal leading-[2.25] text-[#C5CEE6] mb-2">
@@ -57,7 +57,7 @@ const Footer = () => {
                   to="mailto:Sales@Proppicks.com"
                   className="flex gap-[10px] text-[#81B4FF] bg-[#061838] rounded-[100px] py-[10px] px-5 leading-8"
                 >
-                  <img src={MailIcon} alt="Mail Icon" />
+                  <img src={MailIcon} alt="Mail Icon" loading="lazy" />
                   <span>Sales@Proppicks.com</span>
                 </Link>
                 <Link
@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
               <div className="flex justify-between max-w-[104px] mt-8 ms-auto max-md:mx-auto">
                 <Link to="/">
-                  <img src={InstaIcon} alt="Instagram" />
+                  <img src={InstaIcon} alt="Instagram" loading="lazy" />
                 </Link>
                 <Link to="/">
                   <img src={TwitterIcon} alt="Instagram" />
@@ -109,7 +109,7 @@ const Footer = () => {
                 to="/"
                 className="px-5 py-[10px] flex gap-[10px] bg-[#061838] rounded-[14px] border border-solid border-[rgba(255,255,255,0.15)]"
               >
-                <img src={AppleStoreIcon} alt="Apple Store" />
+                <img src={AppleStoreIcon} alt="Apple Store" loading="lazy" />
                 <div>
                   <span className="text-white text-xs block leading-[1.2] mb-1">
                     Download on the
@@ -123,7 +123,7 @@ const Footer = () => {
                 to="/"
                 className="px-5 py-[10px] flex gap-[10px] bg-[#061838] rounded-[14px] border border-solid border-[rgba(255,255,255,0.15)]"
               >
-                <img src={PlayStoreIcon} alt="Apple Store" />
+                <img src={PlayStoreIcon} alt="Apple Store" loading="lazy" />
                 <div>
                   <span className="text-white text-xs block leading-[1.2] mb-1">
                     Get it on
@@ -154,7 +154,7 @@ const Footer = () => {
         </div>
         {/* footer-btm-gradient */}
         <div className="absolute bottom-0 left-0 right-0 w-full">
-          <img src={FooterBtm} alt="dev top gradient" className="w-full" />
+          <img src={FooterBtm} alt="dev top gradient" loading="lazy" className="w-full" />
         </div>
 
       </div>
@@ -185,10 +185,10 @@ const Footer = () => {
           </p>
         </div>
         <div className="pr-[27px] relative z-[2] flex items-center justify-end md:-mt-[50px] max-md:justify-center max-md:pr-0">
-          <img src={PoweredIcon} alt="poweredIcon" />
+          <img src={PoweredIcon} alt="poweredIcon" loading="lazy" />
         </div>
         <div className="absolute top-0 left-0 right-0 w-full">
-          <img src={FooterEnd} alt="dev top gradient" className="w-full" />
+          <img src={FooterEnd} alt="dev top gradient" className="w-full" loading="lazy" />
         </div>
       </div>
     </footer>

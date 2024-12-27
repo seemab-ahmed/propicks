@@ -8,10 +8,10 @@ const MasterBetter = () => {
     return (
         <section className='relative pt-[160px] pb-[90px] max-md:pb-10 max-md:pt-10'>
             <div className='absolute left-0 top-0 right-0 w-full h-auto -z-[1]'>
-                <img src={MbBg} alt='mb-bg' className='w-full object-cover' />
+                <img src={MbBg} alt='mb-bg' loading="lazy" className='w-full object-cover' />
             </div>
             <div className="absolute top-0 left-0 right-0 w-full rotate-180 z-[1]">
-                <img src={MbTop} alt="dev top gradient" className="w-full" />
+                <img src={MbTop} alt="dev top gradient" loading="lazy" className="w-full" />
             </div>
             <div className='max-w-[1400px] mx-auto w-[90%]'>
                 <div className='text-center'>
@@ -32,7 +32,7 @@ const MasterBetter = () => {
                     </Link>
                 </div>
                 <div>
-                    <img src={MbCard} alt='mb-bg' />
+                    <img src={MbCard} alt='mb-bg' loading="lazy" />
                 </div>
                 <Link
                     to="/grow-your-firm"

@@ -1,5 +1,5 @@
 import React from 'react'
-import ExcellenceBg from "../assets/images/excellence-bg.png"
+import ExcellenceBg from "../assets/images/excellence-bg.webp"
 import TextureBg from "../assets/images/texture.png"
 import ExcellenceCard from "../assets/images/excellence-inner.png"
 
@@ -16,7 +16,7 @@ const Excellence = () => {
                         <p className="text-[20px] text-[#C5CEE6] max-md:leading-[14px] leading-none text-center max-lg:text-[18px] max-md:text-[7.5px] max-md:mb-[7px] mb-6">
                             From vision to launch, we manage every detail to build, scale, and ensure your prop firm's success.
                         </p>
-                        <img src={ExcellenceCard} alt='card' className='max-md:max-w-[120px] max-w-auto max-md:mx-auto mx-0' />
+                        <img src={ExcellenceCard} alt='card' loading="lazy" className='max-md:max-w-[120px] max-w-auto max-md:mx-auto mx-0' />
                     </div>
                 </div>
             </div>
