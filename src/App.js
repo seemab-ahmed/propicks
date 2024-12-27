@@ -76,7 +76,9 @@ function App() {
 
       {/* Scroll Arrow */}
       {arrowVisible && (
-        <div className="fixed bottom-4 right-4 w-12 h-12 flex justify-center items-center bg-[#1C3148] rounded-[10px] text-lg font-bold leading-none text-white cursor-pointer hover:bg-[#16354a] transition-all duration-300 scroll-arrow animate-bounce">
+        <div className="fixed bottom-2 right-4 w-12 h-12 flex justify-center items-center z-[999]
+        bg-[#1C3148] rounded-[10px] text-lg font-bold leading-none text-white cursor-pointer 
+        hover:bg-[#16354a] transition-all duration-300 scroll-arrow animate-bounce">
           {/* Down Arrow */}
           {scrollingDown ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -90,6 +92,9 @@ function App() {
           )}
         </div>
       )}
+      {/* dt animation text */}
+      <div className="fixed bottom-4 left-0 right-0 mx-auto w-max px-4 py-2 text-xs 
+      text-[#fff] rounded-[6px] bg-[rgba(36,37,40,0.73)] z-[999] block md:hidden ">On desktop view all animations</div>
     </Router>
   );
 }
