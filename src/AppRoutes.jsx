@@ -12,8 +12,16 @@ const AppRoutes = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Adds smooth scrolling
+      });
+    };
+  
+    // Delay scrolling to allow the page to load
+    const timeout = setTimeout(scrollToTop, 5);
+    return () => clearTimeout(timeout); // Clear timeout on component unmount
   }, [pathname]);
 
   useEffect(() => {
