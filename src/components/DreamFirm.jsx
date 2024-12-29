@@ -81,30 +81,21 @@ const formData = [
   },
   {
     id: 5,
-    title: "Phone",
+    title: "Phone with area code",
     name: "phone",
-    type: "dropdown",
-    options: ["+1", "+44", "+91", "+81"],
-    placeholder: "Select phone code",
+    type: "text",
+    placeholder: "",
   },
   {
     id: 6,
-    title: "Country",
-    name: "country",
-    type: "dropdown",
-    options: ["United States", "United Kingdom", "India", "Japan"],
-    placeholder: "Select country",
-  },
-  {
-    id: 7,
     title: "Subject",
     name: "subject",
     type: "dropdown",
-    options: ["Sports", "Forex", "Features"],
+    options: ["Sports", "Forex", "Futures"],
     placeholder: "Select subject",
   },
   {
-    id: 8,
+    id: 7,
     title: "How can we help",
     name: "textarea",
     placeholder: "Give us a little heads up for the meeting.",
@@ -172,7 +163,7 @@ const DreamFirm = ({ isgrowPage = false }) => {
                   <div
                     key={item.id}
                     className={
-                      item.name === "subject" || item.name === "textarea"
+                      item.name === "subject" || item.name === "textarea" || item.name === "phone"
                         ? "col-span-12"
                         : "col-span-6"
                     }

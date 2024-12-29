@@ -94,7 +94,7 @@ function App() {
       )}
       {/* dt animation text */}
       <div className="fixed bottom-4 left-0 right-0 mx-auto w-max px-4 py-2 text-xs 
-      text-[#fff] rounded-[6px] bg-[rgba(36,37,40,0.73)] z-[999] block md:hidden ">View on desktop to view all animations</div>
+      text-[#fff] rounded-[6px] bg-[rgba(36,37,40,0.73)] z-[999] block md:hidden ">Use a desktop to view all animations.</div>
     </Router>
   );
 }

@@ -130,7 +130,7 @@ const faqData = [
   {
     question: "Can I customize my client dashboard?",
     answer:
-      "bsolutely! We offer full customization with our team of over 25 full-time in-house developers. Whatever your idea is, we can bring it to life.",
+      "Absolutely! We offer full customization with our team of over 25 full-time in-house developers. Whatever your idea is, we can bring it to life.",
   },
 ];
 
