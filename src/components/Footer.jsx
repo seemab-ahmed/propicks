@@ -8,7 +8,7 @@ import PlayStoreIcon from "../assets/images/play.svg";
 import MailIcon from "../assets/images/mail-icon.svg";
 import InstaIcon from "../assets/images/fb-icon.svg";
 import TwitterIcon from "../assets/images/twitter-icon.svg";
-import PoweredIcon from "../assets/images/powered-by.svg";
+import PoweredIcon from "../assets/images/powered-by.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -94,12 +94,12 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="flex justify-between max-w-[104px] mt-8 ms-auto max-md:mx-auto">
-                <Link to="/">
+                <a href="https://www.instagram.com/proppickscom" target="_blank" rel="noreferrer">
                   <img src={InstaIcon} alt="Instagram" loading="lazy" />
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="https://x.com/proppickscom" target="_blank" rel="noreferrer">
                   <img src={TwitterIcon} alt="Instagram" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="pr-[27px] relative z-[2] flex items-center justify-end md:-mt-[50px] max-md:justify-center max-md:pr-0">
-          <img src={PoweredIcon} alt="poweredIcon" loading="lazy" />
+          <img src={PoweredIcon} alt="poweredIcon" loading="lazy" className="max-w-[270px]" />
         </div>
         <div className="absolute top-0 left-0 right-0 w-full">
           <img src={FooterEnd} alt="dev top gradient" className="w-full" loading="lazy" />

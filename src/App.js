@@ -76,7 +76,7 @@ function App() {
 
       {/* Scroll Arrow */}
       {arrowVisible && (
-        <div className="fixed bottom-2 right-4 w-12 h-12 flex justify-center items-center z-[999]
+        <div className="fixed bottom-2 right-2 w-12 h-12 flex justify-center items-center z-[999]
         bg-[#1C3148] rounded-[10px] text-lg font-bold leading-none text-white cursor-pointer 
         hover:bg-[#16354a] transition-all duration-300 scroll-arrow animate-bounce">
           {/* Down Arrow */}
@@ -93,7 +93,7 @@ function App() {
         </div>
       )}
       {/* dt animation text */}
-      <div className="fixed bottom-4 left-0 right-0 mx-auto w-max px-4 py-2 text-xs 
+      <div className="fixed bottom-2 left-0 right-0 mx-auto w-max px-4 py-2 text-xs 
       text-[#fff] rounded-[6px] bg-[rgba(36,37,40,0.73)] z-[999] block md:hidden ">Use a desktop to view all animations.</div>
     </Router>
   );
