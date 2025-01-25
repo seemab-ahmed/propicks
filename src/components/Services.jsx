@@ -347,9 +347,11 @@ const ServiceCard = ({
               autoPlay
               muted
               loop
+              playsInline
             >
               <source src={video} type="video/mp4" />
-              <source src={video} type="video/ogg" />
+              <source src={video.replace(".webm", ".webm")} type="video/webm" />
+              <source src={video.replace(".webm", ".ogg")} type="video/ogg" />
             </video>
           )}
         </div>

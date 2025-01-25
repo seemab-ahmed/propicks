@@ -8,7 +8,7 @@ import Card3Img from "../assets/images/card-3-bg.jpg";
 import Card4Img from "../assets/images/card-4-bg.jpg";
 import FaceIdImg from "../assets/images/face-id.png";
 import StatsImg from "../assets/images/stats-image.png";
-import StatsVid from "../assets/video/guide-vid2.webm"
+import StatsVid from "../assets/video/guide-vid2.webm";
 import PricingImg from "../assets/images/pricing-img.png";
 import PricingVid from "../assets/video/guide-vid3.webm";
 import DashboardImg from "../assets/images/dashboard-img.png";
@@ -24,7 +24,12 @@ const Guide = () => {
       }}
     >
       <div className="absolute top-[-1px] left-0 right-0 w-full">
-        <img src={GuideTop} alt="Gradient Img" loading="lazy" className="w-full" />
+        <img
+          src={GuideTop}
+          alt="Gradient Img"
+          loading="lazy"
+          className="w-full"
+        />
       </div>
       <div className="container relative z-[2]">
         <div className="text-center mb-10 max-md:mb-8">
@@ -46,8 +51,18 @@ const Guide = () => {
           >
             <div className="grid grid-cols-2 gap-7 items-center max-md:grid-cols-1">
               <figure className="max-md:order-2 max-md:mr-auto max-md:max-w-[85%] max-md:max-h-[322px]">
-                <img src={IdentificationImg} alt="faceid" loading="lazy" className="hidden md:block" />
-                <img src={FaceIdImg} alt="faceid" loading="lazy" className="block md:hidden" />
+                <img
+                  src={IdentificationImg}
+                  alt="faceid"
+                  loading="lazy"
+                  className="hidden md:block"
+                />
+                <img
+                  src={FaceIdImg}
+                  alt="faceid"
+                  loading="lazy"
+                  className="block md:hidden"
+                />
               </figure>
               <div className="text-center max-md:order-1 max-md:px-8">
                 <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px]  max-md:mb-[10px]">
@@ -68,9 +83,24 @@ const Guide = () => {
             <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px] block md:hidden">
               <img src={StatsImg} alt="statsImg" loading="lazy" />
             </figure>
-            <video width="100%" height="100%" className="w-full object-cover mb-[110px] max-lg:mb-6 hidden md:block" autoPlay muted loop>
+            <video
+              width="100%"
+              height="100%"
+              className="w-full object-cover mb-[110px] max-lg:mb-6 hidden md:block"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
               <source src={StatsVid} type="video/mp4" />
-              <source src={StatsVid} type="video/ogg" />
+              <source
+                src={StatsVid.replace(".webm", ".webm")}
+                type="video/webm"
+              />
+              <source
+                src={StatsVid.replace(".webm", ".ogg")}
+                type="video/ogg"
+              />
             </video>
             <div className="max-lg:px-7 max-md:order-1 max-md:text-center max-md:p-0">
               <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
@@ -95,9 +125,21 @@ const Guide = () => {
                 className="max-h-[390px] w-full"
               />
             </figure>
-            <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
+            <video
+              width="100%"
+              height="100%"
+              className="w-full h-full object-cover hidden md:block"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
               <source src={PricingVid} type="video/mp4" />
-              <source src={PricingVid} type="video/ogg" />
+              <source src={PricingVid} type="video/webm" />
+              <source
+                src={PricingVid.replace(".webm", ".ogg")}
+                type="video/ogg"
+              />
             </video>
             <div className="p-10 max-lg:p-0 max-lg:mt-6 max-md:order-1 max-md:text-center max-md:px-7 max-md:pt-8 max-md:mt-0 max-md:mb-4">
               <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
@@ -145,7 +187,12 @@ const Guide = () => {
         </div>
       </div>
       <div className="absolute bottom-[-2px] left-0 right-0 w-full z-[1]">
-        <img src={GuideBtm} alt="Gradient Img" loading="lazy" className="w-full" />
+        <img
+          src={GuideBtm}
+          alt="Gradient Img"
+          loading="lazy"
+          className="w-full"
+        />
       </div>
     </section>
   );

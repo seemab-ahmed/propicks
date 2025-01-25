@@ -21,10 +21,19 @@ const CustomOdds = () => {
         <figure className=" block md:hidden w-full">
           <img src={OddsDashMb} alt="main" loading="lazy" className="w-full" />
         </figure>
-        <video width="100%" height="100%" className="w-full h-full object-cover hidden md:block" autoPlay muted loop>
-            <source src={OddsDash} type="video/mp4" />
-            <source src={OddsDash} type="video/ogg" />
-      </video>
+        <video
+          width="100%"
+          height="100%"
+          className="w-full h-full object-cover hidden md:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={OddsDash} type="video/mp4" />
+          <source src={OddsDash} type="video/webm" />
+          <source src={OddsDash.replace(".webm", ".ogg")} type="video/ogg" />
+        </video>
       </div>
       {/* Banner Lines */}
       <div className="absolute top-32 right-0 mx-w-[480px] max-xl:max-w-[380px] max-lg:max-w-[300px] max-md:max-w-[200px]">
@@ -35,8 +44,13 @@ const CustomOdds = () => {
       </div>
       {/* btm-img  */}
       <div className="absolute bottom-[-3px] left-0 right-0 w-full">
-        <img src={ServicesBtm} alt="service top gradient" loading="lazy" className="w-full" />
-      </div> 
+        <img
+          src={ServicesBtm}
+          alt="service top gradient"
+          loading="lazy"
+          className="w-full"
+        />
+      </div>
     </section>
   );
 };

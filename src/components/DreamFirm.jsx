@@ -9,7 +9,7 @@ import DfMblBg from "../assets/images/df-mbl-bg.png";
 import { Link } from "react-router-dom";
 import VideoIcon from "../assets/images/video-icon.svg";
 import Typewriter from "typewriter-effect";
-import Video from "../assets/video/laptop-unreal.webm"
+import Video from "../assets/video/laptop-unreal.webm";
 
 const CustomDropdown = ({ options, name, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,10 +112,11 @@ const DreamFirm = ({ isgrowPage = false }) => {
 
   return (
     <section
-      className={`pt-[140px] pb-[110px] ${!isgrowPage
-        ? "lg:py-[214px]"
-        : "lg:pb-[40px] max-lg:pb-[0] max-md:pt-10"
-        } relative overflow-hidden`}
+      className={`pt-[140px] pb-[110px] ${
+        !isgrowPage
+          ? "lg:py-[214px]"
+          : "lg:pb-[40px] max-lg:pb-[0] max-md:pt-10"
+      } relative overflow-hidden`}
     >
       <div className="form-container container">
         <div className="flex items-center flex-col lg:flex-row justify-between gap-10 relative z-[2]">
@@ -163,7 +164,9 @@ const DreamFirm = ({ isgrowPage = false }) => {
                   <div
                     key={item.id}
                     className={
-                      item.name === "subject" || item.name === "textarea" || item.name === "phone"
+                      item.name === "subject" ||
+                      item.name === "textarea" ||
+                      item.name === "phone"
                         ? "col-span-12"
                         : "col-span-6"
                     }
@@ -213,7 +216,12 @@ const DreamFirm = ({ isgrowPage = false }) => {
               </form>
             </div>
             <div className="hidden lg:block absolute top-0 left-0 w-full h-full -z-[1] scale-150">
-              <img src={VectorImg} alt="vector" loading="lazy" className="w-full" />
+              <img
+                src={VectorImg}
+                alt="vector"
+                loading="lazy"
+                className="w-full"
+              />
             </div>
           </div>
         </div>
@@ -225,7 +233,7 @@ const DreamFirm = ({ isgrowPage = false }) => {
           </div>
         )}
         <div className="absolute top-1/2 -translate-y-1/2 right-0 mx-w-[480px] max-md:max-w-[200px]">
-          <img src={LinesRight} alt="lines"  loading="lazy" />
+          <img src={LinesRight} alt="lines" loading="lazy" />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 left-0 mx-w-[480px] max-md:max-w-[200px]">
           <img src={LinesLeft} alt="lines" loading="lazy" />
@@ -249,9 +257,19 @@ const DreamFirm = ({ isgrowPage = false }) => {
         <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center py-40 bg-black bg-opacity-50 z-[9999]">
           <div className="container">
             <div className="bg-black rounded-lg relative">
-              <video width="100%" height="100%" className="w-full h-full object-cover" autoPlay muted controls loop>
+              <video
+                width="100%"
+                height="100%"
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                controls
+                loop
+                playsInline
+              >
                 <source src={Video} type="video/mp4" />
-                <source src={Video} type="video/ogg" />
+                <source src={Video} type="video/webm" />
+                <source src={Video.replace(".webm", ".ogg")} type="video/ogg" />
               </video>
               <button
                 onClick={handlePopupToggle}

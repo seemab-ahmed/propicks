@@ -178,15 +178,22 @@ const Banner = () => {
             max-xl:m-0 max-lg:w-[94px] max-lg:h-[36px] max-md:w-[75px] max-md:h-[27px]"
             >
               {" "}
-              <img src={Footballs} alt="footballs" loading="lazy" className="w-[100%]" />
+              <img
+                src={Footballs}
+                alt="footballs"
+                loading="lazy"
+                className="w-[100%]"
+              />
             </div>
             <span className="main-heading-span bg-heading-gradient">
               prop firm
             </span>
             .
           </h1>
-          <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl 
-          max-lg:leading-relaxed max-md:text-base ">
+          <p
+            className="text-2xl leading-10 font-normal text-[#CCCDCD] max-w-[723px] w-full mx-auto max-lg:text-xl 
+          max-lg:leading-relaxed max-md:text-base "
+          >
             Unleash the power of advanced technology to transform your business
             and fuel unprecedented growth, driving results beyond 200%.
           </p>
@@ -263,7 +270,12 @@ const Banner = () => {
           </div>
           {/* Iphone Img */}
           <div className="relative left-0 max-w-[660px] bottom-0 right-0 mx-auto z-[0] max-xl:max-w-[486px] max-lg:max-w-[450px]">
-            <img src={HeroInnerImg} alt="thumbnail" loading="lazy" className="w-full h-full" />
+            <img
+              src={HeroInnerImg}
+              alt="thumbnail"
+              loading="lazy"
+              className="w-full h-full"
+            />
           </div>
           {/* md hideden  stats row */}
           <div className="absolute right-0 top-[75px] -translate-x-24 z-10 max-2xl:-translate-x-10 max-xl:top-8 max-xl:translate-x-0 max-md:hidden">
@@ -323,12 +335,15 @@ const Banner = () => {
                 className="w-full h-full object-cover"
                 autoPlay
                 muted
+                playsInline
                 controls
                 loop
+                preload="auto"
               >
                 <source src={BannerVideo} type="video/mp4" />
                 <source src={BannerVideo} type="video/ogg" />
               </video>
+
               <button
                 onClick={handlePopupToggle}
                 className="absolute -top-2 -right-2 text-white bg-[#1c3148] pb-2 rounded-lg h-8 w-8 md:h-10 md:w-10 flex justify-center items-center text-[24px] md:text-[32px] leading-8"
@@ -339,7 +354,7 @@ const Banner = () => {
           </div>
         </div>
       )}
-      {/* Banner Lines */} 
+      {/* Banner Lines */}
       <div className="absolute top-44 right-0 mx-w-[480px] max-md:max-w-[200px]">
         <img src={LinesRight} alt="lines" loading="lazy" />
       </div>
@@ -347,11 +362,15 @@ const Banner = () => {
         <img src={LinesLeft} alt="lines" loading="lazy" />
       </div>
       <div className="absolute bottom-0 left-0 right-0 w-full z-[2]">
-        <img src={BannerBtm} alt="dev top gradient" loading="lazy" className="w-full" />
+        <img
+          src={BannerBtm}
+          alt="dev top gradient"
+          loading="lazy"
+          className="w-full"
+        />
       </div>
     </section>
   );
 };
 
 export default Banner;
-

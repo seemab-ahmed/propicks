@@ -31,9 +31,11 @@ const MobileDev = () => {
           autoPlay
           muted
           loop
+          playsInline
         >
            <source src={IphoneVideo} type="video/mp4" />
-           <source src={IphoneVideo} type="video/ogg" />
+          <source src={IphoneVideo} type="video/webm" />
+          <source src={IphoneVideo.replace(".webm", ".ogg")} type="video/ogg" />
           {" "}
         </video>
         <figure className="block md:hidden">
