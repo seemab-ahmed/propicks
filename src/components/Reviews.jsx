@@ -14,49 +14,31 @@ const Reviews = () => {
         {
             title: "Prop Owner",
             hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
+            para: "PropPicks has given my forex prop firm a huge boost in efficiency and profitability. Their tech solutions are second to none, and their commitment to our success is evident in every interaction. Truly outstanding!",
             star: StarImg,
         },
         {
             title: "Prop Owner",
             hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
+            para: "As a forex prop firm owner, I needed a platform that could handle complex requirements while being easy for clients to use. PropPicks delivered on all fronts, and their innovative approach has earned us countless positive reviews from our clients!",
             star: StarImg,
         },
         {
             title: "Prop Owner",
             hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
+            para: "PropPicks has been a fantastic partner for my fx prop firm. Their technology is top-notch, and their team is always responsive and helpful. Thanks to them, we’ve been able to deliver a premium experience to our clients.",
             star: StarImg,
         },
         {
             title: "Prop Owner",
             hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
+            para: "Took My Sports Prop Firm to the Next Level! PropPicks provided the technology and tools that helped me scale my sports prop firm beyond my expectations. Their custom dashboards and risk management features are a dream for any business owner. Highly recommend!",
             star: StarImg,
         },
         {
             title: "Prop Owner",
             hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
-            star: StarImg,
-        },
-        {
-            title: "Prop Owner",
-            hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
-            star: StarImg,
-        },
-        {
-            title: "Prop Owner",
-            hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
-            star: StarImg,
-        },
-        {
-            title: "Prop Owner",
-            hobby: "Forex",
-            para: "Working with PropPicks has been a game-changer for my prop firm. Their custom-built solutions and seamless integrations have streamlined our operations, and their team is always ready to provide exceptional support. I couldn’t be happier with the partnership!",
+            para: "Partnering with PropPicks was the best decision for our sports prop firm. Their advanced tech, like risk management tools and custom interfaces, has set us apart in the industry. They’re more than a vendor they’re a true partner in our growth.",
             star: StarImg,
         },
     ];
@@ -79,7 +61,7 @@ const Reviews = () => {
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
                         <ScrollingColumn reviewsList={reviewsList} speed={1} />
-                        <ScrollingColumn reviewsList={reviewsList} speed={1.8} className="hidden md:block" />
+                        <ScrollingColumn reviewsList={reviewsList} speed={2} className="hidden md:block" />
                         <ScrollingColumn reviewsList={reviewsList} speed={1.4} className="hidden md:block" />
                     </div>
                     <div className="bg-white-gradient h-[321px] w-full absolute left-0 bottom-0 z-[1]"></div>

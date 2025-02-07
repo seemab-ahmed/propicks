@@ -13,7 +13,7 @@ const Sales = () => {
       //  style={{ backgroundImage: `url(${SalesImg})` }}
     >
       <div className="absolute top-0 left-0 right-0 w-full h-full -z-[1]">
-        <video
+        {/* <video
           width="100%"
           height="100%"
           className="w-full h-full object-cover hidden md:block "
@@ -26,12 +26,12 @@ const Sales = () => {
           <source src={SalesVideo} type="video/mp4" />
           <source src={SalesVideo} type="video/webm" />
           <source src={SalesVideo.replace(".webm", ".ogg")} type="video/ogg" />
-        </video>
+        </video> */}
         <img
           src={SalesImg}
           alt="sale-bg"
           loading="lazy"
-          className="w-full h-full object-cover block md:hidden"
+          className="w-full h-full object-cover block"
         />
       </div>
       <div className="absolute top-0 left-0 right-0 w-full rotate-180">
