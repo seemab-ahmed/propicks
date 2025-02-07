@@ -4,7 +4,7 @@ import BannerBtm from "../assets/images/dev-banner-btm.png";
 import SalesBg from "../assets/images/sales-bg.png";
 import SalesIcon from "../assets/images/sale-icon.png";
 import DevelopBtm from "../assets/images/develop-btm.png";
-import SalesVideo from "../assets/video/laptop-unreal.webm";
+// import SalesVideo from "../assets/video/laptop-unreal.webm";
 
 const Sales = () => {
   return (
