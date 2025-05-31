@@ -9,18 +9,9 @@
       name="description"
       content="Proppicks | Powering some of the biggest fx and sports prop firms!"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="preload" as="image" href="/assets/images/guide-bg.png" fetchpriority="high" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script>
-      var head = document.head;
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src =
-        "https://209243.t.hyros.com/v1/lst/universal-script?ph=b1a255d46103e837dd87adbe6a6da293100da69730864319beee622ea43941f0&tag=!clicked&ref_url=" +
-        encodeURI(document.URL);
-      head.appendChild(script);
-    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -36,28 +27,16 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <title>Proppicks</title>
-  </head>
+    <script>
+      var head = document.head;
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src =
+        "https://209243.t.hyros.com/v1/lst/universal-script?ph=b1a255d46103e837dd87adbe6a6da293100da69730864319beee622ea43941f0&tag=!clicked&ref_url=" +
+        encodeURI(document.URL);
+      head.appendChild(script);
+    </script>
 
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-
-    <!-- Add ScrollSmoother script -->
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- ScrollSmoother Plugin -->
-    <script src="../src/assets/js/ScrollSmoother.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WCKRP968"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -86,14 +65,35 @@
       fbq("init", "4007454779582470");
       fbq("track", "PageView");
     </script>
-    <noscript
-      ><img
+
+    <title>Proppicks</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Meta Pixel (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WCKRP968"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>
+      <img
         height="1"
         width="1"
         style="display: none"
         src="https://www.facebook.com/tr?id=4007454779582470&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -101,5 +101,12 @@
       }
       gtag("js", new Date());
     </script>
+
+    <!-- Add ScrollSmoother script -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- ScrollSmoother Plugin -->
+    <!-- <script src="../src/assets/js/ScrollSmoother.min.js"></script> -->
+    <!-- Google tag (gtag.js) -->
   </body>
 </html>

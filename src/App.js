@@ -13,35 +13,35 @@ function App() {
   const [scrollingDown, setScrollingDown] = useState(true); // State to track scroll direction
   const [arrowVisible, setArrowVisible] = useState(false); // State to track if the arrow should be visible
   const [lastScrollTop, setLastScrollTop] = useState(0); // To track last scroll position for direction
-
   useEffect(() => {
-    // Track scroll direction and visibility of the arrow
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (currentScrollTop > lastScrollTop) {
-        setScrollingDown(true); // Scrolling down
+        setScrollingDown(true);
       } else if (currentScrollTop < lastScrollTop) {
-        setScrollingDown(false); // Scrolling up
+        setScrollingDown(false);
       }
 
-      if (currentScrollTop > 100) { // Show the arrow after scrolling 100px
-        if (!arrowVisible) {
-          setArrowVisible(true); // Show arrow smoothly
-          gsap.to('.scroll-arrow', { opacity: 1, y: 0, duration: 0.5 });
+      const arrow = document.querySelector('.scroll-arrow');
+
+      if (currentScrollTop > 100) {
+        if (!arrowVisible && arrow) {
+          setArrowVisible(true);
+          gsap.to(arrow, { opacity: 1, y: 0, duration: 0.5 });
         }
       } else {
-        if (arrowVisible) {
-          setArrowVisible(false); // Hide arrow smoothly
-          gsap.to('.scroll-arrow', { opacity: 0, y: 100, duration: 0.5 });
+        if (arrowVisible && arrow) {
+          setArrowVisible(false);
+          gsap.to(arrow, { opacity: 0, y: 100, duration: 0.5 });
         }
       }
 
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // Update last scroll position
-    });
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+    };
 
-    // Ensure ScrollSmoother is available
-    // const ScrollSmoother = window.ScrollSmoother;
+    window.addEventListener('scroll', handleScroll);
+
     if (ScrollSmoother && typeof ScrollSmoother.create === "function") {
       try {
         const smootherInstance = ScrollSmoother.create({
@@ -52,6 +52,7 @@ function App() {
         });
 
         return () => {
+          window.removeEventListener('scroll', handleScroll);
           if (smootherInstance && typeof smootherInstance.disable === 'function') {
             smootherInstance.disable();
           }
