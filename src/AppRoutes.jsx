@@ -1,52 +1,65 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import ContactUs from "./pages/ContactUs";
-import ExtraServices from "./pages/ExtraServices";
-import Development from "./pages/Development";
-import GrowFirm from "./pages/GrowFirm";
-import FirmDemo from "./pages/FirmDemo";
 import { useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+import { PageSkeleton } from "./components/Skeleton";
+
+// Lazy load all pages except Home
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const ExtraServices = lazy(() => import("./pages/ExtraServices"));
+const Development = lazy(() => import("./pages/Development"));
+const GrowFirm = lazy(() => import("./pages/GrowFirm"));
+const FirmDemo = lazy(() => import("./pages/FirmDemo"));
 
 const AppRoutes = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // Adds smooth scrolling
-      });
-    };
-  
-    // Delay scrolling to allow the page to load
-    const timeout = setTimeout(scrollToTop, 5);
-    return () => clearTimeout(timeout); // Clear timeout on component unmount
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, [pathname]);
 
+  // Preload routes when idle
   useEffect(() => {
-    // Preload other pages
-    const preloadPages = () => {
-      import("./pages/Development");
-      import("./pages/ExtraServices");
-      import("./pages/ContactUs");
-      import("./pages/GrowFirm");
-      import("./pages/FirmDemo");
-    };
-    preloadPages();
-  }, []);
+    if ('requestIdleCallback' in window) {
+      const idleCallback = requestIdleCallback(() => {
+        const paths = [
+          "/development",
+          "/extra-services",
+          "/contact-us",
+          "/grow-your-firm",
+          "/firm-demo"
+        ];
+        
+        if (paths.some(path => pathname.includes(path) || path === pathname)) {
+          Promise.all([
+            import("./pages/ContactUs"),
+            import("./pages/ExtraServices"),
+            import("./pages/Development"),
+            import("./pages/GrowFirm"),
+            import("./pages/FirmDemo")
+          ]);
+        }
+      });
+      
+      return () => cancelIdleCallback(idleCallback);
+    }
+  }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/development" element={<Development />} />
-      <Route path="/extra-services" element={<ExtraServices />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/grow-your-firm" element={<GrowFirm />} />
-      <Route path="/firm-demo" element={<FirmDemo />} />
-    </Routes>
+    <Suspense fallback={<PageSkeleton />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/development" element={<Development />} />
+        <Route path="/extra-services" element={<ExtraServices />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/grow-your-firm" element={<GrowFirm />} />
+        <Route path="/firm-demo" element={<FirmDemo />} />
+      </Routes>
+    </Suspense>
   );
 };
 
 export default AppRoutes;
-

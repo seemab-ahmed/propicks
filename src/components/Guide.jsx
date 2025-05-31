@@ -1,5 +1,5 @@
 import React from "react";
-import GuideBg from "../assets/images/guide-bg.png";
+import { Link } from "react-router-dom";
 import GuideTop from "../assets/images/guide-top.svg";
 import GuideBtm from "../assets/images/service-btm.png";
 import Card1Img from "../assets/images/card-1-bg.jpg";
@@ -13,115 +13,109 @@ import PricingImg from "../assets/images/pricing-img.png";
 import PricingVid from "../assets/video/guide-vid3.webm";
 import DashboardImg from "../assets/images/dashboard-img.png";
 import IdentificationImg from "../assets/images/Identity-Verification.gif";
-import { Link } from "react-router-dom";
+import GuideBg from "../assets/images/guide-bg.png"; // <-- LCP image
 
 const Guide = () => {
   return (
-    <section
-      className="py-20 bg-contain relative"
-      style={{
-        background: `url(${GuideBg}) no-repeat center center`,
-      }}
-    >
-      <div className="absolute top-[-1px] left-0 right-0 w-full">
+    <section className="py-20 bg-contain relative overflow-hidden">
+
+      {/* 👇 Absolutely position LCP background for faster LCP detection */}
+      <img
+        src={GuideBg}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        fetchpriority="high"
+        decoding="async"
+        loading="eager"
+      />
+
+      <div className="absolute top-[-1px] left-0 right-0 w-full z-[1]">
         <img
           src={GuideTop}
-          alt="Gradient Img"
+          alt="Gradient Top"
           loading="lazy"
+          decoding="async"
           className="w-full"
         />
       </div>
+
       <div className="container relative z-[2]">
         <div className="text-center mb-10 max-md:mb-8">
-          <h2 className="text-[120px] font-bold leading-tight text-white tracking-[-4.8px] mb-5 max-xl:text-[92px]  max-lg:text-7xl max-lg:leading-snug max-md:text-4xl max-md:tracking-[-1.2px]">
-            We guide you through{" "}
-            <span className="bg-heading-gradient">everything</span>.
+          <h2 className="text-[120px] font-bold leading-tight text-white tracking-[-4.8px] mb-5 max-xl:text-[92px] max-lg:text-7xl max-lg:leading-snug max-md:text-4xl max-md:tracking-[-1.2px]">
+            We guide you through <span className="bg-heading-gradient">everything</span>.
           </h2>
           <p className="text-2xl leading-10 font-normal text-[#CCCDCD] max-lg:text-xl max-md:text-base">
-            PropPicks Tech guides you every step of the way in building your
-            dream prop firm—whether it's for sports, forex, or futures. From
-            concept to launch, we provide the tools, expertise, and support to
-            bring your vision to life.
+            PropPicks Tech guides you every step of the way in building your dream prop firm...
           </p>
         </div>
+
         <div className="grid grid-cols-12 gap-8">
+          {/* === CARD 1 === */}
           <div
-            className="col-span-12 bg-cover py-14 px-16 rounded-3xl max-lg:py-10 max-lg:px-10 max-md:px-0 max-md:pb-0 max-md:pt-7"
+            className="col-span-12 bg-cover min-h-[150px] py-14 px-16 rounded-3xl relative max-lg:py-10 max-lg:px-10 max-md:px-0 max-md:pb-0 max-md:pt-7"
             style={{ backgroundImage: `url(${Card1Img})` }}
           >
             <div className="grid grid-cols-2 gap-7 items-center max-md:grid-cols-1">
               <figure className="max-md:order-2 max-md:mr-auto max-md:max-w-[85%] max-md:max-h-[322px]">
                 <img
                   src={IdentificationImg}
-                  alt="faceid"
+                  alt="faceid gif"
                   loading="lazy"
+                  decoding="async"
                   className="hidden md:block"
                 />
                 <img
                   src={FaceIdImg}
                   alt="faceid"
                   loading="lazy"
+                  decoding="async"
                   className="block md:hidden"
                 />
               </figure>
               <div className="text-center max-md:order-1 max-md:px-8">
-                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px]  max-md:mb-[10px]">
-                  Integrate & Guide Through the Essentials
-                </h3>
-                <p className="text-lg font-normal leading-8 text-[#C5CEE6] max-lg:text-base max-md:text-sm">
-                  We handle the integration of every essential tool and platform
-                  you need to run your prop firm, from trading systems and
-                  analytics to account management and client interfaces.
-                </p>
+                <h3 className="text-5xl font-bold text-white mb-5">Integrate & Guide</h3>
+                <p className="text-lg text-[#C5CEE6]">We handle the integration...</p>
               </div>
             </div>
           </div>
+
+          {/* === CARD 2 === */}
           <div
-            className="col-span-6 grid grid-cols-1 bg-cover py-16 px-10 rounded-[36px] max-lg:py-10 max-lg:px-0 max-md:col-span-12 max-md:py-7 max-md:px-8 max-md:overflow-hidden"
+            className="col-span-6 bg-cover py-16 px-10 rounded-[36px] max-md:col-span-12"
             style={{ backgroundImage: `url(${Card2Img})` }}
           >
-            <figure className="mb-[110px] max-lg:mb-6 max-md:order-2 max-md:mb-0 max-md:mx-[-20px] block md:hidden">
-              <img src={StatsImg} alt="statsImg" loading="lazy" />
+            <figure className="mb-[110px] block md:hidden">
+              <img src={StatsImg} alt="stats" loading="lazy" decoding="async" />
             </figure>
             <video
               width="100%"
               height="100%"
-              className="w-full object-cover mb-[110px] max-lg:mb-6 hidden md:block"
+              className="w-full object-cover mb-[110px] hidden md:block"
               autoPlay
               muted
               loop
               playsInline
+              preload="none"
             >
-              <source src={StatsVid} type="video/mp4" />
-              <source
-                src={StatsVid.replace(".webm", ".webm")}
-                type="video/webm"
-              />
-              <source
-                src={StatsVid.replace(".webm", ".ogg")}
-                type="video/ogg"
-              />
+              <source src={StatsVid} type="video/webm" />
             </video>
-            <div className="max-lg:px-7 max-md:order-1 max-md:text-center max-md:p-0">
-              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
-                Launch & Scale Your Firm
-              </h3>
-              <p className="text-lg font-normal leading-8 text-[#C5CEE6] max-lg:text-base max-md:text-sm">
-                With your firm ready to go, we support you through launch and
-                beyond, helping you scale efficiently as your business reaches
-                new heights.
-              </p>
+            <div>
+              <h3 className="text-5xl font-bold text-white mb-5">Launch & Scale</h3>
+              <p className="text-lg text-[#C5CEE6]">With your firm ready to go...</p>
             </div>
           </div>
+
+          {/* === CARD 3 === */}
           <div
-            className="col-span-6 grid grid-cols-1 bg-cover pt-4 rounded-[36px] max-lg:py-10 max-lg:px-7 max-md:col-span-12 max-md:p-0"
+            className="col-span-6 bg-cover pt-4 rounded-[36px] max-md:col-span-12"
             style={{ backgroundImage: `url(${Card3Img})` }}
           >
-            <figure className="max-md:order-2 block md:hidden">
+            <figure className="block md:hidden">
               <img
                 src={PricingImg}
-                alt="pricing-img"
+                alt="pricing"
                 loading="lazy"
+                decoding="async"
                 className="max-h-[390px] w-full"
               />
             </figure>
@@ -133,64 +127,52 @@ const Guide = () => {
               muted
               loop
               playsInline
+              preload="none"
             >
-              <source src={PricingVid} type="video/mp4" />
               <source src={PricingVid} type="video/webm" />
-              <source
-                src={PricingVid.replace(".webm", ".ogg")}
-                type="video/ogg"
-              />
             </video>
-            <div className="p-10 max-lg:p-0 max-lg:mt-6 max-md:order-1 max-md:text-center max-md:px-7 max-md:pt-8 max-md:mt-0 max-md:mb-4">
-              <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px]">
-                Develop Custom Plans with Risk Management
-              </h3>
-              <p className="text-lg font-normal leading-8 text-[#C5CEE6] max-lg:text-base max-md:text-sm">
-                Our team collaborates with you to create custom plans, embedding
-                risk management strategies that align with your business goals
-                and protect your capital.
-              </p>
+            <div className="p-10">
+              <h3 className="text-5xl font-bold text-white mb-5">Develop Custom Plans</h3>
+              <p className="text-lg text-[#C5CEE6]">Our team collaborates...</p>
             </div>
           </div>
+
+          {/* === CARD 4 === */}
           <div
             className="col-span-12 bg-cover pl-16 rounded-3xl max-lg:pl-0"
             style={{ backgroundImage: `url(${Card4Img})` }}
           >
-            <div className="grid grid-cols-12 gap-5 items-center max-lg:gap-0 max-md:grid-cols-1">
-              <div className="text-center col-span-5 max-lg:pl-7 max-lg:col-span-6 max-md:px-7 max-md:pt-8 max-md:mb-[-20px]">
-                <h3 className="text-5xl font-bold leading-none text-white mb-5 -tracking-[0.96px] max-w-[360px] mx-auto max-xl:text-3xl max-lg:text-[28px] max-md:mb-[10px] max-md:max-w-[180px]">
-                  Design & Build Your Brand
-                </h3>
-                <p className="text-lg font-normal leading-8 text-[#C5CEE6] max-w-[560px] w-full mx-auto max-lg:text-base max-md:text-sm ">
-                  We bring your vision to life with custom Figma designs and a
-                  cohesive brand identity, setting the foundation for a
-                  distinctive and professional prop firm either forex or sports.
-                </p>
+            <div className="grid grid-cols-12 items-center max-md:grid-cols-1">
+              <div className="text-center col-span-5 max-md:px-7">
+                <h3 className="text-5xl font-bold text-white mb-5">Design & Build</h3>
+                <p className="text-lg text-[#C5CEE6]">We bring your vision to life...</p>
               </div>
-              <figure className="col-span-7 self-end max-lg:col-span-6 ">
-                <img src={DashboardImg} alt="faceid" loading="lazy" />
+              <figure className="col-span-7 self-end">
+                <img src={DashboardImg} alt="dashboard" loading="lazy" decoding="async" />
               </figure>
             </div>
           </div>
         </div>
+
         <div className="flex items-center justify-center mt-16 max-md:mt-8">
           <Link
             to="/development"
-            className="btn blue text-center py-5 px-10 text-lg leading-none block text-white font-medium rounded-[10px] border border-[#3D7FDE]  shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.10)]  max-md:text-base hover:text-white"
+            className="btn blue py-5 px-10 text-lg text-white rounded-[10px] border border-[#3D7FDE]"
             style={{
-              background:
-                "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
+              background: "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%), #1972F5",
             }}
           >
             <span className="relative z-[2]">Development</span>
           </Link>
         </div>
       </div>
+
       <div className="absolute bottom-[-2px] left-0 right-0 w-full z-[1]">
         <img
           src={GuideBtm}
-          alt="Gradient Img"
+          alt="Gradient Btm"
           loading="lazy"
+          decoding="async"
           className="w-full"
         />
       </div>

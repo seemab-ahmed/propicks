@@ -309,7 +309,7 @@ const ServiceCard = ({
   return (
     <div
       id="service-card"
-      className="service-card rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14 max-md:pt-[30px]"
+      className="service-card min-h-[200px] rounded-[32px] overflow-hidden border border-solid relative border-t-[rgba(255,255,255,0.09)] border-l-[rgba(255,255,255,0.09)] border-b-0 border-r-0 pt-14 max-md:pt-[30px]"
       style={{
         ...backgroundStyle,
         boxShadow:
