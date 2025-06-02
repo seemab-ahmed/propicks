@@ -71,7 +71,7 @@ function App() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <AppRoutes />
-          <Footer />
+          <Footer />/
         </div>
       </div>
 

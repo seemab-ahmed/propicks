@@ -7,7 +7,7 @@ import LinesLeft from "../assets/images/line-left.svg";
 import VectorImg from "../assets/images/form-vector.png";
 import DfMblBg from "../assets/images/df-mbl-bg.png";
 import { Link } from "react-router-dom";
-import VideoIcon from "../assets/images/video-icon.svg";
+import VideoIcon from "../assets/icons/video-icon.svg";
 import Typewriter from "typewriter-effect";
 import Video from "../assets/video/laptop-unreal.webm";
 
